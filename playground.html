@@ -18,7 +18,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="\assets\images\mainlogo.png" height="50"></a>
+            <a class="navbar-brand" href="index.html"><img src="/assets/images/mainlogo.png" height="50" alt="Main Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,9 +44,37 @@
         </div>
     </nav>
 
+    <div class="container mt-5">
+        <!-- Playground Section -->
+        <section class="mb-5">
+            <h2>HTML Playground</h2>
+            <p>Test more HTML structures in the playground below and click "Run" to see your code in action:</p>
 
+            <!-- HTML Playground Editors -->
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>HTML</h3>
+                    <textarea id="htmlPlayground" class="form-control" rows="10">&lt;h1&gt;Welcome to the HTML Playground&lt;/h1&gt;
+&lt;p&gt;You can edit this HTML and see the live preview below.&lt;/p&gt;</textarea>
+                </div>
+                <div class="col-md-4">
+                    <h3>CSS</h3>
+                    <textarea id="cssPlayground" class="form-control" rows="10">h1 { color: blue; } p { font-style: italic; }</textarea>
+                </div>
+                <div class="col-md-4">
+                    <h3>JavaScript</h3>
+                    <textarea id="jsPlayground" class="form-control" rows="10">console.log("Hello from JavaScript!");</textarea>
+                </div>
+            </div>
 
+            <button class="btn btn-success mt-3" onclick="runPlayground()">Run Playground</button>
 
+            <!-- Playground Live Preview -->
+            <div class="mt-3">
+                <iframe id="playgroundPreview" class="w-100" style="height: 400px; border: 1px solid #ccc; background-color: white;"></iframe>
+            </div>
+        </section>
+    </div>
 
     <button id="openChatbot" class="chatbot-toggle">
         <img src="assets/images/chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
@@ -71,5 +99,33 @@
     <script src="js/main.js"></script>
     <script src="js/dark-mode.js"></script>
     <script src="js/chatbot.js"></script>
+    <script>
+        function runPlayground() {
+            const html = document.getElementById('htmlPlayground').value;
+            const css = document.getElementById('cssPlayground').value;
+            const js = document.getElementById('jsPlayground').value;
+
+            const iframe = document.getElementById('playgroundPreview');
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+            iframeDocument.open();
+            iframeDocument.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <style>${css}</style>
+                </head>
+                <body>
+                    ${html}
+                    <script>${js}<\/script>
+                </body>
+                </html>
+            `);
+            iframeDocument.close();
+        }
+
+        // Run the playground on page load
+        document.addEventListener('DOMContentLoaded', runPlayground);
+    </script>
 </body>
 </html>
