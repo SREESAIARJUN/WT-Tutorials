@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Resetting default body margins */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 90px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    background: linear-gradient(135deg, #7fffd4, #87cefa, #ffe4e1);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #333;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>') 12 12, auto;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 15px 15px;
+    padding: 15px 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand, .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 80px; /* Height of the navbar */
+    left: 0;
+    width: 150px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+}
+
+/* Dark Mode for Sidebar */
+body.dark-mode .sidebar {
+    background-color: #1a1a2e;
+}
+
+body.dark-mode .sidebar a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .sidebar a:hover {
+    background-color: #2a2a3e;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 150px; /* Adjust according to sidebar width */
+    padding: 20px;
+    margin-top: 0px; /* To avoid overlap with navbar */
+    transition: 0.3s;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* Card Styling */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Button Styling */
+.btn-primary {
+    background: linear-gradient(90deg, #7fffd4, #87cefa);
+    border: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Chatbot container and button */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.chatbot-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #7fffd4, #87cefa);
+    color: #333;
+    font-weight: 600;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.chatbot-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: fill; 
+    border-radius: 50%;
+    border: 4px solid #00fffb; 
+}
+
+.chatbot-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 80%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.user {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+.bot {
+    align-self: flex-start;
+    background-color: #e9ecef;
+    color: #333;
+    border-bottom-left-radius: 0;
+}
+
+.chatbot-input {
+    display: flex;
+    padding: 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.chatbot-input textarea {
+    flex-grow: 1;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-size: 14px;
+    resize: none;
+}
+
+.chatbot-input button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.chatbot-toggle {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: linear-gradient(90deg, #7fffd4, #87cefa);
+    color: #333;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(127, 255, 212, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(127, 255, 212, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(127, 255, 212, 0);
+    }
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+/* Syntax highlighting */
+pre {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #7fffd4, #87cefa);
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #87cefa, #7fffd4);
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Decorative Circle */
+.decorative-circle {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #7fffd4, #87cefa);
+    position: absolute;
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+
+/* Unique section styling */
+.unique-section {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: skew(-2deg);
+}
+
+.unique-section > * {
+    transform: skew(2deg);
+}
