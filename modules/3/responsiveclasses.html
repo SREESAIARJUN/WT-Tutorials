@@ -1,0 +1,208 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="./introtobootstrap.html">Getting started with bootstrap</a>
+        <a href="./creatingresponsivelayouts.html">Creating Responsive Layouts Using Bootstrap CSS </a>
+        <a href="./basichtmlstructure.html">Basic HTML structure for bootstrap</a>
+        <a href="./responsiveclasses.html">Responsive classes</a>
+        <a href="./renderingimages.html">Rendering Images</a>
+        <a href="./gridsystem.html">The grid System</a>
+        <a href="./constructingdata.html">Constructing data entry forms</a>
+        <a href="./Packagedcomponents.html">Packaged components in bootstrap</a>
+        <a href="./Thepageheader.html">The page header</a>
+        <a href="./glyphicons.html">Glyphicons</a>
+        <a href="./navigationbar.html">The navigation bar</a>
+        <a href="./bagdes.html">Badges</a>
+        <a href="./alerts.html">Alerts</a>
+        <a href="./toolbarsandbuttongroups.html">Toolbars and button groups</a>
+        <a href="./panels.html">panels</a>
+            </div>
+
+    <!-- Main Content -->
+   
+
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">Responsive Classes in Bootstrap</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>Introduction</h2>
+                <p>Bootstrap provides a range of responsive classes to help developers create adaptable layouts. Responsive classes allow elements to change their behavior based on the screen size, making it easier to manage content visibility, alignment, and spacing on different devices.</p>
+                <p>This section introduces Bootstrap’s responsive classes and demonstrates how to apply them to ensure your web content looks good on any device.</p>
+            </section>
+    
+            <!-- Responsive Classes Overview Section -->
+            <section class="mb-5">
+                <h2>Common Responsive Classes in Bootstrap</h2>
+                <p>Bootstrap’s responsive classes work on a variety of elements. Here are some commonly used classes:</p>
+    
+                <ul>
+                    <li><strong><code>.d-{breakpoint}-{value}</code>:</strong> Controls the display of an element. Possible values include <code>none</code>, <code>block</code>, <code>inline</code>, and more.</li>
+                    <li><strong><code>.text-{breakpoint}-{alignment}</code>:</strong> Controls text alignment. Alignment options include <code>start</code>, <code>center</code>, and <code>end</code>.</li>
+                    <li><strong><code>.m-{breakpoint}-{size}</code>:</strong> Sets the margin for an element. Sizes range from <code>0</code> to <code>5</code>.</li>
+                    <li><strong><code>.p-{breakpoint}-{size}</code>:</strong> Sets the padding for an element, with sizes ranging from <code>0</code> to <code>5</code>.</li>
+                </ul>
+            </section>
+    
+            <!-- Responsive Classes Examples Section -->
+            <section class="mb-5">
+                <h2>Line-by-Line Code Examples</h2>
+                <p>Let’s look at some examples of Bootstrap’s responsive classes in action.</p>
+    
+                <h3>Example 1: Display Control</h3>
+                <p>This example demonstrates how to show and hide elements based on the screen size:</p>
+                <pre>
+    &lt;div class="container"&gt;
+        &lt;div class="d-none d-md-block"&gt;Visible on medium and larger screens.&lt;/div&gt;
+        &lt;div class="d-block d-md-none"&gt;Visible only on small screens.&lt;/div&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>d-none d-md-block</code>: Hides the element on extra-small and small screens, but displays it as a block on medium screens and up.</li>
+                    <li><code>d-block d-md-none</code>: Displays the element on extra-small and small screens, but hides it on medium screens and larger.</li>
+                </ul>
+    
+                <h3>Example 2: Responsive Text Alignment</h3>
+                <p>This example shows how to align text differently based on screen size:</p>
+                <pre>
+    &lt;div class="container"&gt;
+        &lt;p class="text-start text-md-center text-lg-end"&gt;
+            Text is left-aligned on small screens, center-aligned on medium screens, and right-aligned on large screens.
+        &lt;/p&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>text-start</code>: Aligns text to the left on small screens.</li>
+                    <li><code>text-md-center</code>: Centers text on medium screens and up.</li>
+                    <li><code>text-lg-end</code>: Aligns text to the right on large screens and up.</li>
+                </ul>
+    
+                <h3>Example 3: Responsive Spacing</h3>
+                <p>This example demonstrates how to add responsive margins and padding to elements:</p>
+                <pre>
+    &lt;div class="container"&gt;
+        &lt;div class="m-2 m-md-4 p-3 p-lg-5"&gt;
+            This element has smaller margin and padding on small screens, with increased spacing on medium and large screens.
+        &lt;/div&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>m-2</code>: Adds a small margin on all sides on small screens.</li>
+                    <li><code>m-md-4</code>: Adds a larger margin on medium screens and up.</li>
+                    <li><code>p-3</code>: Adds padding inside the element on small screens.</li>
+                    <li><code>p-lg-5</code>: Adds even more padding inside the element on large screens and up.</li>
+                </ul>
+            </section>
+    
+            <!-- Expected Output Section -->
+            <section class="mb-5">
+                <h2>Expected Output</h2>
+                <p>When viewed on a small screen, only the <code>d-block d-md-none</code> element will be visible, and the text will be aligned to the left with smaller margins and padding.</p>
+                <p>On a larger screen, both display elements will appear, with center or right-aligned text and increased spacing.</p>
+                <img src="responsive_classes_output.png" alt="Expected Output Preview" class="img-fluid">
+            </section>
+        </main>
+    </div>
+    
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

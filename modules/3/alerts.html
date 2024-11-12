@@ -1,0 +1,240 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="./introtobootstrap.html">Getting started with bootstrap</a>
+        <a href="./creatingresponsivelayouts.html">Creating Responsive Layouts Using Bootstrap CSS </a>
+        <a href="./basichtmlstructure.html">Basic HTML structure for bootstrap</a>
+        <a href="./responsiveclasses.html">Responsive classes</a>
+        <a href="./renderingimages.html">Rendering Images</a>
+        <a href="./gridsystem.html">The grid System</a>
+        <a href="./constructingdata.html">Constructing data entry forms</a>
+        <a href="./Packagedcomponents.html">Packaged components in bootstrap</a>
+        <a href="./Thepageheader.html">The page header</a>
+        <a href="./glyphicons.html">Glyphicons</a>
+        <a href="./navigationbar.html">The navigation bar</a>
+        <a href="./bagdes.html">Badges</a>
+        <a href="./alerts.html">Alerts</a>
+        <a href="./toolbarsandbuttongroups.html">Toolbars and button groups</a>
+        <a href="./panels.html">panels</a>
+            </div>
+
+    <!-- Main Content -->
+   
+
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">Using Alerts in Bootstrap</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>What are Alerts?</h2>
+                <p>Alerts in Bootstrap are components used to convey important information to the user. They can be used to display success messages, warnings, errors, or general information. Alerts are easily customizable, allowing you to adapt their styles and behaviors according to your needs.</p>
+            </section>
+    
+            <!-- Basic Alert Example -->
+            <section class="mb-5">
+                <h2>Basic Alert Example</h2>
+                <p>To create a basic alert, use the <code>.alert</code> class along with a contextual class such as <code>.alert-success</code> for a success message.</p>
+    
+                <h3>Example: Basic Alert</h3>
+                <pre>
+    &lt;div class="alert alert-success" role="alert"&gt;
+      This is a success alert—check it out!
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div class="alert alert-success" role="alert">
+                    This is a success alert—check it out!
+                </div>
+            </section>
+    
+            <!-- Different Alert Contexts -->
+            <section class="mb-5">
+                <h2>Different Alert Contexts</h2>
+                <p>Bootstrap provides several contextual classes to style alerts according to their purpose:</p>
+    
+                <h3>Example: Different Alert Contexts</h3>
+                <pre>
+    &lt;div class="alert alert-danger" role="alert"&gt;
+      This is a danger alert—check it out!
+    &lt;/div&gt;
+    
+    &lt;div class="alert alert-warning" role="alert"&gt;
+      This is a warning alert—check it out!
+    &lt;/div&gt;
+    
+    &lt;div class="alert alert-info" role="alert"&gt;
+      This is an info alert—check it out!
+    &lt;/div&gt;
+    
+    &lt;div class="alert alert-light" role="alert"&gt;
+      This is a light alert—check it out!
+    &lt;/div&gt;
+    
+    &lt;div class="alert alert-dark" role="alert"&gt;
+      This is a dark alert—check it out!
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div class="alert alert-danger" role="alert">
+                    This is a danger alert—check it out!
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    This is a warning alert—check it out!
+                </div>
+                <div class="alert alert-info" role="alert">
+                    This is an info alert—check it out!
+                </div>
+                <div class="alert alert-light" role="alert">
+                    This is a light alert—check it out!
+                </div>
+                <div class="alert alert-dark" role="alert">
+                    This is a dark alert—check it out!
+                </div>
+            </section>
+    
+            <!-- Dismissing Alerts -->
+            <section class="mb-5">
+                <h2>Dismissing Alerts</h2>
+                <p>Bootstrap alerts can be made dismissible, allowing users to close them. To create a dismissible alert, add the <code>.alert-dismissible</code> class and include a close button:</p>
+    
+                <h3>Example: Dismissible Alert</h3>
+                <pre>
+    &lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+      This is a warning alert that can be dismissed.
+      &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    This is a warning alert that can be dismissed.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </section>
+    
+            <!-- Alert Link Example -->
+            <section class="mb-5">
+                <h2>Alert with Link</h2>
+                <p>Alerts can include links or buttons for additional actions:</p>
+    
+                <h3>Example: Alert with Link</h3>
+                <pre>
+    &lt;div class="alert alert-info" role="alert"&gt;
+      This is an info alert with a link! &lt;a href="#" class="alert-link"&gt;Click here&lt;/a&gt; for more information.
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div class="alert alert-info" role="alert">
+                    This is an info alert with a link! <a href="#" class="alert-link">Click here</a> for more information.
+                </div>
+            </section>
+    
+            <!-- Summary Section -->
+            <section class="mb-5">
+                <h2>Summary</h2>
+                <p>Alerts are a powerful feature in Bootstrap, allowing developers to provide clear feedback to users about their actions. With customizable styles, dismissible options, and the ability to include links, alerts can significantly enhance user experience.</p>
+            </section>
+        </main>
+    </div>
+    
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

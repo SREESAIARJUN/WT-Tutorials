@@ -1,0 +1,221 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="./introtobootstrap.html">Getting started with bootstrap</a>
+        <a href="./creatingresponsivelayouts.html">Creating Responsive Layouts Using Bootstrap CSS </a>
+        <a href="./basichtmlstructure.html">Basic HTML structure for bootstrap</a>
+        <a href="./responsiveclasses.html">Responsive classes</a>
+        <a href="./renderingimages.html">Rendering Images</a>
+        <a href="./gridsystem.html">The grid System</a>
+        <a href="./constructingdata.html">Constructing data entry forms</a>
+        <a href="./Packagedcomponents.html">Packaged components in bootstrap</a>
+        <a href="./Thepageheader.html">The page header</a>
+        <a href="./glyphicons.html">Glyphicons</a>
+        <a href="./navigationbar.html">The navigation bar</a>
+        <a href="./bagdes.html">Badges</a>
+        <a href="./alerts.html">Alerts</a>
+        <a href="./toolbarsandbuttongroups.html">Toolbars and button groups</a>
+        <a href="./panels.html">panels</a>
+            </div>
+
+    <!-- Main Content -->
+   
+
+        
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">Using Icons in Bootstrap: Glyphicons</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>Introduction to Glyphicons</h2>
+                <p>Glyphicons are a set of small, scalable icons that were originally included with Bootstrap 3. They help enhance user interfaces by adding visual indicators and improving navigation. In Bootstrap 4 and 5, Glyphicons are no longer included, but other icon libraries like <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> or <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons</a> can be used instead.</p>
+                <p>Below, we’ll look at how to integrate icons using Font Awesome in Bootstrap projects, simulating the use of Glyphicons.</p>
+            </section>
+    
+            <!-- Setting Up Font Awesome -->
+            <section class="mb-5">
+                <h2>Setting Up Font Awesome</h2>
+                <p>To use Font Awesome in your project, you can add a link to the Font Awesome CDN in the <code>&lt;head&gt;</code> of your HTML document:</p>
+    
+                <h3>Example: Adding Font Awesome</h3>
+                <pre>
+    &lt;head&gt;
+        &lt;link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"&gt;
+    &lt;/head&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>&lt;link&gt;</code>: Adds a link to the Font Awesome CSS file, allowing you to use icons in your HTML.</li>
+                    <li><code>rel="stylesheet"</code>: Specifies that this is a stylesheet link.</li>
+                </ul>
+            </section>
+    
+            <!-- Using Icons in Buttons -->
+            <section class="mb-5">
+                <h2>Using Icons in Buttons</h2>
+                <p>Icons can make buttons more visually appealing and provide users with a quick understanding of the button's function. Here’s how to use icons from Font Awesome in buttons.</p>
+    
+                <h3>Example: Button with Icon</h3>
+                <pre>
+    &lt;button type="button" class="btn btn-primary"&gt;
+        &lt;i class="fas fa-download"&gt;&lt;/i&gt; Download
+    &lt;/button&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>&lt;i&gt;</code>: Represents an icon element, using Font Awesome's <code>fas fa-download</code> classes to display a download icon.</li>
+                    <li><code>btn btn-primary</code>: Bootstrap button classes to style the button.</li>
+                </ul>
+            </section>
+    
+            <!-- Using Icons in Navigation -->
+            <section class="mb-5">
+                <h2>Using Icons in Navigation</h2>
+                <p>Icons can also be useful in navigation bars to indicate different sections or actions.</p>
+    
+                <h3>Example: Navigation Item with Icon</h3>
+                <pre>
+    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;
+            &lt;i class="fas fa-home"&gt;&lt;/i&gt; Home
+        &lt;/a&gt;
+    &lt;/nav&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>&lt;nav&gt;</code>: Creates a navigation container.</li>
+                    <li><code>&lt;a&gt;</code>: Adds a navigation link with a home icon using the <code>fas fa-home</code> class from Font Awesome.</li>
+                </ul>
+            </section>
+    
+            <!-- Icon List Example -->
+            <section class="mb-5">
+                <h2>Icon List Example</h2>
+                <p>Icons are often used alongside list items to represent different categories or actions.</p>
+    
+                <h3>Example: List with Icons</h3>
+                <pre>
+    &lt;ul class="list-group"&gt;
+        &lt;li class="list-group-item"&gt;&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt; Task Completed&lt;/li&gt;
+        &lt;li class="list-group-item"&gt;&lt;i class="fas fa-times-circle"&gt;&lt;/i&gt; Task Pending&lt;/li&gt;
+    &lt;/ul&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>&lt;ul&gt;</code>: Creates an unordered list.</li>
+                    <li><code>&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt;</code>: Adds a Font Awesome check icon for completed tasks.</li>
+                    <li><code>&lt;i class="fas fa-times-circle"&gt;&lt;/i&gt;</code>: Adds a Font Awesome cross icon for pending tasks.</li>
+                </ul>
+            </section>
+    
+            <!-- Expected Output Section -->
+            <section class="mb-5">
+                <h2>Expected Output</h2>
+                <p>With these examples, your web application should have visually appealing icons that make navigation and action items more intuitive. You can see icons in buttons, navigation links, and lists.</p>
+                <p>Although Glyphicons are no longer included in Bootstrap by default, these examples show how to achieve similar functionality with Font Awesome.</p>
+            </section>
+        </main>
+    </div>
+    
+    
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

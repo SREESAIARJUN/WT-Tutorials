@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="./introtobootstrap.html">Getting started with bootstrap</a>
+        <a href="./creatingresponsivelayouts.html">Creating Responsive Layouts Using Bootstrap CSS </a>
+        <a href="./basichtmlstructure.html">Basic HTML structure for bootstrap</a>
+        <a href="./responsiveclasses.html">Responsive classes</a>
+        <a href="./renderingimages.html">Rendering Images</a>
+        <a href="./gridsystem.html">The grid System</a>
+        <a href="./constructingdata.html">Constructing data entry forms</a>
+        <a href="./Packagedcomponents.html">Packaged components in bootstrap</a>
+        <a href="./Thepageheader.html">The page header</a>
+        <a href="./glyphicons.html">Glyphicons</a>
+        <a href="./navigationbar.html">The navigation bar</a>
+        <a href="./bagdes.html">Badges</a>
+        <a href="./alerts.html">Alerts</a>
+        <a href="./toolbarsandbuttongroups.html">Toolbars and button groups</a>
+        <a href="./panels.html">panels</a>
+            </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">Rendering Images in Bootstrap</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>Introduction</h2>
+                <p>Bootstrap offers classes to make images responsive and styled effectively across different screen sizes. Using these classes, you can control how images scale and fit within the layout, ensuring they look consistent across devices.</p>
+                <p>In this section, we’ll cover Bootstrap’s responsive image class, rounded corners, circular images, and image alignment within a page.</p>
+            </section>
+    
+            <!-- Responsive Image Class Section -->
+            <section class="mb-5">
+                <h2>Responsive Images</h2>
+                <p>To make images responsive in Bootstrap, use the <code>.img-fluid</code> class. This class ensures that the image scales appropriately within its container, adjusting its width based on the screen size.</p>
+    
+                <h3>Example: Responsive Image</h3>
+                <pre>
+    &lt;div class="container"&gt;
+        &lt;img src="sample.jpg" class="img-fluid" alt="Sample Image"&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>.img-fluid</code>: Makes the image responsive, setting its <code>max-width</code> to <code>100%</code> and <code>height</code> to <code>auto</code>.</li>
+                    <li>The image will automatically scale to fit within its container without losing its aspect ratio.</li>
+                </ul>
+            </section>
+    
+            <!-- Image Shape Classes Section -->
+            <section class="mb-5">
+                <h2>Image Shapes</h2>
+                <p>Bootstrap includes classes for styling image shapes. Here are some options:</p>
+                <ul>
+                    <li><code>.rounded</code>: Adds small, rounded corners.</li>
+                    <li><code>.rounded-circle</code>: Makes the image circular.</li>
+                    <li><code>.img-thumbnail</code>: Adds a border around the image, giving it a thumbnail style.</li>
+                </ul>
+    
+                <h3>Example: Image Shapes</h3>
+                <pre>
+    &lt;div class="container"&gt;
+        &lt;img src="rounded.jpg" class="rounded img-fluid" alt="Rounded Image"&gt;
+        &lt;img src="circle.jpg" class="rounded-circle img-fluid" alt="Circular Image"&gt;
+        &lt;img src="thumbnail.jpg" class="img-thumbnail img-fluid" alt="Thumbnail Image"&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>.rounded</code>: Adds rounded corners to the image.</li>
+                    <li><code>.rounded-circle</code>: Crops the image to a circular shape.</li>
+                    <li><code>.img-thumbnail</code>: Styles the image as a thumbnail with a border.</li>
+                    <li>All images also have <code>.img-fluid</code> for responsiveness.</li>
+                </ul>
+            </section>
+    
+            <!-- Image Alignment Section -->
+            <section class="mb-5">
+                <h2>Image Alignment</h2>
+                <p>To align images within the content, Bootstrap provides helper classes for float-based alignment.</p>
+    
+                <h3>Example: Image Alignment</h3>
+                <pre>
+    &lt;div class="container"&gt;
+        &lt;img src="float-left.jpg" class="float-start img-fluid" alt="Left-aligned Image"&gt;
+        &lt;img src="float-right.jpg" class="float-end img-fluid" alt="Right-aligned Image"&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>.float-start</code>: Aligns the image to the left of its container.</li>
+                    <li><code>.float-end</code>: Aligns the image to the right of its container.</li>
+                    <li>Each image has <code>.img-fluid</code> to keep it responsive.</li>
+                </ul>
+            </section>
+    
+            <!-- Expected Output Section -->
+            <section class="mb-5">
+                <h2>Expected Output</h2>
+                <p>When using Bootstrap’s image classes, the images will scale to fit their containers and apply specified styles. Rounded and circular images will appear with the specified shape, and aligned images will float left or right as expected.</p>
+                <img src="image_rendering_output.png" alt="Expected Output Preview" class="img-fluid">
+            </section>
+        </main>
+    </div>
+    
+
+
+        
+
+            
+
+     
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

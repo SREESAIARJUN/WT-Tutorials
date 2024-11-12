@@ -1,0 +1,205 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+    <div class="sidebar" id="sidebar">
+        <a href="./introtobootstrap.html">Getting started with bootstrap</a>
+        <a href="./creatingresponsivelayouts.html">Creating Responsive Layouts Using Bootstrap CSS </a>
+        <a href="./basichtmlstructure.html">Basic HTML structure for bootstrap</a>
+        <a href="./responsiveclasses.html">Responsive classes</a>
+        <a href="./renderingimages.html">Rendering Images</a>
+        <a href="./gridsystem.html">The grid System</a>
+        <a href="./constructingdata.html">Constructing data entry forms</a>
+        <a href="./Packagedcomponents.html">Packaged components in bootstrap</a>
+        <a href="./Thepageheader.html">The page header</a>
+        <a href="./glyphicons.html">Glyphicons</a>
+        <a href="./navigationbar.html">The navigation bar</a>
+        <a href="./bagdes.html">Badges</a>
+        <a href="./alerts.html">Alerts</a>
+        <a href="./toolbarsandbuttongroups.html">Toolbars and button groups</a>
+        <a href="./panels.html">panels</a>
+            </div>
+
+
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">Using Badges in Bootstrap</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>What are Badges?</h2>
+                <p>Badges are lightweight components in Bootstrap that display a small count or label beside a parent element. They are commonly used to indicate unread messages, notifications, or to highlight specific information, enhancing the user interface of web applications.</p>
+            </section>
+    
+            <!-- Basic Badge Example -->
+            <section class="mb-5">
+                <h2>Basic Badge Example</h2>
+                <p>The simplest way to use badges is to add the <code>.badge</code> class to an element. Here’s how to create a basic badge:</p>
+    
+                <h3>Example: Basic Badge</h3>
+                <pre>
+    &lt;span class="badge bg-primary"&gt;New&lt;/span&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <p>This will render a blue badge displaying the text "New".</p>
+                <span class="badge bg-primary">New</span>
+            </section>
+    
+            <!-- Badge Variants -->
+            <section class="mb-5">
+                <h2>Badge Variants</h2>
+                <p>Bootstrap provides several contextual classes to style badges, allowing you to change their colors according to the context:</p>
+    
+                <h3>Example: Badge Variants</h3>
+                <pre>
+    &lt;span class="badge bg-secondary"&gt;Secondary&lt;/span&gt;
+    &lt;span class="badge bg-success"&gt;Success&lt;/span&gt;
+    &lt;span class="badge bg-danger"&gt;Danger&lt;/span&gt;
+    &lt;span class="badge bg-warning text-dark"&gt;Warning&lt;/span&gt;
+    &lt;span class="badge bg-info text-dark"&gt;Info&lt;/span&gt;
+    &lt;span class="badge bg-light text-dark"&gt;Light&lt;/span&gt;
+    &lt;span class="badge bg-dark"&gt;Dark&lt;/span&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    <span class="badge bg-secondary">Secondary</span>
+                    <span class="badge bg-success">Success</span>
+                    <span class="badge bg-danger">Danger</span>
+                    <span class="badge bg-warning text-dark">Warning</span>
+                    <span class="badge bg-info text-dark">Info</span>
+                    <span class="badge bg-light text-dark">Light</span>
+                    <span class="badge bg-dark">Dark</span>
+                </div>
+            </section>
+    
+            <!-- Badges with Links -->
+            <section class="mb-5">
+                <h2>Badges with Links</h2>
+                <p>You can also use badges as part of a link by wrapping them in anchor tags:</p>
+    
+                <h3>Example: Badge in a Link</h3>
+                <pre>
+    &lt;a href="#" class="badge bg-primary"&gt;Inbox &lt;span class="badge bg-light text-dark"&gt;4&lt;/span&gt;&lt;/a&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <p>This will create a badge that acts as a link, showing a count of items in the inbox:</p>
+                <a href="#" class="badge bg-primary">Inbox <span class="badge bg-light text-dark">4</span></a>
+            </section>
+    
+            <!-- Pill Badges -->
+            <section class="mb-5">
+                <h2>Pill Badges</h2>
+                <p>Pill badges have rounded corners, providing a different aesthetic. You can achieve this by adding the <code>.rounded-pill</code> class:</p>
+    
+                <h3>Example: Pill Badge</h3>
+                <pre>
+    &lt;span class="badge rounded-pill bg-success"&gt;Pill Badge&lt;/span&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <span class="badge rounded-pill bg-success">Pill Badge</span>
+            </section>
+    
+            <!-- Summary Section -->
+            <section class="mb-5">
+                <h2>Summary</h2>
+                <p>Bootstrap badges are a versatile tool for displaying small counts and labels. They can be used in various ways, including as standalone elements, part of links, and with different styles and sizes to fit your design needs.</p>
+            </section>
+        </main>
+    </div>
+    
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

@@ -1,0 +1,287 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="./introtobootstrap.html">Getting started with bootstrap</a>
+        <a href="./creatingresponsivelayouts.html">Creating Responsive Layouts Using Bootstrap CSS </a>
+        <a href="./basichtmlstructure.html">Basic HTML structure for bootstrap</a>
+        <a href="./responsiveclasses.html">Responsive classes</a>
+        <a href="./renderingimages.html">Rendering Images</a>
+        <a href="./gridsystem.html">The grid System</a>
+        <a href="./constructingdata.html">Constructing data entry forms</a>
+        <a href="./Packagedcomponents.html">Packaged components in bootstrap</a>
+        <a href="./Thepageheader.html">The page header</a>
+        <a href="./glyphicons.html">Glyphicons</a>
+        <a href="./navigationbar.html">The navigation bar</a>
+        <a href="./bagdes.html">Badges</a>
+        <a href="./alerts.html">Alerts</a>
+        <a href="./toolbarsandbuttongroups.html">Toolbars and button groups</a>
+        <a href="./panels.html">panels</a>
+            </div>
+
+    <!-- Main Content -->
+   
+
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">Packaged Components in Bootstrap</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>Introduction</h2>
+                <p>Bootstrap offers a variety of packaged components designed to streamline the creation of common web elements. These pre-styled, functional components allow developers to build complex interfaces quickly.</p>
+                <p>In this tutorial, we’ll explore several key components: buttons, modals, navigation bars, carousels, and alerts.</p>
+            </section>
+    
+            <!-- Buttons Section -->
+            <section class="mb-5">
+                <h2>Buttons</h2>
+                <p>Bootstrap provides different button styles to suit various purposes. You can use classes like <code>.btn-primary</code>, <code>.btn-secondary</code>, and more for color variations.</p>
+    
+                <h3>Example: Button Styles</h3>
+                <pre>
+    &lt;button type="button" class="btn btn-primary"&gt;Primary Button&lt;/button&gt;
+    &lt;button type="button" class="btn btn-secondary"&gt;Secondary Button&lt;/button&gt;
+    &lt;button type="button" class="btn btn-success"&gt;Success Button&lt;/button&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>.btn</code>: Applies basic Bootstrap button styling.</li>
+                    <li><code>.btn-primary</code>, <code>.btn-secondary</code>, etc.: Define button colors and importance level.</li>
+                </ul>
+            </section>
+    
+            <!-- Modals Section -->
+            <section class="mb-5">
+                <h2>Modals</h2>
+                <p>Modals are pop-up dialogues that require user interaction. Bootstrap modals are easy to create and manage with attributes like <code>data-bs-toggle</code> and <code>data-bs-target</code>.</p>
+    
+                <h3>Example: Basic Modal</h3>
+                <pre>
+    &lt;button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt;
+        Launch Modal
+    &lt;/button&gt;
+    
+    &lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+        &lt;div class="modal-dialog"&gt;
+            &lt;div class="modal-content"&gt;
+                &lt;div class="modal-header"&gt;
+                    &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Modal Title&lt;/h5&gt;
+                    &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="modal-body"&gt;
+                    This is a Bootstrap modal example.
+                &lt;/div&gt;
+                &lt;div class="modal-footer"&gt;
+                    &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                    &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>data-bs-toggle="modal"</code> and <code>data-bs-target="#exampleModal"</code>: Activate the modal and specify its ID.</li>
+                    <li><code>.modal-content</code>: The main container for modal content.</li>
+                    <li><code>.btn-close</code>: Provides a close button.</li>
+                </ul>
+            </section>
+    
+            <!-- Navigation Bars Section -->
+            <section class="mb-5">
+                <h2>Navigation Bars</h2>
+                <p>Bootstrap’s navbar component is useful for creating responsive navigation headers. You can easily integrate links, toggles, and brand names.</p>
+    
+                <h3>Example: Basic Navbar</h3>
+                <pre>
+    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;Brand&lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+            &lt;ul class="navbar-nav"&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;Features&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;Pricing&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>.navbar-expand-lg</code>: Navbar becomes collapsible on smaller screens.</li>
+                    <li><code>.navbar-light</code> and <code>bg-light</code>: Set navbar color and background.</li>
+                    <li><code>data-bs-toggle="collapse"</code>: Toggles the navbar items on small screens.</li>
+                </ul>
+            </section>
+    
+            <!-- Carousel Section -->
+            <section class="mb-5">
+                <h2>Carousel</h2>
+                <p>The Bootstrap carousel component creates a slideshow with images or text, supporting captions and controls.</p>
+    
+                <h3>Example: Basic Carousel</h3>
+                <pre>
+    &lt;div id="carouselExample" class="carousel slide" data-bs-ride="carousel"&gt;
+        &lt;div class="carousel-inner"&gt;
+            &lt;div class="carousel-item active"&gt;
+                &lt;img src="image1.jpg" class="d-block w-100" alt="First slide"&gt;
+            &lt;/div&gt;
+            &lt;div class="carousel-item"&gt;
+                &lt;img src="image2.jpg" class="d-block w-100" alt="Second slide"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"&gt;
+            &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"&gt;
+            &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>.carousel</code> and <code>.carousel-inner</code>: Main structure for the carousel and the slides.</li>
+                    <li><code>.carousel-control-prev</code> and <code>.carousel-control-next</code>: Buttons for navigating between slides.</li>
+                    <li><code>.carousel-item</code>: Each individual slide.</li>
+                </ul>
+            </section>
+    
+            <!-- Alerts Section -->
+            <section class="mb-5">
+                <h2>Alerts</h2>
+                <p>Bootstrap alerts allow you to display messages in various colors to capture the user’s attention.</p>
+    
+                <h3>Example: Alerts</h3>
+                <pre>
+    &lt;div class="alert alert-primary" role="alert"&gt;
+        This is a primary alert—check it out!
+    &lt;/div&gt;
+    &lt;div class="alert alert-danger" role="alert"&gt;
+        This is a danger alert—be careful!
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>.alert</code>: Basic alert styling.</li>
+                    <li><code>.alert-primary</code>, <code>.alert-danger</code>: Color-coded alert types.</li>
+                </ul>
+            </section>
+    
+            <!-- Expected Output Section -->
+            <section class="mb-5">
+                <h2>Expected Output</h2>
+                <p>The components above offer a range of interactive and informative elements for any webpage. Below
+    
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

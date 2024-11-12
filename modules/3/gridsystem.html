@@ -1,0 +1,246 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="./introtobootstrap.html">Getting started with bootstrap</a>
+        <a href="./creatingresponsivelayouts.html">Creating Responsive Layouts Using Bootstrap CSS </a>
+        <a href="./basichtmlstructure.html">Basic HTML structure for bootstrap</a>
+        <a href="./responsiveclasses.html">Responsive classes</a>
+        <a href="./renderingimages.html">Rendering Images</a>
+        <a href="./gridsystem.html">The grid System</a>
+        <a href="./constructingdata.html">Constructing data entry forms</a>
+        <a href="./Packagedcomponents.html">Packaged components in bootstrap</a>
+        <a href="./Thepageheader.html">The page header</a>
+        <a href="./glyphicons.html">Glyphicons</a>
+        <a href="./navigationbar.html">The navigation bar</a>
+        <a href="./bagdes.html">Badges</a>
+        <a href="./alerts.html">Alerts</a>
+        <a href="./toolbarsandbuttongroups.html">Toolbars and button groups</a>
+        <a href="./panels.html">panels</a>
+            </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">The Bootstrap Grid System</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>Introduction</h2>
+                <p>The Bootstrap grid system allows developers to create responsive and adaptive layouts for websites. It’s based on a 12-column layout, which can be divided into columns of varying sizes to suit the content and screen size.</p>
+                <p>Using the grid system, we can arrange content in columns and rows, controlling layout with simple classes for different screen sizes.</p>
+            </section>
+    
+            <!-- Grid Structure Overview -->
+            <section class="mb-5">
+                <h2>Basic Grid Structure</h2>
+                <p>The grid system uses containers, rows, and columns to align and organize content. Here’s how each part functions:</p>
+                <ul>
+                    <li><code>&lt;div class="container"&gt;</code>: A container for the grid, providing padding and centering the content.</li>
+                    <li><code>&lt;div class="row"&gt;</code>: Defines a row within the grid. All columns must be inside a row.</li>
+                    <li><code>&lt;div class="col"&gt;</code>: Represents a column. Columns are by default 12 units wide but can be customized to fit various screen sizes.</li>
+                </ul>
+    
+                <h3>Example: Basic Grid Layout</h3>
+                <pre>
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col"&gt;Column 1&lt;/div&gt;
+            &lt;div class="col"&gt;Column 2&lt;/div&gt;
+            &lt;div class="col"&gt;Column 3&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li>The <code>.row</code> class wraps the columns and creates a horizontal group of columns.</li>
+                    <li>Each <code>.col</code> takes up equal space by default, adjusting automatically within the row.</li>
+                </ul>
+            </section>
+    
+            <!-- Column Widths and Breakpoints Section -->
+            <section class="mb-5">
+                <h2>Column Widths and Breakpoints</h2>
+                <p>Bootstrap provides classes to control column width based on screen size. These classes are applied in the format <code>.col-[size]-[number]</code>, where:</p>
+                <ul>
+                    <li><code>size</code> is the screen size: <code>sm</code> (small), <code>md</code> (medium), <code>lg</code> (large), <code>xl</code> (extra-large).</li>
+                    <li><code>number</code> is the number of columns (1 to 12).</li>
+                </ul>
+    
+                <h3>Example: Responsive Columns</h3>
+                <pre>
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-12 col-md-8"&gt;Main Content&lt;/div&gt;
+            &lt;div class="col-6 col-md-4"&gt;Sidebar&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>col-12</code>: On extra-small screens, the first column takes up the full width.</li>
+                    <li><code>col-md-8</code>: On medium screens and above, it takes 8 columns (two-thirds of the row).</li>
+                    <li><code>col-6</code>: The second column is half-width on extra-small screens, or <code>col-md-4</code> (one-third) on medium and larger screens.</li>
+                </ul>
+            </section>
+    
+            <!-- Nesting Columns Section -->
+            <section class="mb-5">
+                <h2>Nesting Columns</h2>
+                <p>Columns can also be nested within each other to create more complex layouts. This is useful for organizing content into sub-grids.</p>
+    
+                <h3>Example: Nested Columns</h3>
+                <pre>
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-6"&gt;
+                Column 1
+                &lt;div class="row"&gt;
+                    &lt;div class="col-6"&gt;Nested Column 1&lt;/div&gt;
+                    &lt;div class="col-6"&gt;Nested Column 2&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-6"&gt;Column 2&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li>The first column is divided further into two nested columns, each taking half of its parent’s width.</li>
+                    <li>This creates a layout with sub-sections within the main grid structure.</li>
+                </ul>
+            </section>
+    
+            <!-- Offset Columns Section -->
+            <section class="mb-5">
+                <h2>Offsetting Columns</h2>
+                <p>Offsets in Bootstrap allow spacing or "offsetting" columns from the start. You can use classes like <code>.offset-md-*</code> to push columns to the right.</p>
+    
+                <h3>Example: Offset Columns</h3>
+                <pre>
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-md-4 offset-md-4"&gt;Centered Column&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>offset-md-4</code>: Pushes the column 4 units to the right, centering it within the row.</li>
+                    <li>This is useful for centering or spacing out elements.</li>
+                </ul>
+            </section>
+    
+            <!-- Expected Output Section -->
+            <section class="mb-5">
+                <h2>Expected Output</h2>
+                <p>With the Bootstrap grid system, the layout will adjust based on screen size, as shown in the examples above. Nested columns, offsets, and custom widths provide flexibility for complex layouts.</p>
+                <img src="grid_system_output.png" alt="Expected Output Preview" class="img-fluid">
+            </section>
+        </main>
+    </div>
+     
+
+        
+  
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

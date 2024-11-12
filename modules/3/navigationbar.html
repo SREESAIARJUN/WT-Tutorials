@@ -1,0 +1,260 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="./introtobootstrap.html">Getting started with bootstrap</a>
+        <a href="./creatingresponsivelayouts.html">Creating Responsive Layouts Using Bootstrap CSS </a>
+        <a href="./basichtmlstructure.html">Basic HTML structure for bootstrap</a>
+        <a href="./responsiveclasses.html">Responsive classes</a>
+        <a href="./renderingimages.html">Rendering Images</a>
+        <a href="./gridsystem.html">The grid System</a>
+        <a href="./constructingdata.html">Constructing data entry forms</a>
+        <a href="./Packagedcomponents.html">Packaged components in bootstrap</a>
+        <a href="./Thepageheader.html">The page header</a>
+        <a href="./glyphicons.html">Glyphicons</a>
+        <a href="./navigationbar.html">The navigation bar</a>
+        <a href="./bagdes.html">Badges</a>
+        <a href="./alerts.html">Alerts</a>
+        <a href="./toolbarsandbuttongroups.html">Toolbars and button groups</a>
+        <a href="./panels.html">panels</a>
+            </div>
+
+    <!-- Main Content -->
+   
+
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">Creating a Navigation Bar with Bootstrap</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>Introduction to Bootstrap Navigation Bars</h2>
+                <p>The navigation bar (navbar) is an essential component for structuring the layout and guiding users through your site. Bootstrap's <code>navbar</code> component provides a fully customizable, responsive navbar that automatically adapts to different screen sizes.</p>
+            </section>
+    
+            <!-- Basic Navbar Example -->
+            <section class="mb-5">
+                <h2>Basic Navbar Structure</h2>
+                <p>The following example shows a simple navigation bar using Bootstrap's classes. This includes a brand, navigation links, and a responsive toggle for smaller screens.</p>
+    
+                <h3>Example: Basic Navbar</h3>
+                <pre>
+    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;MyWebsite&lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+            &lt;ul class="navbar-nav"&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link active" href="#"&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;Services&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;Contact&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;</code>: Creates a light-colored navigation bar that expands on large screens (<code>lg</code>).</li>
+                    <li><code>&lt;a class="navbar-brand"&gt;</code>: Specifies the brand name or logo.</li>
+                    <li><code>&lt;button class="navbar-toggler"&gt;</code>: Adds a toggle button that appears on smaller screens for collapsing the navbar.</li>
+                    <li><code>&lt;div class="collapse navbar-collapse"&gt;</code>: Wraps the navigation items to allow them to collapse on smaller screens.</li>
+                    <li><code>&lt;ul class="navbar-nav"&gt;</code>: A container for each navigation link.</li>
+                </ul>
+            </section>
+    
+            <!-- Navbar with Dropdowns -->
+            <section class="mb-5">
+                <h2>Adding Dropdown Menus</h2>
+                <p>Dropdowns in a navbar are useful for creating additional sub-menus. Here’s an example with a dropdown menu for "Services".</p>
+    
+                <h3>Example: Navbar with Dropdown</h3>
+                <pre>
+    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;MyWebsite&lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarNavDropdown"&gt;
+            &lt;ul class="navbar-nav"&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link active" href="#"&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item dropdown"&gt;
+                    &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"&gt;Services&lt;/a&gt;
+                    &lt;ul class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Web Development&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Graphic Design&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;SEO&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;Contact&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>&lt;li class="nav-item dropdown"&gt;</code>: Adds a dropdown item in the navigation.</li>
+                    <li><code>&lt;a class="dropdown-toggle" data-bs-toggle="dropdown"&gt;</code>: Creates a toggle link for the dropdown menu.</li>
+                    <li><code>&lt;ul class="dropdown-menu"&gt;</code>: Contains each dropdown menu item.</li>
+                    <li><code>aria-labelledby="navbarDropdown"</code>: Links the dropdown menu to its toggle for accessibility.</li>
+                </ul>
+            </section>
+    
+            <!-- Navbar with Right-Aligned Links -->
+            <section class="mb-5">
+                <h2>Right-Aligned Links</h2>
+                <p>In some cases, you may want certain navigation links to appear on the right side of the navbar. This is done by adding the <code>ms-auto</code> class to the container of these items.</p>
+    
+                <h3>Example: Right-Aligned Navbar</h3>
+                <pre>
+    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+        &lt;a class="navbar-brand" href="#"&gt;MyWebsite&lt;/a&gt;
+        &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"&gt;
+            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
+            &lt;ul class="navbar-nav me-auto"&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link active" href="#"&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul class="navbar-nav ms-auto"&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;Login&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="nav-item"&gt;
+                    &lt;a class="nav-link" href="#"&gt;Register&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+                </pre>
+    
+                <h4>Explanation</h4>
+                <ul>
+                    <li><code>me-auto</code>: Aligns the first set of items to the left.</li>
+                    <li><code>ms-auto</code>: Aligns the second set of items to the right.</li>
+                </ul>
+            </section>
+    
+            <!-- Expected Output Section -->
+            <section class="mb-5">
+                <h2>Expected Output</h2>
+                <p>With these examples, your navigation bar should be fully responsive and include multiple sections, dropdown menus, and options aligned as needed. Try resizing the browser window to see how it adapts.</p>
+            </section>
+        </main>
+    </div>
+    
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>
