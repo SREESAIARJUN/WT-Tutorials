@@ -1,0 +1,279 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!--Editable section starts-->
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="./Intro to CSS.html">Intro to CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./CSS Selectors.html">CSS Selectors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Inserting CSS in an HTML document.html">Inserting CSS in an HTML document</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Backgrounds.html">Backgrounds</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Fonts and Text Styles.html">Fonts and Text Styles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Creating Boxes.html">Creating Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Displaying.html">Displaying</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Positioning and Floating Elements.html">Positioning and Floating Elements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Features of CSS3.html">Features of CSS3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Media Queries.html                                     ">Media Queries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Overview of JavaScript.html">Overview of JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Functions.html">JavaScript Functions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Image maps and Animations.html">Image Maps and Animations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Objects.html">JavaScript Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Working with Browser and Document Objects.html">Working with Browser and Document Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to JQuery.html">Intro to JQuery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JQuery Selectors and Events.html">JQuery Selectors and Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Methods to access HTML Elements and Attributes.html">Methods to access HTML elements and attributes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to AJAX.html">Intro to AJAX</a></li>
+                </ul>
+            </div>
+        </nav>
+  <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Inserting CSS in an HTML Document</h1>
+            </div>
+
+            <section id="topic3" class="mb-5">
+                <h2>Comprehensive Explanation</h2>
+                <p>There are three main ways to insert CSS into an HTML document:</p>
+                <ol>
+                    <li>Inline CSS</li>
+                    <li>Internal CSS</li>
+                    <li>External CSS</li>
+                </ol>
+                <p>Each method has its own use cases and advantages. Let's explore each of these methods in detail.</p>
+            </section>
+
+            <section class="mb-5">
+                <h3>1. Inline CSS</h3>
+                <p>Inline CSS is used to apply unique styles to individual HTML elements. It uses the <code>style</code> attribute of HTML elements.</p>
+                
+                <h4>Example:</h4>
+                <pre><code class="language-html">
+&lt;p style="color: blue; font-size: 18px;"&gt;This is a paragraph with inline CSS.&lt;/p&gt;
+                </code></pre>
+                
+                <h4>Pros:</h4>
+                <ul>
+                    <li>Quickly apply styles to a single element</li>
+                    <li>Useful for testing or quick fixes</li>
+                </ul>
+                
+                <h4>Cons:</h4>
+                <ul>
+                    <li>Mixes content with presentation</li>
+                    <li>Difficult to maintain for larger projects</li>
+                    <li>Increases HTML file size</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3>2. Internal CSS</h3>
+                <p>Internal CSS is placed in the <code>&lt;head&gt;</code> section of an HTML document using the <code>&lt;style&gt;</code> tag.</p>
+                
+                <h4>Example:</h4>
+                <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Internal CSS Example&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: navy;
+        }
+        p {
+            line-height: 1.6;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Page&lt;/h1&gt;
+    &lt;p&gt;This page uses internal CSS for styling.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+                
+                <h4>Pros:</h4>
+                <ul>
+                    <li>No need for external files</li>
+                    <li>Good for single-page websites</li>
+                </ul>
+                
+                <h4>Cons:</h4>
+                <ul>
+                    <li>Increases HTML file size</li>
+                    <li>Styles can't be reused across multiple pages</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3>3. External CSS</h3>
+                <p>External CSS involves creating a separate CSS file and linking it to your HTML document. This is the most common and preferred method for larger projects.</p>
+                
+                <h4>Example:</h4>
+                <p>First, create a CSS file (e.g., <code>styles.css</code>):</p>
+                <pre><code class="language-css">
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+h1 {
+    color: navy;
+}
+p {
+    line-height: 1.6;
+}
+                </code></pre>
+                
+                <p>Then, link the CSS file in your HTML document:</p>
+                <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;External CSS Example&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Page&lt;/h1&gt;
+    &lt;p&gt;This page uses external CSS for styling.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+                
+                <h4>Pros:</h4>
+                <ul>
+                    <li>Separates content from presentation</li>
+                    <li>Styles can be reused across multiple pages</li>
+                    <li>Easier to maintain and update</li>
+                    <li>Reduced HTML file size</li>
+                    <li>Browser caching can improve load times</li>
+                </ul>
+                
+                <h4>Cons:</h4>
+                <ul>
+                    <li>Requires an additional HTTP request to load the CSS file</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Use external CSS for most projects, especially larger ones</li>
+                    <li>Use internal CSS for small, single-page websites or when you need page-specific styles</li>
+                    <li>Use inline CSS sparingly, only for unique, one-off styling needs</li>
+                    <li>Consider using a CSS preprocessor like Sass or Less for more complex projects</li>
+                    <li>Organize your CSS files logically, grouping related styles together</li>
+                    <li>Use comments in your CSS to explain complex rules or sections</li>
+                    <li>Minimize the use of !important declarations, as they can make stylesheets difficult to maintain</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Conclusion</h2>
+                <p>Choosing the right method to insert CSS into your HTML document depends on your project's size, complexity, and specific requirements. For most projects, external CSS is the recommended approach due to its flexibility and maintainability. However, understanding all three methods will allow you to choose the best option for each situation you encounter in web development.</p>
+            </section>
+        </main>
+    </div>
+</div>
+
+<!--Editable section ends-->
+<button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+    <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+</button>
+
+<div id="chatbot" class="chatbot-container" style="display: none;">
+    <div class="chatbot-header">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+        <h3>Web Tech Assistant</h3>
+        <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+    <div class="chatbot-input">
+        <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+        <button id="sendMessage" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="dark-mode.js"></script>
+<script src="chatbot.js"></script>
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

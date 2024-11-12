@@ -1,0 +1,228 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!--Editable section starts-->
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="./Intro to CSS.html">Intro to CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./CSS Selectors.html">CSS Selectors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Inserting CSS in an HTML document.html">Inserting CSS in an HTML document</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Backgrounds.html">Backgrounds</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Fonts and Text Styles.html">Fonts and Text Styles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Creating Boxes.html">Creating Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Displaying.html">Displaying</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Positioning and Floating Elements.html">Positioning and Floating Elements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Features of CSS3.html">Features of CSS3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Media Queries.html                                     ">Media Queries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Overview of JavaScript.html">Overview of JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Functions.html">JavaScript Functions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Image maps and Animations.html">Image Maps and Animations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Objects.html">JavaScript Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Working with Browser and Document Objects.html">Working with Browser and Document Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to JQuery.html">Intro to JQuery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JQuery Selectors and Events.html">JQuery Selectors and Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Methods to access HTML Elements and Attributes.html">Methods to access HTML elements and attributes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to AJAX.html">Intro to AJAX</a></li>
+                </ul>
+            </div>
+        </nav>
+
+  <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Methods to access HTML Elements and Attributes</h1>
+            </div>
+
+            <section id="topic19" class="mb-5">
+                <h2>Comprehensive Explanation</h2>
+                <p>Accessing and manipulating HTML elements and their attributes is a fundamental aspect of web development. JavaScript provides several methods and properties to interact with the Document Object Model (DOM), which represents the structure of an HTML document. Let's explore the most commonly used techniques:</p>
+            </section>
+
+            <section class="mb-5">
+                <h3>Accessing HTML Elements</h3>
+                <p>There are several ways to access HTML elements using JavaScript:</p>
+                <ul>
+                    <li><strong>getElementById():</strong> Retrieves an element with a specific ID.</li>
+                    <li><strong>getElementsByTagName():</strong> Retrieves a collection of elements with a specific tag name.</li>
+                    <li><strong>getElementsByClassName():</strong> Retrieves a collection of elements with a specific class name.</li>
+                    <li><strong>querySelector():</strong> Retrieves the first element that matches a specified CSS selector.</li>
+                    <li><strong>querySelectorAll():</strong> Retrieves a collection of elements that match a specified CSS selector.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3>Accessing HTML Attributes</h3>
+                <p>Once you've selected an HTML element, you can access and manipulate its attributes using the following properties and methods:</p>
+                <ul>
+                    <li><strong>element.getAttribute()</strong>: Retrieves the value of a specified attribute.</li>
+                    <li><strong>element.setAttribute()</strong>: Sets the value of a specified attribute.</li>
+                    <li><strong>element.hasAttribute()</strong>: Checks if an element has a specified attribute.</li>
+                    <li><strong>element.removeAttribute()</strong>: Removes a specified attribute from an element.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3>Line-by-Line Code Examples</h3>
+                <pre><code class="language-javascript">
+// Accessing an element by ID
+const heading = document.getElementById('mainHeading');
+console.log(heading.textContent); // Output: "Welcome to my website!"
+
+// Accessing elements by tag name
+const paragraphs = document.getElementsByTagName('p');
+for (let i = 0; i < paragraphs.length; i++) {
+  console.log(paragraphs[i].textContent);
+}
+
+// Accessing elements by class name
+const highlightedElements = document.getElementsByClassName('highlighted');
+highlightedElements[0].style.backgroundColor = 'yellow';
+
+// Accessing an element using querySelector()
+const firstParagraph = document.querySelector('p');
+console.log(firstParagraph.textContent);
+
+// Accessing multiple elements using querySelectorAll()
+const allParagraphs = document.querySelectorAll('p');
+allParagraphs.forEach(paragraph => {
+  console.log(paragraph.textContent);
+});
+
+// Accessing and modifying an attribute
+const image = document.getElementById('mainImage');
+console.log(image.getAttribute('src')); // Output: "image.jpg"
+image.setAttribute('alt', 'Main Image');
+</code></pre>
+            </section>
+
+            <section class="mb-5">
+                <h3>Expected Outputs</h3>
+                <p>The code examples provided will result in the following outputs:</p>
+                <ul>
+                    <li>The text content of the element with the ID "mainHeading" will be logged to the console.</li>
+                    <li>The text content of all &lt;p&gt; elements on the page will be logged to the console.</li>
+                    <li>The background color of the first element with the class "highlighted" will be set to yellow.</li>
+                    <li>The text content of the first &lt;p&gt; element on the page will be logged to the console.</li>
+                    <li>The text content of all &lt;p&gt; elements on the page will be logged to the console.</li>
+                    <li>The "src" attribute of the element with the ID "mainImage" will be logged to the console, and the "alt" attribute will be set to "Main Image".</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3>Best Practices</h3>
+                <ul>
+                    <li>Use the most specific selector possible to improve performance and maintainability.</li>
+                    <li>Prefer <code>querySelector()</code> and <code>querySelectorAll()</code> over older methods like <code>getElementById()</code> and <code>getElementsByTagName()</code> for better flexibility and support.</li>
+                    <li>Avoid using <code>document.write()</code> to modify the DOM, as it can lead to unexpected behavior and security issues.</li>
+                    <li>Cache frequently accessed DOM elements to improve performance and avoid repeated lookups.</li>
+                    <li>Use event delegation to efficiently handle events on dynamic elements.</li>
+                    <li>Validate user input and sanitize data before updating the DOM to prevent XSS vulnerabilities.</li>
+                    <li>Consider using a JavaScript framework or library like React, Angular, or Vue.js for more complex DOM manipulation tasks.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3>Conclusion</h3>
+                <p>Mastering the methods to access and manipulate HTML elements and attributes is a crucial skill for web developers. By understanding the various selection techniques and attribute management methods provided by JavaScript, you can effectively interact with the DOM and create dynamic, responsive, and secure web applications.</p>
+            </section>
+        </main>
+    </div>
+</div>
+
+<!--Editable section ends-->
+
+<button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+    <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+</button>
+
+<div id="chatbot" class="chatbot-container" style="display: none;">
+    <div class="chatbot-header">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+        <h3>Web Tech Assistant</h3>
+        <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+    <div class="chatbot-input">
+        <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+        <button id="sendMessage" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="dark-mode.js"></script>
+<script src="chatbot.js"></script>
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

@@ -1,0 +1,231 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!--Editable section starts-->
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="./Intro to CSS.html">Intro to CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./CSS Selectors.html">CSS Selectors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Inserting CSS in an HTML document.html">Inserting CSS in an HTML document</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Backgrounds.html">Backgrounds</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Fonts and Text Styles.html">Fonts and Text Styles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Creating Boxes.html">Creating Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Displaying.html">Displaying</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Positioning and Floating Elements.html">Positioning and Floating Elements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Features of CSS3.html">Features of CSS3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Media Queries.html                                     ">Media Queries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Overview of JavaScript.html">Overview of JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Functions.html">JavaScript Functions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Image maps and Animations.html">Image Maps and Animations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Objects.html">JavaScript Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Working with Browser and Document Objects.html">Working with Browser and Document Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to JQuery.html">Intro to JQuery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JQuery Selectors and Events.html">JQuery Selectors and Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Methods to access HTML Elements and Attributes.html">Methods to access HTML elements and attributes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to AJAX.html">Intro to AJAX</a></li>
+                </ul>
+            </div>
+        </nav>
+
+   <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Introduction to AJAX</h1>
+            </div>
+
+            <section id="topic20" class="mb-5">
+                <h2>Comprehensive Explanation</h2>
+                <p>AJAX (Asynchronous JavaScript and XML) is a set of web development techniques that allow web applications to update their user interface without requiring a full page refresh. This is achieved by exchanging small amounts of data with the server behind the scenes, allowing the web page to update dynamically without interrupting the user's experience.</p>
+                
+                <p>AJAX is a crucial technology for building modern, responsive, and interactive web applications. It enables features such as:</p>
+                <ul>
+                    <li>Autocomplete suggestions</li>
+                    <li>Real-time updates (e.g., chat applications, social media feeds)</li>
+                    <li>Partial page updates (e.g., loading new content without refreshing the entire page)</li>
+                    <li>Form validation and submission without page reload</li>
+                </ul>
+                
+                <p>AJAX is typically implemented using a combination of technologies, including:</p>
+                <ul>
+                    <li>JavaScript (for client-side functionality)</li>
+                    <li>XMLHttpRequest (or the newer Fetch API) to make asynchronous requests to the server</li>
+                    <li>Server-side technologies (e.g., PHP, Node.js, Ruby on Rails) to handle the server-side logic and data processing</li>
+                    <li>Data formats like XML, JSON, or plain text to exchange data between the client and server</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Line-by-Line Code Examples</h2>
+                <h3>Basic AJAX Example Using XMLHttpRequest</h3>
+                <pre><code class="language-javascript">
+// JavaScript code to make an AJAX request
+function loadData() {
+    // Create a new XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+
+    // Define the request details
+    xhr.open('GET', 'data.php', true);
+
+    // Define the callback function to handle the response
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // Update the DOM with the response data
+            document.getElementById('content').innerHTML = xhr.responseText;
+        }
+    };
+
+    // Send the request
+    xhr.send();
+}
+</code></pre>
+
+<h3>Line-by-Line Explanation</h3>
+<ol>
+    <li><code>const xhr = new XMLHttpRequest();</code>: Creates a new XMLHttpRequest object to make the AJAX request.</li>
+    <li><code>xhr.open('GET', 'data.php', true);</code>: Defines the request method (GET), the URL of the server-side script (data.php), and sets the request to be asynchronous (true).</li>
+    <li><code>xhr.onreadystatechange = function() { ... };</code>: Defines a callback function to handle the server's response. The function is executed whenever the readyState property of the XMLHttpRequest object changes.</li>
+    <li><code>if (xhr.readyState === 4 && xhr.status === 200) { ... };</code>: Checks if the request has completed successfully (readyState 4 indicates the request is done, and status 200 indicates a successful HTTP response).</li>
+    <li><code>document.getElementById('content').innerHTML = xhr.responseText;</code>: Updates the content of an HTML element with the server's response data.</li>
+    <li><code>xhr.send();</code>: Sends the AJAX request to the server.
+</ol>
+
+<h3>Expected Output</h3>
+<p>When the <code>loadData()</code> function is called, the content of the HTML element with the ID "content" will be updated with the data returned from the server-side script (data.php).</p>
+</section>
+
+<section class="mb-5">
+    <h2>Fetch API Example</h2>
+    <pre><code class="language-javascript">
+// JavaScript code to make an AJAX request using the Fetch API
+function loadData() {
+    fetch('data.php')
+        .then(response => response.text())
+        .then(data => {
+            // Update the DOM with the response data
+            document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+</code></pre>
+
+<h3>Line-by-Line Explanation</h3>
+<ol>
+    <li><code>fetch('data.php')</code>: Calls the Fetch API to make a GET request to the 'data.php' server-side script.</li>
+    <li><code>.then(response => response.text())</code>: Handles the response from the server and converts the response body to text.</li>
+    <li><code>.then(data => { ... })</code>: Receives the server's response data and updates the content of the HTML element with the ID "content".</li>
+    <li><code>.catch(error => { ... })</code>: Handles any errors that may occur during the request.
+</ol>
+
+<h3>Expected Output</h3>
+<p>Similar to the previous example, the content of the HTML element with the ID "content" will be updated with the data returned from the server-side script (data.php).</p>
+</section>
+
+<section class="mb-5">
+    <h2>Conclusion</h2>
+    <p>AJAX is a powerful set of web development techniques that enable web applications to update their user interface without requiring a full page refresh. By exchanging small amounts of data with the server behind the scenes, AJAX-powered applications can provide a more responsive and seamless user experience.</p>
+    
+    <p>The examples provided demonstrate the basic implementation of AJAX using both the traditional XMLHttpRequest object and the newer Fetch API. These techniques are foundational for building modern, interactive web applications that can enhance user engagement and improve overall application performance.</p>
+</section>
+</main>
+</div>
+</div>
+
+<!--Editable section ends-->
+
+<button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+    <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+</button>
+
+<div id="chatbot" class="chatbot-container" style="display: none;">
+    <div class="chatbot-header">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+        <h3>Web Tech Assistant</h3>
+        <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+    <div class="chatbot-input">
+        <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+        <button id="sendMessage" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="dark-mode.js"></script>
+<script src="chatbot.js"></script>
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

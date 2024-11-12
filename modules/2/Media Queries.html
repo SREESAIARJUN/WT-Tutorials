@@ -1,0 +1,245 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!--Editable section starts-->
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="./Intro to CSS.html">Intro to CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./CSS Selectors.html">CSS Selectors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Inserting CSS in an HTML document.html">Inserting CSS in an HTML document</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Backgrounds.html">Backgrounds</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Fonts and Text Styles.html">Fonts and Text Styles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Creating Boxes.html">Creating Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Displaying.html">Displaying</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Positioning and Floating Elements.html">Positioning and Floating Elements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Features of CSS3.html">Features of CSS3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Media Queries.html                                     ">Media Queries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Overview of JavaScript.html">Overview of JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Functions.html">JavaScript Functions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Image maps and Animations.html">Image Maps and Animations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Objects.html">JavaScript Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Working with Browser and Document Objects.html">Working with Browser and Document Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to JQuery.html">Intro to JQuery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JQuery Selectors and Events.html">JQuery Selectors and Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Methods to access HTML Elements and Attributes.html">Methods to access HTML elements and attributes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to AJAX.html">Intro to AJAX</a></li>
+                </ul>
+            </div>
+        </nav>
+       <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Media Queries</h1>
+            </div>
+
+            <section id="topic10" class="mb-5">
+                <h2>Comprehensive Explanation</h2>
+                <p>Media queries are a powerful feature in CSS3 that allow you to apply styles based on the characteristics of the device or browser viewport. This enables you to create responsive and adaptive web designs that provide an optimal user experience on various devices, from desktops to mobile phones.</p>
+                <p>Media queries work by testing one or more media features, such as the width or height of the viewport, the device's orientation, or the resolution of the screen. Based on the results of these tests, the browser can then apply the corresponding CSS styles to the web page.</p>
+            </section>
+
+            <section class="mb-5">
+                <h3>Syntax and Structure</h3>
+                <p>The basic syntax for a media query in CSS is as follows:</p>
+                <pre><code class="language-css">
+@media (media-feature-rule) {
+    /* CSS rules to be applied */
+}
+                </code></pre>
+                <p>The media-feature-rule can be one or more of the following:</p>
+                <ul>
+                    <li><code>width</code>: Checks the width of the viewport.</li>
+                    <li><code>height</code>: Checks the height of the viewport.</li>
+                    <li><code>orientation</code>: Checks the orientation of the device (portrait or landscape).</li>
+                    <li><code>resolution</code>: Checks the resolution of the screen.</li>
+                    <li><code>aspect-ratio</code>: Checks the aspect ratio of the viewport.</li>
+                    <li><code>max-</code> and <code>min-</code> prefixes: Allows setting minimum and maximum values for the media features.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3>Code Examples</h3>
+                <p>Here are some examples of how to use media queries in your CSS:</p>
+                <pre><code class="language-css">
+/* Apply styles for screens smaller than 768px */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* Apply styles for screens larger than 1200px */
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+}
+
+/* Apply styles for portrait orientation */
+@media (orientation: portrait) {
+    .image-container {
+        width: 100%;
+    }
+}
+
+/* Apply styles for landscape orientation */
+@media (orientation: landscape) {
+    .image-container {
+        width: 50%;
+    }
+}
+                </code></pre>
+            </section>
+
+            <section class="mb-5">
+                <h3>Expected Outputs</h3>
+                <p>When the media queries are applied, the expected output would be:</p>
+                <ul>
+                    <li>For screens smaller than 768px:
+                        <ul>
+                            <li>Body font size: 14px</li>
+                            <li>Heading 1 font size: 24px</li>
+                        </ul>
+                    </li>
+                    <li>For screens larger than 1200px:
+                        <ul>
+                            <li>Body font size: 16px</li>
+                            <li>Heading 1 font size: 36px</li>
+                        </ul>
+                    </li>
+                    <li>For portrait orientation:
+                        <ul>
+                            <li>Image container width: 100%</li>
+                        </ul>
+                    </li>
+                    <li>For landscape orientation:
+                        <ul>
+                            <li>Image container width: 50%</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Best Practices for Media Queries</h2>
+                <ul>
+                    <li>Use a mobile-first approach: Start by designing for small screens and then use media queries to enhance the design for larger screens.</li>
+                    <li>Avoid using fixed pixel values for media query breakpoints; instead, use relative units like em or rem to make the design more responsive.</li>
+                    <li>Group related styles together in your media queries to improve maintainability and readability.</li>
+                    <li>Use a consistent naming convention for your media query breakpoints, such as <code>small</code>, <code>medium</code>, and <code>large</code>.</li>
+                    <li>Consider using a CSS preprocessor like Sass or Less to manage your media queries more efficiently.</li>
+                    <li>Test your media queries thoroughly on a variety of devices and screen sizes to ensure a consistent and optimal user experience.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Conclusion</h2>
+                <p>Media queries are a powerful tool in the CSS3 arsenal, allowing web developers to create responsive and adaptive web designs that provide an optimal user experience across a wide range of devices. By leveraging media queries, you can ensure your web content is displayed correctly and looks great on everything from desktop computers to mobile phones. Understanding the syntax and best practices for using media queries is a crucial skill for any modern web developer.</p>
+            </section>
+        </main>
+    </div>
+</div>
+
+<!--Editable section ends-->
+
+<button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+    <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+</button>
+
+<div id="chatbot" class="chatbot-container" style="display: none;">
+    <div class="chatbot-header">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+        <h3>Web Tech Assistant</h3>
+        <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+    <div class="chatbot-input">
+        <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+        <button id="sendMessage" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="dark-mode.js"></script>
+<script src="chatbot.js"></script>
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

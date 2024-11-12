@@ -1,0 +1,233 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!--Editable section starts-->
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="./Intro to CSS.html">Intro to CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./CSS Selectors.html">CSS Selectors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Inserting CSS in an HTML document.html">Inserting CSS in an HTML document</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Backgrounds.html">Backgrounds</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Fonts and Text Styles.html">Fonts and Text Styles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Creating Boxes.html">Creating Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Displaying.html">Displaying</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Positioning and Floating Elements.html">Positioning and Floating Elements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Features of CSS3.html">Features of CSS3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Media Queries.html                                     ">Media Queries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Overview of JavaScript.html">Overview of JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Functions.html">JavaScript Functions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Image maps and Animations.html">Image Maps and Animations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Objects.html">JavaScript Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Working with Browser and Document Objects.html">Working with Browser and Document Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to JQuery.html">Intro to JQuery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JQuery Selectors and Events.html">JQuery Selectors and Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Methods to access HTML Elements and Attributes.html">Methods to access HTML elements and attributes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to AJAX.html">Intro to AJAX</a></li>
+                </ul>
+            </div>
+        </nav>
+   <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Image Maps and Animations</h1>
+            </div>
+
+            <section id="topic14" class="mb-5">
+                <h2>Image Maps</h2>
+                <p>An image map is an image with clickable regions, allowing users to navigate to different pages or perform actions when they click on specific areas of the image. This feature is useful for creating interactive graphics, diagrams, or product showcases on a website.</p>
+
+                <h3>Creating an Image Map</h3>
+                <p>To create an image map, you need to use the <code>&lt;map&gt;</code> and <code>&lt;area&gt;</code> elements in your HTML. Here's an example:</p>
+
+                <pre><code class="language-html">
+&lt;img src="world-map.png" alt="World Map" usemap="#world-map"&gt;
+&lt;map name="world-map"&gt;
+    &lt;area shape="rect" coords="0,0,200,100" href="north-america.html" alt="North America"&gt;
+    &lt;area shape="circle" coords="300,200,50" href="europe.html" alt="Europe"&gt;
+    &lt;area shape="poly" coords="400,300,450,350,350,400,300,350" href="asia.html" alt="Asia"&gt;
+&lt;/map&gt;
+                </code></pre>
+
+                <p>In this example, the <code>&lt;img&gt;</code> element has a <code>usemap</code> attribute that references the <code>name</code> of the <code>&lt;map&gt;</code> element. The <code>&lt;area&gt;</code> elements define the clickable regions within the image, with the <code>shape</code> and <code>coords</code> attributes specifying the shape and coordinates of each region.</p>
+
+                <h3>Expected Output</h3>
+                <p>When users click on the different regions of the world map, they will be taken to the corresponding pages (e.g., north-america.html, europe.html, asia.html).</p>
+            </section>
+
+            <section class="mb-5">
+                <h2>CSS Animations</h2>
+                <p>CSS Animations allow you to create dynamic and visually engaging effects on web pages. You can animate the movement, size, color, or any other property of an HTML element over time.</p>
+
+                <h3>Creating CSS Animations</h3>
+                <p>To create a CSS animation, you need to define the keyframes and then apply the animation to the target element. Here's an example of a simple bounce animation:</p>
+
+                <pre><code class="language-css">
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+
+.animated-element {
+    animation: bounce 1s infinite;
+}
+                </code></pre>
+
+                <p>In this example, the <code>@keyframes</code> rule defines the animation's behavior over time. The <code>transform: translateY()</code> property is used to move the element vertically. The <code>.animated-element</code> class applies the animation to the target element, with a duration of 1 second and an infinite loop.</p>
+
+                <h3>Line-by-Line Explanation</h3>
+                <ol>
+                    <li><code>@keyframes bounce</code>: Defines an animation named "bounce".</li>
+                    <li><code>0% { transform: translateY(0); }</code>: At the start of the animation (0%), the element is at its original position (translateY(0)).</li>
+                    <li><code>50% { transform: translateY(-50px); }</code>: At 50% of the animation, the element is moved up by 50 pixels.</li>
+                    <li><code>100% { transform: translateY(0); }</code>: At the end of the animation (100%), the element is back at its original position.</li>
+                    <li><code>.animated-element { animation: bounce 1s infinite; }</code>: Applies the "bounce" animation to any element with the class "animated-element". The animation lasts for 1 second and loops infinitely.</li>
+                </ol>
+
+                <h3>Expected Output</h3>
+                <p>The element with the class "animated-element" will continuously bounce up and down, creating a visually engaging effect.</p>
+            </section>
+
+            <section class="mb-5">
+                <h2>Combining Image Maps and Animations</h2>
+                <p>You can combine image maps and CSS animations to create even more interactive and visually appealing user experiences. For example, you could have an image map with different regions that trigger animations when users hover over or click on them.</p>
+
+                <pre><code class="language-html">
+&lt;img src="interactive-map.png" alt="Interactive Map" usemap="#map"&gt;
+&lt;map name="map"&gt;
+    &lt;area shape="rect" coords="0,0,200,100" href="#" onmouseover="animateRegion(this)"&gt;
+    &lt;area shape="circle" coords="300,200,50" href="#" onmouseover="animateRegion(this)"&gt;
+    &lt;area shape="poly" coords="400,300,450,350,350,400,300,350" href="#" onmouseover="animateRegion(this)"&gt;
+&lt;/map&gt;
+
+&lt;script&gt;
+function animateRegion(area) {
+    var element = area.parentElement.querySelector('img');
+    element.classList.add('animated');
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.animated {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+&lt;/style>
+                </code></pre>
+
+                <p>In this example, the image map is combined with a JavaScript function that adds the "animated" class to the image when the user hovers over a region. The CSS animation then creates a pulsing effect on the image, making the interaction more visually engaging.</p>
+
+                <h3>Expected Output</h3>
+                <p>When the user hovers over the different regions of the interactive map, the corresponding part of the image will pulse, creating a dynamic and attention-grabbing effect.</p>
+            </section>
+
+            <section class="mb-5">
+                <h2>Conclusion</h2>
+                <p>Image maps and CSS animations are powerful tools for creating interactive and visually engaging web experiences. By combining these techniques, you can design user interfaces that are both functional and aesthetically pleasing, capturing the user's attention and enhancing their overall experience on your website.</p>
+            </section>
+        </main>
+    </div>
+</div>
+
+<!--Editable section ends-->
+
+<button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+    <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+</button>
+
+<div id="chatbot" class="chatbot-container" style="display: none;">
+    <div class="chatbot-header">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+        <h3>Web Tech Assistant</h3>
+        <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+    <div class="chatbot-input">
+        <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+        <button id="sendMessage" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="dark-mode.js"></script>
+<script src="chatbot.js"></script>
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>
