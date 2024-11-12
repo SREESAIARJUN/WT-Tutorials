@@ -58,13 +58,15 @@ body {
     top: 80px; /* Height of the navbar */
     left: 0;
     width: 150px;
-    height: 100vh;
+    height: calc(100vh - 80px); /* Adjust height to avoid overlapping with the navbar */
     background-color: #f8f9fa;
     padding-top: 20px;
     z-index: 100;
     transition: 0.3s;
-    overflow: scroll;
+    overflow-y: auto; /* Enable vertical scrolling for overflowing content */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
+
 
 .sidebar a {
     padding: 10px;
