@@ -1,0 +1,232 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="./phpandwebforms.html">PHP and web forms</a>
+        <a href="./sendingformdatatoserver.html">Sending Form Data to a Server</a>
+        <a href="./workingwithcookies.html">Working with Cookies and Session Handlers</a>
+        <a href="./interactingwithdatabase.html">Interacting with the Database</a>
+        <a href="./preparedstatement.html">Prepared Statement</a>
+        <a href="./databasetransactions.html">Database Transactions</a>
+            </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">Working with Cookies and Session Handlers</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>What are Cookies and Sessions?</h2>
+                <p>Cookies and sessions are mechanisms for storing data on the client-side and server-side, respectively. They are essential for maintaining state in web applications, especially in stateless HTTP protocols.</p>
+                <ul>
+                    <li><strong>Cookies:</strong> Small pieces of data stored on the client’s browser. They can persist for a defined period, making them suitable for remembering user preferences or tracking users.</li>
+                    <li><strong>Sessions:</strong> Server-side storage of data for a particular user session. Sessions store data temporarily and are deleted when the user closes the browser or after a specified time.</li>
+                </ul>
+            </section>
+    
+            <!-- Working with Cookies Section -->
+            <section class="mb-5">
+                <h2>Working with Cookies</h2>
+                <p>To create a cookie in PHP, use the <code>setcookie()</code> function. The syntax is as follows:</p>
+                <pre>
+    &lt;?php
+    setcookie("username", "JohnDoe", time() + (86400 * 30), "/"); // 86400 = 1 day
+    ?&gt;
+                </pre>
+    
+                <h3>Example: Setting a Cookie</h3>
+                <p>This example sets a cookie named <code>username</code> that expires in 30 days:</p>
+                <pre>
+    &lt;?php
+    setcookie("username", "JohnDoe", time() + (86400 * 30), "/");
+    echo "Cookie named 'username' is set! Value is: " . $_COOKIE["username"];
+    ?&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    Cookie named 'username' is set! Value is: JohnDoe
+                </div>
+            </section>
+    
+            <!-- Accessing Cookies Section -->
+            <section class="mb-5">
+                <h2>Accessing Cookies</h2>
+                <p>To access a cookie, use the <code>$_COOKIE</code> superglobal array:</p>
+                <pre>
+    &lt;?php
+    if(isset($_COOKIE["username"])) {
+        echo "Welcome " . $_COOKIE["username"];
+    } else {
+        echo "Welcome Guest";
+    }
+    ?&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    If the cookie is set, it will display: Welcome JohnDoe
+                    <br>
+                    If not set, it will display: Welcome Guest
+                </div>
+            </section>
+    
+            <!-- Working with Sessions Section -->
+            <section class="mb-5">
+                <h2>Working with Sessions</h2>
+                <p>To start a session in PHP, use the <code>session_start()</code> function. You can store session variables using the <code>$_SESSION</code> superglobal:</p>
+                <pre>
+    &lt;?php
+    session_start(); // Start the session
+    $_SESSION["username"] = "JohnDoe";
+    ?&gt;
+                </pre>
+    
+                <h3>Example: Setting a Session Variable</h3>
+                <p>This example starts a session and sets a session variable:</p>
+                <pre>
+    &lt;?php
+    session_start();
+    $_SESSION["username"] = "JohnDoe";
+    echo "Session variable 'username' is set! Value is: " . $_SESSION["username"];
+    ?&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    Session variable 'username' is set! Value is: JohnDoe
+                </div>
+            </section>
+    
+            <!-- Accessing Sessions Section -->
+            <section class="mb-5">
+                <h2>Accessing Session Variables</h2>
+                <p>To access session variables, use the <code>$_SESSION</code> superglobal:</p>
+                <pre>
+    &lt;?php
+    session_start();
+    if(isset($_SESSION["username"])) {
+        echo "Welcome back " . $_SESSION["username"];
+    } else {
+        echo "Welcome Guest";
+    }
+    ?&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    If the session variable is set, it will display: Welcome back JohnDoe
+                    <br>
+                    If not set, it will display: Welcome Guest
+                </div>
+            </section>
+    
+            <!-- Summary Section -->
+            <section class="mb-5">
+                <h2>Summary</h2>
+                <p>Cookies and sessions are fundamental to maintaining user state in web applications. Use cookies for persistent data that can be accessed on the client side and sessions for temporary data stored on the server. Always be cautious about security, especially when handling sensitive information.</p>
+            </section>
+        </main>
+    </div>
+    
+
+        
+    
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

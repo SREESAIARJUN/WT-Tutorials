@@ -1,0 +1,246 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="./phpandwebforms.html">PHP and web forms</a>
+        <a href="./sendingformdatatoserver.html">Sending Form Data to a Server</a>
+        <a href="./workingwithcookies.html">Working with Cookies and Session Handlers</a>
+        <a href="./interactingwithdatabase.html">Interacting with the Database</a>
+        <a href="./preparedstatement.html">Prepared Statement</a>
+        <a href="./databasetransactions.html">Database Transactions</a>
+            </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">Database Transactions</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>Introduction to Database Transactions</h2>
+                <p>A database transaction is a sequence of operations performed as a single logical unit of work. A transaction must be either fully completed or fully failed, ensuring data integrity. Transactions are essential in scenarios where multiple related operations need to succeed or fail together, such as transferring money between accounts.</p>
+            </section>
+    
+            <!-- ACID Properties Section -->
+            <section class="mb-5">
+                <h2>ACID Properties</h2>
+                <p>Transactions are governed by four key properties known as ACID:</p>
+                <ul>
+                    <li><strong>Atomicity:</strong> Ensures that all operations within the transaction are completed; if any operation fails, the transaction is aborted.</li>
+                    <li><strong>Consistency:</strong> Ensures that a transaction brings the database from one valid state to another, maintaining database rules.</li>
+                    <li><strong>Isolation:</strong> Ensures that transactions occur independently of one another, even when they are executed concurrently.</li>
+                    <li><strong>Durability:</strong> Ensures that once a transaction has been committed, it remains so, even in the event of a system failure.</li>
+                </ul>
+            </section>
+    
+            <!-- Implementing Transactions Section -->
+            <section class="mb-5">
+                <h2>Implementing Transactions in PHP with MySQLi</h2>
+                <p>To implement a transaction in PHP, you can use the following steps:</p>
+                <ol>
+                    <li>Begin the transaction using the <code>begin_transaction()</code> method.</li>
+                    <li>Execute the necessary queries.</li>
+                    <li>If all queries are successful, commit the transaction with <code>commit()</code>.</li>
+                    <li>If any query fails, rollback the transaction using <code>rollback()</code>.</li>
+                </ol>
+                <p>Here's a sample implementation:</p>
+                <pre>
+    &lt;?php
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+    $dbname = "myDB";
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    
+    // Begin transaction
+    $conn->begin_transaction();
+    
+    try {
+        // Execute queries
+        $conn->query("INSERT INTO Accounts (username, balance) VALUES ('Alice', 1000)");
+        $conn->query("INSERT INTO Accounts (username, balance) VALUES ('Bob', 500)");
+    
+        // Example of a potential failure
+        // Uncommenting the line below will trigger a rollback
+        // throw new Exception("Simulated error");
+    
+        // Commit transaction
+        $conn->commit();
+        echo "Transaction completed successfully.";
+    } catch (Exception $e) {
+        // Rollback transaction
+        $conn->rollback();
+        echo "Transaction failed: " . $e->getMessage();
+    }
+    
+    // Close connection
+    $conn->close();
+    ?&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    Transaction completed successfully.
+                </div>
+                <p>Or, if an error occurs:</p>
+                <div>
+                    Transaction failed: Simulated error.
+                </div>
+            </section>
+    
+            <!-- Example of a Transfer Operation Section -->
+            <section class="mb-5">
+                <h2>Example: Money Transfer Between Accounts</h2>
+                <p>Here's an example of a transaction for transferring money between two accounts:</p>
+                <pre>
+    &lt;?php
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn->begin_transaction();
+    
+    try {
+        $from_account = "Alice";
+        $to_account = "Bob";
+        $amount = 100;
+    
+        // Deduct amount from the sender's account
+        $conn->query("UPDATE Accounts SET balance = balance - $amount WHERE username = '$from_account'");
+        
+        // Add amount to the receiver's account
+        $conn->query("UPDATE Accounts SET balance = balance + $amount WHERE username = '$to_account'");
+    
+        $conn->commit();
+        echo "Transfer completed successfully.";
+    } catch (Exception $e) {
+        $conn->rollback();
+        echo "Transfer failed: " . $e->getMessage();
+    }
+    
+    $conn->close();
+    ?&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    Transfer completed successfully.
+                </div>
+                <p>Or, if an error occurs:</p>
+                <div>
+                    Transfer failed: <error message>.
+                </div>
+            </section>
+    
+            <!-- Summary Section -->
+            <section class="mb-5">
+                <h2>Summary</h2>
+                <p>This tutorial introduced database transactions in PHP, emphasizing their importance in maintaining data integrity through the ACID properties. You learned how to implement transactions using MySQLi, ensuring that a series of database operations either complete successfully or not at all.</p>
+            </section>
+        </main>
+    </div>
+    
+
+        
+    
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

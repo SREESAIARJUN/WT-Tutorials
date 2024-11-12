@@ -1,0 +1,280 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Editable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="./phpandwebforms.html">PHP and web forms</a>
+        <a href="./sendingformdatatoserver.html">Sending Form Data to a Server</a>
+        <a href="./workingwithcookies.html">Working with Cookies and Session Handlers</a>
+        <a href="./interactingwithdatabase.html">Interacting with the Database</a>
+        <a href="./preparedstatement.html">Prepared Statement</a>
+        <a href="./databasetransactions.html">Database Transactions</a>
+            </div>
+
+    <!-- Main Content -->
+   
+    <div class="main-content">
+        <!-- Main Content Section -->
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">Prepared Statements</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>Introduction to Prepared Statements</h2>
+                <p>Prepared statements are a powerful feature of PHP's MySQLi and PDO extensions that help prevent SQL injection attacks and improve performance. They allow you to execute the same SQL statement repeatedly with high efficiency, separating the SQL logic from the data being passed in.</p>
+            </section>
+    
+            <!-- Benefits of Prepared Statements Section -->
+            <section class="mb-5">
+                <h2>Benefits of Prepared Statements</h2>
+                <ul>
+                    <li><strong>Security:</strong> Prepared statements mitigate SQL injection risks by separating SQL code from data.</li>
+                    <li><strong>Performance:</strong> They can enhance performance when executing the same statement multiple times.</li>
+                    <li><strong>Code Readability:</strong> They help to make code cleaner and easier to maintain.</li>
+                </ul>
+            </section>
+    
+            <!-- Creating a Prepared Statement Section -->
+            <section class="mb-5">
+                <h2>Creating a Prepared Statement</h2>
+                <p>To create a prepared statement, you first prepare the SQL statement, and then bind parameters to it. Here's how to do it with MySQLi:</p>
+                <pre>
+    &lt;?php
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+    $dbname = "myDB";
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    
+    // Prepare a SQL statement
+    $stmt = $conn->prepare("INSERT INTO Users (username, email) VALUES (?, ?)");
+    
+    // Bind parameters
+    $stmt->bind_param("ss", $username, $email);
+    
+    // Set parameters and execute
+    $username = "JohnDoe";
+    $email = "john@example.com";
+    $stmt->execute();
+    
+    echo "New record created successfully";
+    
+    // Close statement
+    $stmt->close();
+    ?&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    New record created successfully
+                </div>
+            </section>
+    
+            <!-- Reading Data with Prepared Statements Section -->
+            <section class="mb-5">
+                <h2>Reading Data with Prepared Statements</h2>
+                <p>Prepared statements can also be used for reading data from the database:</p>
+                <pre>
+    &lt;?php
+    $stmt = $conn->prepare("SELECT id, username, email FROM Users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    
+    // Set parameter and execute
+    $email = "john@example.com";
+    $stmt->execute();
+    
+    // Bind result variables
+    $stmt->bind_result($id, $username, $email);
+    
+    // Fetch the values
+    while ($stmt->fetch()) {
+        echo "id: $id - Name: $username - Email: $email&lt;br&gt;";
+    }
+    
+    // Close statement
+    $stmt->close();
+    ?&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    id: 1 - Name: JohnDoe - Email: john@example.com
+                </div>
+            </section>
+    
+            <!-- Updating Data with Prepared Statements Section -->
+            <section class="mb-5">
+                <h2>Updating Data with Prepared Statements</h2>
+                <p>To update records using prepared statements:</p>
+                <pre>
+    &lt;?php
+    $stmt = $conn->prepare("UPDATE Users SET email = ? WHERE username = ?");
+    $stmt->bind_param("ss", $new_email, $username);
+    
+    // Set parameters and execute
+    $new_email = "john.doe@example.com";
+    $username = "JohnDoe";
+    $stmt->execute();
+    
+    echo "Record updated successfully";
+    
+    // Close statement
+    $stmt->close();
+    ?&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    Record updated successfully
+                </div>
+            </section>
+    
+            <!-- Deleting Data with Prepared Statements Section -->
+            <section class="mb-5">
+                <h2>Deleting Data with Prepared Statements</h2>
+                <p>To delete records using prepared statements:</p>
+                <pre>
+    &lt;?php
+    $stmt = $conn->prepare("DELETE FROM Users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    
+    // Set parameter and execute
+    $username = "JohnDoe";
+    $stmt->execute();
+    
+    echo "Record deleted successfully";
+    
+    // Close statement
+    $stmt->close();
+    ?&gt;
+                </pre>
+    
+                <h4>Expected Output</h4>
+                <div>
+                    Record deleted successfully
+                </div>
+            </section>
+    
+            <!-- Closing the Connection Section -->
+            <section class="mb-5">
+                <h2>Closing the Database Connection</h2>
+                <p>As always, remember to close your database connection when you are done:</p>
+                <pre>
+    &lt;?php
+    $conn->close();
+    ?&gt;
+                </pre>
+            </section>
+    
+            <!-- Summary Section -->
+            <section class="mb-5">
+                <h2>Summary</h2>
+                <p>This tutorial introduced prepared statements in PHP, highlighting their security and performance advantages. You learned how to create, execute, and manage prepared statements for inserting, selecting, updating, and deleting data in a MySQL database.</p>
+            </section>
+        </main>
+    </div>
+    
+        
+    
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>
