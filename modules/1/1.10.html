@@ -1,0 +1,255 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+<style>
+        /* Added CSS for sidebar */
+        .sidebar {
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+   
+    <a href="1.1.html">Fundamentals of HTML</a>
+    <a href="1.2.html">Working with Text</a>
+    <a href="1.3.html">Organizing Text in HTML</a>
+    <a href="1.4.html">Working with Links and URLs</a>
+    <a href="1.5.html">Creating Tables</a>
+    <a href="1.6.html">Working with Images</a>
+    <a href="1.7.html">Canvas</a>
+    <a href="1.8.html">Forms</a>
+    <a href="1.9.html">Frames and Multimedia</a>
+    <a href="1.10.html">HTML5 Document Structure</a>
+    <a href="1.11.html">Creating Editable Content</a>
+    <a href="1.12.html">Checking Spelling Mistakes</a>
+    <a href="1.13.html">Exploring Custom Data Attributes</a>
+    <a href="1.14.html">Client-Side Storage</a>
+    <a href="1.15.html">Drag and Drop Feature</a>
+    <a href="1.16.html">Offline Web Applications</a>
+    <a href="1.17.html">Web Communications</a>
+    <a href="1.18.html">Cross-Document Messaging and Desktop Notifications</a>
+
+</div>
+<!-- Main Content -->
+<div class="main-content">
+<!-- Main Content Section -->
+<main class="container mt-5">
+    <h1 class="text-center mb-5">HTML Real-Time Tutorial</h1>
+
+    <!-- Section: HTML5 -->
+    <section class="mb-5">
+        <h2>HTML5</h2>
+
+        <h3>What is HTML5?</h3>
+        <p>HTML5 is the latest version of Hypertext Markup Language (HTML), which is used to structure and present content on the web. It introduced several new elements, attributes, and behaviors that enhance the performance of web pages and improve user experiences.</p>
+
+        <h3>New Features in HTML5</h3>
+        <p>HTML5 introduced a range of new features for modern web development:</p>
+        <ul>
+            <li>New semantic elements: <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, etc.</li>
+            <li>Support for multimedia elements like <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>, eliminating the need for third-party plugins like Flash.</li>
+            <li>Graphics support via <code>&lt;canvas&gt;</code> and <code>&lt;svg&gt;</code> elements for dynamic 2D drawings and vector graphics.</li>
+            <li>Enhanced form controls, including input types like <code>email</code>, <code>date</code>, <code>color</code>, etc.</li>
+            <li>Support for offline storage using Web Storage APIs: <code>localStorage</code> and <code>sessionStorage</code>.</li>
+            <li>Geolocation API for accessing location data with user consent.</li>
+            <li>WebSockets for real-time, full-duplex communication between a browser and a server.</li>
+            <li>Drag and drop functionality.</li>
+        </ul>
+
+        <h3>HTML5 Semantic Elements</h3>
+        <p>HTML5 introduced semantic tags, which provide more meaningful markup and improve accessibility:</p>
+        <ul>
+            <li><code>&lt;header&gt;</code> – Defines a header for a document or section.</li>
+            <li><code>&lt;footer&gt;</code> – Defines a footer for a document or section.</li>
+            <li><code>&lt;section&gt;</code> – Defines a section in a document.</li>
+            <li><code>&lt;article&gt;</code> – Defines an independent, self-contained article.</li>
+            <li><code>&lt;nav&gt;</code> – Defines navigation links.</li>
+            <li><code>&lt;aside&gt;</code> – Defines content aside from the content it is placed in.</li>
+        </ul>
+
+        <h3>Multimedia in HTML5</h3>
+        <p>HTML5 provides built-in support for audio and video elements:</p>
+
+        <h4>Audio Example</h4>
+        <pre>
+&lt;audio controls&gt;
+  &lt;source src="audiofile.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+        </pre>
+
+        <h4>Video Example</h4>
+        <pre>
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;source src="video.ogg" type="video/ogg"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+        </pre>
+
+        <h3>Canvas for Drawing</h3>
+        <p>The <code>&lt;canvas&gt;</code> element provides a resolution-dependent bitmap canvas that can be used for rendering graphs, game graphics, or other visual images:</p>
+
+        <pre>
+&lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;
+  Your browser does not support the canvas element.
+&lt;/canvas&gt;
+        </pre>
+
+        <h3>Form Enhancements</h3>
+        <p>HTML5 introduced several new form input types:</p>
+        <ul>
+            <li><code>email</code> – For email addresses.</li>
+            <li><code>url</code> – For URLs.</li>
+            <li><code>date</code> – For dates.</li>
+            <li><code>color</code> – For picking a color.</li>
+        </ul>
+
+        <h3>Example of New Input Types</h3>
+        <pre>
+&lt;form&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;label for="birthday"&gt;Birthday:&lt;/label&gt;
+  &lt;input type="date" id="birthday" name="birthday"&gt;
+
+  &lt;label for="favcolor"&gt;Favorite Color:&lt;/label&gt;
+  &lt;input type="color" id="favcolor" name="favcolor"&gt;
+&lt;/form&gt;
+        </pre>
+
+        <h3>Geolocation API</h3>
+        <p>HTML5 also includes the Geolocation API, which allows websites to request the user's location:</p>
+
+        <pre>
+&lt;button onclick="getLocation()"&gt;Get Location&lt;/button&gt;
+&lt;p id="demo"&gt;&lt;/p&gt;
+&lt;script&gt;
+  var x = document.getElementById("demo");
+
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+
+  function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "&lt;br&gt;Longitude: " + position.coords.longitude;
+  }
+&lt;/script&gt;
+        </pre>
+
+        <h3>Local Storage</h3>
+        <p>HTML5's Web Storage API provides a way to store data in the browser with <code>localStorage</code> and <code>sessionStorage</code>. Unlike cookies, this storage is not sent with every server request.</p>
+
+        <h4>Example: Storing Data</h4>
+        <pre>
+&lt;script&gt;
+  localStorage.setItem("username", "JohnDoe");
+  document.getElementById("result").innerHTML = localStorage.getItem("username");
+&lt;/script&gt;
+        </pre>
+
+        <h3>Browser Support</h3>
+        <p>HTML5 is supported by all modern browsers, including Chrome, Firefox, Safari, Edge, and Opera. HTML5 also works well on mobile browsers like Safari for iOS and Chrome for Android.</p>
+    </section>
+</main>
+</div>
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

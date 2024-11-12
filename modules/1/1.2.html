@@ -1,0 +1,234 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+<style>
+        /* Added CSS for sidebar */
+        .sidebar {
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+   
+    <a href="1.1.html">Fundamentals of HTML</a>
+    <a href="1.2.html">Working with Text</a>
+    <a href="1.3.html">Organizing Text in HTML</a>
+    <a href="1.4.html">Working with Links and URLs</a>
+    <a href="1.5.html">Creating Tables</a>
+    <a href="1.6.html">Working with Images</a>
+    <a href="1.7.html">Canvas</a>
+    <a href="1.8.html">Forms</a>
+    <a href="1.9.html">Frames and Multimedia</a>
+    <a href="1.10.html">HTML5 Document Structure</a>
+    <a href="1.11.html">Creating Editable Content</a>
+    <a href="1.12.html">Checking Spelling Mistakes</a>
+    <a href="1.13.html">Exploring Custom Data Attributes</a>
+    <a href="1.14.html">Client-Side Storage</a>
+    <a href="1.15.html">Drag and Drop Feature</a>
+    <a href="1.16.html">Offline Web Applications</a>
+    <a href="1.17.html">Web Communications</a>
+    <a href="1.18.html">Cross-Document Messaging and Desktop Notifications</a>
+
+</div>
+<!-- Main Content -->
+<div class="main-content">
+
+    <!-- Main Content Section -->
+    <main class="container mt-5">
+        <h1 class="text-center mb-5">HTML Working with Text</h1>
+
+        <!-- Working with Text Section -->
+        <section class="mb-5">
+            <h2>Working with Text in HTML</h2>
+            <p>HTML contains several elements for defining text with special meaning. You can format and organize text using different tags to create emphasis, structure, and presentation styles.</p>
+
+            <h3>HTML Formatting Elements</h3>
+            <p>Formatting elements are designed to display special types of text:</p>
+            <ul>
+                <li><b>&lt;b&gt;</b> - Bold text</li>
+                <li><b>&lt;strong&gt;</b> - Important text</li>
+                <li><b>&lt;i&gt;</b> - Italic text</li>
+                <li><b>&lt;em&gt;</b> - Emphasized text</li>
+                <li><b>&lt;mark&gt;</b> - Marked or highlighted text</li>
+                <li><b>&lt;small&gt;</b> - Smaller text</li>
+                <li><b>&lt;del&gt;</b> - Deleted text</li>
+                <li><b>&lt;ins&gt;</b> - Inserted text</li>
+                <li><b>&lt;sub&gt;</b> - Subscript text</li>
+                <li><b>&lt;sup&gt;</b> - Superscript text</li>
+            </ul>
+
+            <h3>Bold and Strong Elements</h3>
+            <p>The <b>&lt;b&gt;</b> element defines bold text, while the <b>&lt;strong&gt;</b> element represents strong importance.</p>
+            <pre>
+&lt;b&gt;This text is bold&lt;/b&gt;
+&lt;strong&gt;This text is important&lt;/strong&gt;
+            </pre>
+
+            <h3>Italic and Emphasized Elements</h3>
+            <p>The <b>&lt;i&gt;</b> element represents italicized text, often used to indicate technical terms or thoughts. The <b>&lt;em&gt;</b> element adds emphasis, often causing the text to be read differently by screen readers.</p>
+            <pre>
+&lt;i&gt;This text is italic&lt;/i&gt;
+&lt;em&gt;This text is emphasized&lt;/em&gt;
+            </pre>
+
+            <h3>Marked and Small Text</h3>
+            <p>The <b>&lt;mark&gt;</b> element highlights or marks text. The <b>&lt;small&gt;</b> element renders smaller text.</p>
+            <pre>
+&lt;mark&gt;This text is highlighted&lt;/mark&gt;
+&lt;small&gt;This is smaller text&lt;/small&gt;
+            </pre>
+
+            <h3>Deleted and Inserted Text</h3>
+            <p>Use the <b>&lt;del&gt;</b> tag for deleted text, often displayed as struck-through, and <b>&lt;ins&gt;</b> for inserted text, typically underlined.</p>
+            <pre>
+&lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; &lt;ins&gt;red&lt;/ins&gt;.&lt;/p&gt;
+            </pre>
+
+            <h3>Subscript and Superscript</h3>
+            <p>The <b>&lt;sub&gt;</b> element is used to display subscript text (e.g., H<sub>2</sub>O), and the <b>&lt;sup&gt;</b> element is used to display superscript text (e.g., E = mc<sup>2</sup>).</p>
+            <pre>
+&lt;p&gt;This is &lt;sub&gt;subscripted&lt;/sub&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;sup&gt;superscripted&lt;/sup&gt; text.&lt;/p&gt;
+            </pre>
+        </section>
+
+        <!-- Organizing Text Section -->
+        <section class="mb-5">
+            <h2>Organizing Text in HTML</h2>
+            <h3>HTML Paragraphs</h3>
+            <p>The <b>&lt;p&gt;</b> tag defines a paragraph. A paragraph always starts on a new line, and browsers automatically add some white space before and after a paragraph.</p>
+            <pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+            </pre>
+
+            <h3>HTML Display</h3>
+            <p>HTML does not preserve extra spaces or lines in the code. The browser automatically removes any extra spaces when displaying content.</p>
+            <pre>
+&lt;p&gt;
+  This paragraph contains    a lot of spaces,
+  but the browser ignores it.
+&lt;/p&gt;
+            </pre>
+
+            <h3>HTML Horizontal Rules</h3>
+            <p>The <b>&lt;hr&gt;</b> tag defines a thematic break in an HTML page, most often displayed as a horizontal line.</p>
+            <pre>
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;p&gt;This is some text.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;p&gt;This is some more text.&lt;/p&gt;
+            </pre>
+
+            <h3>HTML Line Breaks</h3>
+            <p>The <b>&lt;br&gt;</b> tag is used for line breaks without starting a new paragraph.</p>
+            <pre>
+&lt;p&gt;This is&lt;br&gt;a paragraph&lt;br&gt;with line breaks.&lt;/p&gt;
+            </pre>
+
+            <h3>Preformatted Text</h3>
+            <p>The <b>&lt;pre&gt;</b> tag defines preformatted text. The text inside a <b>&lt;pre&gt;</b> element preserves both spaces and line breaks.</p>
+            <pre>
+&lt;pre&gt;
+  This is preformatted text.
+  It preserves spacing.
+&lt;/pre&gt;
+            </pre>
+        </section>
+    </main>
+</div>
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

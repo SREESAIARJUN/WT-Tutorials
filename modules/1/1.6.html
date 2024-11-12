@@ -1,0 +1,227 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+<style>
+        /* Added CSS for sidebar */
+        .sidebar {
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+   <div class="sidebar" id="sidebar">
+   
+    <a href="1.1.html">Fundamentals of HTML</a>
+    <a href="1.2.html">Working with Text</a>
+    <a href="1.3.html">Organizing Text in HTML</a>
+    <a href="1.4.html">Working with Links and URLs</a>
+    <a href="1.5.html">Creating Tables</a>
+    <a href="1.6.html">Working with Images</a>
+    <a href="1.7.html">Canvas</a>
+    <a href="1.8.html">Forms</a>
+    <a href="1.9.html">Frames and Multimedia</a>
+    <a href="1.10.html">HTML5 Document Structure</a>
+    <a href="1.11.html">Creating Editable Content</a>
+    <a href="1.12.html">Checking Spelling Mistakes</a>
+    <a href="1.13.html">Exploring Custom Data Attributes</a>
+    <a href="1.14.html">Client-Side Storage</a>
+    <a href="1.15.html">Drag and Drop Feature</a>
+    <a href="1.16.html">Offline Web Applications</a>
+    <a href="1.17.html">Web Communications</a>
+    <a href="1.18.html">Cross-Document Messaging and Desktop Notifications</a>
+
+</div>
+    <!-- Main Content -->
+<div class="main-content">
+    <!-- Working with Images Section -->
+<section class="mb-5">
+    <h2>Working with Images in HTML</h2>
+    <p>Images are an important part of web pages. They can make your content more attractive and provide valuable information to users.</p>
+
+    <h3>Adding Images</h3>
+    <p>To add an image in HTML, you use the <b>&lt;img&gt;</b> tag. This tag is self-closing and requires the <b>src</b> attribute to specify the image source, and the <b>alt</b> attribute to provide alternative text for screen readers.</p>
+    <pre>
+&lt;img src="path/to/image.jpg" alt="Description of image"&gt;
+    </pre>
+
+    <h3>Image Attributes</h3>
+    <p>The <b>&lt;img&gt;</b> tag has several attributes:</p>
+    <ul>
+        <li><b>src</b> - Specifies the path to the image.</li>
+        <li><b>alt</b> - Provides alternative text for the image.</li>
+        <li><b>width</b> - Sets the width of the image.</li>
+        <li><b>height</b> - Sets the height of the image.</li>
+    </ul>
+    <p>Example:</p>
+    <pre>
+&lt;img src="image.jpg" alt="My Image" width="300" height="200"&gt;
+    </pre>
+
+    <h3>Image Formats</h3>
+    <p>Common image formats supported in HTML include:</p>
+    <ul>
+        <li><b>JPEG</b> (.jpg) - Good for photographs.</li>
+        <li><b>PNG</b> (.png) - Good for graphics with transparent backgrounds.</li>
+        <li><b>GIF</b> (.gif) - Good for simple animations and graphics.</li>
+        <li><b>SVG</b> (.svg) - Scalable vector graphics, excellent for logos and icons.</li>
+    </ul>
+
+    <h3>Responsive Images</h3>
+    <p>To create responsive images that adapt to different screen sizes, use CSS. The following code sets the image to scale with its container:</p>
+    <pre>
+&lt;img src="image.jpg" alt="My Image" style="max-width: 100%; height: auto;"&gt;
+    </pre>
+
+    <h3>Using Images as Links</h3>
+    <p>You can also make images clickable by wrapping them in an anchor (<b>&lt;a&gt;</b>) tag:</p>
+    <pre>
+&lt;a href="https://example.com"&gt;
+    &lt;img src="image.jpg" alt="My Image"&gt;
+&lt;/a&gt;
+    </pre>
+</section>
+
+
+<!-- Working with Images Section -->
+<section class="mb-5">
+    <h2>Working with Images in HTML</h2>
+    <p>Images are an essential part of web design. They can enhance the visual appeal of a website and provide useful information to users.</p>
+
+    <h3>HTML Image Element</h3>
+    <p>The <b>&lt;img&gt;</b> tag is used to embed images in HTML documents. The <b>src</b> attribute specifies the path to the image you want to display.</p>
+    <pre>
+&lt;img src="path/to/image.jpg" alt="Description of image"&gt;
+    </pre>
+
+    <h3>Attributes of the Image Element</h3>
+    <ul>
+        <li><b>src</b> - The URL or path of the image file.</li>
+        <li><b>alt</b> - Alternative text for the image, displayed if the image cannot be loaded. This is important for accessibility.</li>
+        <li><b>width</b> - Specifies the width of the image in pixels or percentage.</li>
+        <li><b>height</b> - Specifies the height of the image in pixels or percentage.</li>
+    </ul>
+
+    <h3>Example of an Image Tag</h3>
+    <pre>
+&lt;img src="logo.png" alt="Website Logo" width="200" height="100"&gt;
+    </pre>
+
+    <h3>Image Formats</h3>
+    <p>HTML supports various image formats:</p>
+    <ul>
+        <li><b>JPEG</b> - Commonly used for photographs. Supports millions of colors.</li>
+        <li><b>PNG</b> - Supports transparency and is best for images with text or sharp edges.</li>
+        <li><b>GIF</b> - Supports animations but has a limited color palette (256 colors).</li>
+        <li><b>SVG</b> - Scalable vector graphics; ideal for logos and icons that need to be resized without loss of quality.</li>
+    </ul>
+
+    <h3>Responsive Images</h3>
+    <p>To make images responsive and scale with the screen size, you can set the width to 100% and height to auto:</p>
+    <pre>
+&lt;img src="path/to/image.jpg" alt="Description of image" style="width: 100%; height: auto;"&gt;
+    </pre>
+
+    <h3>Using Images as Links</h3>
+    <p>Images can also be linked to other pages or websites by wrapping the <b>&lt;img&gt;</b> tag within an <b>&lt;a&gt;</b> tag:</p>
+    <pre>
+&lt;a href="https://www.example.com"&gt;
+    &lt;img src="logo.png" alt="Website Logo"&gt;
+&lt;/a&gt;
+    </pre>
+
+    <h3>Image Accessibility</h3>
+    <p>Using the <b>alt</b> attribute is crucial for accessibility. It provides a text alternative for screen readers and users who cannot view the images.</p>
+</section>
+</div>
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

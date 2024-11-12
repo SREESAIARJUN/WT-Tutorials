@@ -1,0 +1,187 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+<style>
+        /* Added CSS for sidebar */
+        .sidebar {
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+   
+    <a href="1.1.html">Fundamentals of HTML</a>
+    <a href="1.2.html">Working with Text</a>
+    <a href="1.3.html">Organizing Text in HTML</a>
+    <a href="1.4.html">Working with Links and URLs</a>
+    <a href="1.5.html">Creating Tables</a>
+    <a href="1.6.html">Working with Images</a>
+    <a href="1.7.html">Canvas</a>
+    <a href="1.8.html">Forms</a>
+    <a href="1.9.html">Frames and Multimedia</a>
+    <a href="1.10.html">HTML5 Document Structure</a>
+    <a href="1.11.html">Creating Editable Content</a>
+    <a href="1.12.html">Checking Spelling Mistakes</a>
+    <a href="1.13.html">Exploring Custom Data Attributes</a>
+    <a href="1.14.html">Client-Side Storage</a>
+    <a href="1.15.html">Drag and Drop Feature</a>
+    <a href="1.16.html">Offline Web Applications</a>
+    <a href="1.17.html">Web Communications</a>
+    <a href="1.18.html">Cross-Document Messaging and Desktop Notifications</a>
+
+</div>
+    <!-- Main Content -->
+<div class="main-content">
+<!-- Main Content Section -->
+<main class="container mt-5">
+    <h1 class="text-center mb-5">Exploring Custom Data Attributes in HTML</h1>
+
+    <!-- Custom Data Attributes Section -->
+    <section class="mb-5">
+        <h2>Understanding Custom Data Attributes</h2>
+        <p>HTML5 introduced the concept of <em>custom data attributes</em>, which allow you to add extra information to HTML elements without affecting the presentation or behavior of the webpage. These attributes are useful for embedding additional data that can be accessed via JavaScript.</p>
+
+        <h3>What are Custom Data Attributes?</h3>
+        <p>A custom data attribute is defined with a name that starts with <code>data-</code>. The syntax follows this structure:</p>
+        <pre>&lt;element data-attribute="value"&gt;Content&lt;/element&gt;</pre>
+        <p>For example:</p>
+        <pre>
+&lt;div data-user-id="12345" data-role="admin"&gt;Admin User&lt;/div&gt;
+        </pre>
+        <p>In this example, <code>data-user-id</code> and <code>data-role</code> are custom data attributes containing values that can be utilized by JavaScript.</p>
+
+        <h3>Accessing Custom Data Attributes with JavaScript</h3>
+        <p>Custom data attributes can be accessed using JavaScript’s <code>dataset</code> property. This property provides a way to retrieve data from elements, making it easy to use values without requiring additional IDs or classes.</p>
+        
+        <p>For example:</p>
+        <pre>
+// JavaScript Example
+const userElement = document.querySelector('[data-user-id]');
+console.log(userElement.dataset.userId); // Outputs: "12345"
+console.log(userElement.dataset.role);   // Outputs: "admin"
+        </pre>
+
+        <h3>Benefits of Using Custom Data Attributes</h3>
+        <ul>
+            <li>They allow you to store custom data without impacting HTML validity or style.</li>
+            <li>Custom data attributes can be dynamically accessed and modified via JavaScript.</li>
+            <li>Useful for passing data in single-page applications or other JavaScript-driven sites.</li>
+        </ul>
+
+        <h3>When to Use Custom Data Attributes</h3>
+        <p>Custom data attributes are especially helpful when you need to embed metadata within elements without creating additional backend structures. They are widely used in JavaScript frameworks, event handling, and for embedding specific data related to an element on the frontend.</p>
+
+        <p>However, it's essential to use them thoughtfully. Custom data attributes should not be misused for styling purposes; their primary role is for storing extra data that JavaScript can use.</p>
+
+        <h3>Practical Example</h3>
+        <p>In the following example, we have a button that triggers a JavaScript function. The function accesses the <code>data-info</code> attribute to display a message:</p>
+
+        <pre>
+&lt;button data-info="Hello, World!" onclick="showDataInfo(this)"&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+function showDataInfo(element) {
+    alert(element.dataset.info);
+}
+&lt;/script&gt;
+        </pre>
+
+        <p>When the button is clicked, JavaScript reads the <code>data-info</code> attribute and displays it as an alert.</p>
+    </section>
+</main>
+
+    </div>
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

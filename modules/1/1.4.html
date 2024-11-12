@@ -1,0 +1,218 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+<style>
+        /* Added CSS for sidebar */
+        .sidebar {
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+   <div class="sidebar" id="sidebar">
+   
+    <a href="1.1.html">Fundamentals of HTML</a>
+    <a href="1.2.html">Working with Text</a>
+    <a href="1.3.html">Organizing Text in HTML</a>
+    <a href="1.4.html">Working with Links and URLs</a>
+    <a href="1.5.html">Creating Tables</a>
+    <a href="1.6.html">Working with Images</a>
+    <a href="1.7.html">Canvas</a>
+    <a href="1.8.html">Forms</a>
+    <a href="1.9.html">Frames and Multimedia</a>
+    <a href="1.10.html">HTML5 Document Structure</a>
+    <a href="1.11.html">Creating Editable Content</a>
+    <a href="1.12.html">Checking Spelling Mistakes</a>
+    <a href="1.13.html">Exploring Custom Data Attributes</a>
+    <a href="1.14.html">Client-Side Storage</a>
+    <a href="1.15.html">Drag and Drop Feature</a>
+    <a href="1.16.html">Offline Web Applications</a>
+    <a href="1.17.html">Web Communications</a>
+    <a href="1.18.html">Cross-Document Messaging and Desktop Notifications</a>
+
+</div>
+    <!-- Main Content Section -->
+<div class="main-content">
+
+    <main class="container mt-5">
+        <!-- Section for Working with Links and URLs -->
+        <section class="mb-5">
+            <h2>1.4 Working with Links and URLs</h2>
+            <p>Links are an essential part of HTML, allowing users to navigate between web pages, sections of a page, or even external resources like images or documents. The HTML <b>&lt;a&gt;</b> (anchor) element defines a hyperlink.</p>
+
+            <h3>Creating Links</h3>
+            <p>To create a basic hyperlink, use the <b>&lt;a&gt;</b> tag with the <b>href</b> attribute, which specifies the URL to which the link points.</p>
+            <pre>
+&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
+            </pre>
+            <p>The above example creates a hyperlink to "https://www.example.com". Clicking on the text "Visit Example.com" will take the user to that URL.</p>
+
+            <h3>Linking to Other Pages</h3>
+            <p>To link to another page on the same website, you can provide a relative URL in the <b>href</b> attribute.</p>
+            <pre>
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+            </pre>
+            <p>This example links to a page called "about.html" in the same directory.</p>
+
+            <h3>Opening Links in a New Tab</h3>
+            <p>If you want the link to open in a new browser tab, add the <b>target="_blank"</b> attribute to the <b>&lt;a&gt;</b> tag.</p>
+            <pre>
+&lt;a href="https://www.example.com" target="_blank"&gt;Open Example.com in a new tab&lt;/a&gt;
+            </pre>
+
+            <h3>Linking to an Email Address</h3>
+            <p>To create a link that allows users to send an email, use the <b>mailto:</b> protocol in the <b>href</b> attribute.</p>
+            <pre>
+&lt;a href="mailto:someone@example.com"&gt;Send Email&lt;/a&gt;
+            </pre>
+
+            <h3>Linking to Specific Sections of a Page</h3>
+            <p>You can link to a specific section of a web page using anchors. First, assign an <b>id</b> attribute to the target element, and then create a link to that <b>id</b> with the <b>#</b> symbol.</p>
+            <pre>
+&lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;
+&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;
+            </pre>
+            <p>Clicking the link will scroll the page to the section with the corresponding <b>id</b>.</p>
+
+            <h3>Linking to a Phone Number</h3>
+            <p>To create a link that allows users to call a phone number directly from a mobile device, use the <b>tel:</b> protocol.</p>
+            <pre>
+&lt;a href="tel:+123456789"&gt;Call Us&lt;/a&gt;
+            </pre>
+
+            <h3>Absolute vs. Relative URLs</h3>
+            <p>There are two types of URLs used in hyperlinks: absolute and relative.</p>
+            <ul>
+                <li><b>Absolute URLs:</b> These contain the full path, including the protocol (http or https), domain name, and any path to the resource.</li>
+                <pre>
+&lt;a href="https://www.example.com/about.html"&gt;About Us&lt;/a&gt;
+                </pre>
+                <li><b>Relative URLs:</b> These specify the path relative to the current document. They are often used to link between pages on the same website.</li>
+                <pre>
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+                </pre>
+            </ul>
+
+            <h3>Link States</h3>
+            <p>There are different states a link can be in, which can be styled using CSS:</p>
+            <ul>
+                <li><b>a:link</b> – A normal, unvisited link.</li>
+                <li><b>a:visited</b> – A link the user has already visited.</li>
+                <li><b>a:hover</b> – A link when the user mouses over it.</li>
+                <li><b>a:active</b> – A link the moment it is clicked.</li>
+            </ul>
+
+            <h3>Example: Styling Link States</h3>
+            <pre>
+a:link {
+    color: blue;
+}
+a:visited {
+    color: purple;
+}
+a:hover {
+    color: red;
+}
+a:active {
+    color: green;
+}
+            </pre>
+
+        </section>
+    </main>
+</div>
+
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

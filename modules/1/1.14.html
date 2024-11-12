@@ -1,0 +1,241 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+<style>
+        /* Added CSS for sidebar */
+        .sidebar {
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+   <div class="sidebar" id="sidebar">
+   
+    <a href="1.1.html">Fundamentals of HTML</a>
+    <a href="1.2.html">Working with Text</a>
+    <a href="1.3.html">Organizing Text in HTML</a>
+    <a href="1.4.html">Working with Links and URLs</a>
+    <a href="1.5.html">Creating Tables</a>
+    <a href="1.6.html">Working with Images</a>
+    <a href="1.7.html">Canvas</a>
+    <a href="1.8.html">Forms</a>
+    <a href="1.9.html">Frames and Multimedia</a>
+    <a href="1.10.html">HTML5 Document Structure</a>
+    <a href="1.11.html">Creating Editable Content</a>
+    <a href="1.12.html">Checking Spelling Mistakes</a>
+    <a href="1.13.html">Exploring Custom Data Attributes</a>
+    <a href="1.14.html">Client-Side Storage</a>
+    <a href="1.15.html">Drag and Drop Feature</a>
+    <a href="1.16.html">Offline Web Applications</a>
+    <a href="1.17.html">Web Communications</a>
+    <a href="1.18.html">Cross-Document Messaging and Desktop Notifications</a>
+
+</div>
+    <!-- Main Content -->
+<div class="main-content">
+<!-- Main Content Section -->
+<main class="container mt-5">
+    <h1 class="text-center mb-5">Client-Side Storage in HTML5</h1>
+
+    <!-- Client-Side Storage Section -->
+    <section class="mb-5">
+        <h2>Introduction to Client-Side Storage</h2>
+        <p>Client-side storage allows web applications to store data directly on the user's device. This enables a smoother user experience and faster data retrieval since information can be accessed without server requests.</p>
+        <p>HTML5 introduces two main types of client-side storage mechanisms: <strong>Local Storage</strong> and <strong>Session Storage</strong>. These storage options provide a way to save data within the browser for different use cases.</p>
+
+        <!-- Cookies -->
+        <h3>Using Cookies</h3>
+        <p>Cookies are small pieces of data stored by the browser that help identify users and retain information for sessions. They are commonly used for remembering login information, storing user preferences, and tracking user activity.</p>
+        <ul>
+            <li>Cookies are sent to the server with each request, allowing the server to recognize users.</li>
+            <li>Cookies have a specified expiration date, after which they are automatically deleted.</li>
+            <li>They are limited in storage size (around 4KB per cookie).</li>
+        </ul>
+
+        <h4>Setting a Cookie with JavaScript</h4>
+        <p>Here is an example of setting a cookie with JavaScript:</p>
+        <pre>
+document.cookie = "username=John Doe; expires=Fri, 31 Dec 2024 12:00:00 UTC; path=/";
+        </pre>
+        <p>This example creates a cookie named <code>username</code> with the value "John Doe" that expires on December 31, 2024.</p>
+
+        <h4>Reading a Cookie</h4>
+        <p>To read a cookie, simply access <code>document.cookie</code>:</p>
+        <pre>
+let cookies = document.cookie;
+console.log(cookies);
+        </pre>
+
+        <!-- Local Storage -->
+        <h3>Local Storage</h3>
+        <p><strong>Local Storage</strong> is a feature of HTML5 that allows web applications to store data persistently in the browser. Data stored in local storage has no expiration date and remains available even after the browser is closed and reopened.</p>
+        <ul>
+            <li>Data is stored as key-value pairs.</li>
+            <li>Local storage has a storage limit (usually around 5-10 MB per domain).</li>
+            <li>It is accessible only within the same domain.</li>
+        </ul>
+
+        <h4>Using Local Storage</h4>
+        <p>To store data in local storage, use the <code>localStorage.setItem</code> method:</p>
+        <pre>
+localStorage.setItem("username", "John Doe");
+        </pre>
+        <p>To retrieve data, use <code>localStorage.getItem</code>:</p>
+        <pre>
+let username = localStorage.getItem("username");
+console.log(username);
+        </pre>
+        <p>To remove a specific item, use <code>localStorage.removeItem</code>, or clear all data with <code>localStorage.clear</code>.</p>
+
+        <!-- Session Storage -->
+        <h3>Session Storage</h3>
+        <p><strong>Session Storage</strong> is similar to local storage but has a key difference: data stored in session storage is cleared when the page session ends. This typically occurs when the browser or tab is closed.</p>
+        <ul>
+            <li>Data is stored as key-value pairs.</li>
+            <li>Data remains only for the duration of the page session.</li>
+            <li>Session storage has a similar size limit to local storage (usually around 5-10 MB).</li>
+        </ul>
+
+        <h4>Using Session Storage</h4>
+        <p>To store data in session storage, use the <code>sessionStorage.setItem</code> method:</p>
+        <pre>
+sessionStorage.setItem("username", "John Doe");
+        </pre>
+        <p>To retrieve data, use <code>sessionStorage.getItem</code>:</p>
+        <pre>
+let username = sessionStorage.getItem("username");
+console.log(username);
+        </pre>
+        <p>To remove a specific item, use <code>sessionStorage.removeItem</code>, or clear all session data with <code>sessionStorage.clear</code>.</p>
+
+        <!-- Comparison of Storage Options -->
+        <h3>Comparison of Client-Side Storage Options</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Cookies</th>
+                    <th>Local Storage</th>
+                    <th>Session Storage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data Persistence</td>
+                    <td>Depends on expiration date</td>
+                    <td>Persistent until manually deleted</td>
+                    <td>Cleared when page session ends</td>
+                </tr>
+                <tr>
+                    <td>Storage Limit</td>
+                    <td>~4 KB per cookie</td>
+                    <td>~5-10 MB per domain</td>
+                    <td>~5-10 MB per domain</td>
+                </tr>
+                <tr>
+                    <td>Data Accessibility</td>
+                    <td>Sent with each HTTP request</td>
+                    <td>Accessible only within the same domain</td>
+                    <td>Accessible only within the same domain</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Each client-side storage method has its specific use cases. Cookies are suited for server-side data sharing, local storage for persistent data, and session storage for temporary data.</p>
+    </section>
+</main>
+
+
+    </div>
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

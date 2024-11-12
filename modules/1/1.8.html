@@ -1,0 +1,230 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+<style>
+        /* Added CSS for sidebar */
+        .sidebar {
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+   
+    <a href="1.1.html">Fundamentals of HTML</a>
+    <a href="1.2.html">Working with Text</a>
+    <a href="1.3.html">Organizing Text in HTML</a>
+    <a href="1.4.html">Working with Links and URLs</a>
+    <a href="1.5.html">Creating Tables</a>
+    <a href="1.6.html">Working with Images</a>
+    <a href="1.7.html">Canvas</a>
+    <a href="1.8.html">Forms</a>
+    <a href="1.9.html">Frames and Multimedia</a>
+    <a href="1.10.html">HTML5 Document Structure</a>
+    <a href="1.11.html">Creating Editable Content</a>
+    <a href="1.12.html">Checking Spelling Mistakes</a>
+    <a href="1.13.html">Exploring Custom Data Attributes</a>
+    <a href="1.14.html">Client-Side Storage</a>
+    <a href="1.15.html">Drag and Drop Feature</a>
+    <a href="1.16.html">Offline Web Applications</a>
+    <a href="1.17.html">Web Communications</a>
+    <a href="1.18.html">Cross-Document Messaging and Desktop Notifications</a>
+
+</div>
+    <!-- Main Content -->
+<!-- Main Content -->
+<div class="main-content">
+
+    <!-- Main Content Section -->
+    <main class="container mt-5">
+        <h1 class="text-center mb-5">HTML Forms</h1>
+
+        <!-- Forms Section -->
+        <section class="mb-5">
+            <h2>HTML Forms</h2>
+            <p>HTML Forms are used to collect user input. The <b>&lt;form&gt;</b> element wraps all the form controls and contains attributes that specify how the form behaves.</p>
+
+            <h3>Form Element</h3>
+            <p>The <b>&lt;form&gt;</b> element has several attributes:</p>
+            <ul>
+                <li><b>action</b> - URL where the form data is sent when submitted.</li>
+                <li><b>method</b> - HTTP method used when sending form data (GET or POST).</li>
+            </ul>
+            <pre>
+&lt;form action="submit_form.php" method="post"&gt;
+    <!-- Form controls go here -->
+&lt;/form&gt;
+            </pre>
+
+            <h3>Form Controls</h3>
+            <p>HTML provides several input types to create form controls:</p>
+            <ul>
+                <li><b>&lt;input&gt;</b> - Used for various types of user input (text, password, checkbox, etc.).</li>
+                <li><b>&lt;textarea&gt;</b> - A multi-line input field for text.</li>
+                <li><b>&lt;button&gt;</b> - A clickable button.</li>
+                <li><b>&lt;select&gt;</b> - A dropdown list.</li>
+                <li><b>&lt;label&gt;</b> - Defines a label for an input element.</li>
+            </ul>
+
+            <h3>Input Types</h3>
+            <p>The <b>&lt;input&gt;</b> element can take various types:</p>
+            <pre>
+&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password"&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+            </pre>
+
+            <h3>Textarea Example</h3>
+            <pre>
+&lt;form&gt;
+    &lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea id="message" name="message"&gt;Enter your message here...&lt;/textarea&gt;
+
+    &lt;input type="submit" value="Send"&gt;
+&lt;/form&gt;
+            </pre>
+
+            <h3>Select Dropdown Example</h3>
+            <pre>
+&lt;form&gt;
+    &lt;label for="cars"&gt;Choose a car:&lt;/label&gt;
+    &lt;select id="cars" name="cars"&gt;
+        &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+        &lt;option value="saab"&gt;Saab&lt;/option&gt;
+        &lt;option value="fiat"&gt;Fiat&lt;/option&gt;
+        &lt;option value="audi"&gt;Audi&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+            </pre>
+
+            <h3>Checkbox and Radio Buttons</h3>
+            <p>Checkboxes allow the user to select one or more options, while radio buttons allow for selecting only one option from a set:</p>
+            <pre>
+&lt;form&gt;
+    &lt;label&gt;&lt;input type="checkbox" name="vehicle1" value="Bike"&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+    &lt;label&gt;&lt;input type="checkbox" name="vehicle2" value="Car"&gt; I have a car&lt;/label&gt;&lt;br&gt;
+
+    &lt;label&gt;&lt;input type="radio" name="gender" value="male"&gt; Male&lt;/label&gt;&lt;br&gt;
+    &lt;label&gt;&lt;input type="radio" name="gender" value="female"&gt; Female&lt;/label&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+            </pre>
+
+            <h3>Form Validation</h3>
+            <p>HTML5 provides built-in form validation by using attributes such as <b>required</b>, <b>minlength</b>, and <b>maxlength</b>.</p>
+            <pre>
+&lt;form&gt;
+    &lt;label for="username"&gt;Username (min 5 characters):&lt;/label&gt;
+    &lt;input type="text" id="username" name="username" required minlength="5"&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+            </pre>
+        </section>
+    </main>
+</div>
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

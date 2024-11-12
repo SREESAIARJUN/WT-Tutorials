@@ -1,0 +1,289 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+<style>
+        /* Added CSS for sidebar */
+        .sidebar {
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+   
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+   
+    <a href="1.1.html">Fundamentals of HTML</a>
+    <a href="1.2.html">Working with Text</a>
+    <a href="1.3.html">Organizing Text in HTML</a>
+    <a href="1.4.html">Working with Links and URLs</a>
+    <a href="1.5.html">Creating Tables</a>
+    <a href="1.6.html">Working with Images</a>
+    <a href="1.7.html">Canvas</a>
+    <a href="1.8.html">Forms</a>
+    <a href="1.9.html">Frames and Multimedia</a>
+    <a href="1.10.html">HTML5 Document Structure</a>
+    <a href="1.11.html">Creating Editable Content</a>
+    <a href="1.12.html">Checking Spelling Mistakes</a>
+    <a href="1.13.html">Exploring Custom Data Attributes</a>
+    <a href="1.14.html">Client-Side Storage</a>
+    <a href="1.15.html">Drag and Drop Feature</a>
+    <a href="1.16.html">Offline Web Applications</a>
+    <a href="1.17.html">Web Communications</a>
+    <a href="1.18.html">Cross-Document Messaging and Desktop Notifications</a>
+
+</div>
+    <!-- Main Content -->
+    <div class="main-content">
+    
+    
+    <!-- Main Content Section -->
+<main class="container mt-5">
+    <h1 class="text-center mb-5">Fundamentals of HTML</h1>
+
+    <!-- Introduction to HTML Section -->
+    <section class="mb-5">
+        <h2>What is HTML?</h2>
+        <p>HTML, or <strong>HyperText Markup Language</strong>, is the standard markup language used to create web pages. HTML elements are the building blocks of HTML, which structure content for display in a web browser. HTML elements are represented by tags, and each tag tells the browser how to display the content enclosed within it.</p>
+
+        <h3>Basic Structure of an HTML Document</h3>
+        <p>An HTML document starts with a doctype declaration, followed by the <code>&lt;html&gt;</code> element, which contains the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> sections.</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;This is a Heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+
+        <h4>Explanation:</h4>
+        <ul>
+            <li><strong>&lt;!DOCTYPE html&gt;</strong>: Declares the document type and version (HTML5).</li>
+            <li><strong>&lt;html&gt;</strong>: The root element of the HTML document.</li>
+            <li><strong>&lt;head&gt;</strong>: Contains metadata, links to CSS files, and the page title.</li>
+            <li><strong>&lt;body&gt;</strong>: Contains all the content displayed on the webpage, such as headings, paragraphs, images, and links.</li>
+        </ul>
+    </section>
+
+    <!-- Common HTML Elements Section -->
+    <section class="mb-5">
+        <h2>Common HTML Elements</h2>
+
+        <h3>Headings</h3>
+        <p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags, with <code>&lt;h1&gt;</code> as the highest (most important) level and <code>&lt;h6&gt;</code> as the lowest.</p>
+        <pre>
+&lt;h1&gt;This is an H1 Heading&lt;/h1&gt;
+&lt;h2&gt;This is an H2 Heading&lt;/h2&gt;
+&lt;h3&gt;This is an H3 Heading&lt;/h3&gt;
+        </pre>
+
+        <h3>Paragraphs</h3>
+        <p>Paragraphs are defined using the <code>&lt;p&gt;</code> tag, which is used for blocks of text.</p>
+        <pre>
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+        </pre>
+
+        <h3>Links</h3>
+        <p>Links are defined with the <code>&lt;a&gt;</code> tag, which requires an <code>href</code> attribute to specify the URL.</p>
+        <pre>
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+        </pre>
+
+        <h3>Images</h3>
+        <p>Images are embedded using the <code>&lt;img&gt;</code> tag, which has <code>src</code> (source) and <code>alt</code> (alternative text) attributes.</p>
+        <pre>
+&lt;img src="image.jpg" alt="Description of the image" width="500" height="300"&gt;
+        </pre>
+    </section>
+
+    <!-- HTML Attributes Section -->
+    <section class="mb-5">
+        <h2>HTML Attributes</h2>
+        <p>Attributes provide additional information about HTML elements. They are always included in the opening tag and usually consist of a name and a value.</p>
+        <h4>Common HTML Attributes</h4>
+        <ul>
+            <li><strong>href</strong>: Specifies the URL in the <code>&lt;a&gt;</code> (anchor) tag.</li>
+            <li><strong>src</strong>: Specifies the file path for images in the <code>&lt;img&gt;</code> tag.</li>
+            <li><strong>alt</strong>: Provides alternative text for images if they cannot be displayed.</li>
+            <li><strong>title</strong>: Adds additional information as a tooltip when you hover over the element.</li>
+            <li><strong>style</strong>: Allows for inline CSS styling.</li>
+            <li><strong>id</strong>: Specifies a unique identifier for an element, which can be targeted by CSS or JavaScript.</li>
+            <li><strong>class</strong>: Specifies a class name for an element, which can be targeted by CSS or JavaScript to apply specific styles or behavior.</li>
+        </ul>
+
+        <h4>Example Using Attributes:</h4>
+        <pre>
+&lt;a href="https://www.example.com" title="Example Site"&gt;Visit Example&lt;/a&gt;
+&lt;img src="logo.png" alt="Site Logo" class="site-logo"&gt;
+        </pre>
+    </section>
+
+    <!-- HTML Lists Section -->
+    <section class="mb-5">
+        <h2>HTML Lists</h2>
+        <p>HTML provides two main types of lists: <strong>ordered lists</strong> and <strong>unordered lists</strong>. Lists are used to group related items together.</p>
+
+        <h3>Unordered List</h3>
+        <p>An unordered list is created with the <code>&lt;ul&gt;</code> tag, and list items are added with the <code>&lt;li&gt;</code> tag.</p>
+        <pre>
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+        </pre>
+
+        <h3>Ordered List</h3>
+        <p>An ordered list is created with the <code>&lt;ol&gt;</code> tag, and list items are also added with the <code>&lt;li&gt;</code> tag.</p>
+        <pre>
+&lt;ol&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+  &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;
+        </pre>
+    </section>
+
+    <!-- HTML Tables Section -->
+    <section class="mb-5">
+        <h2>HTML Tables</h2>
+        <p>Tables are used to organize data in rows and columns. Tables are created with the <code>&lt;table&gt;</code> tag, with rows added using <code>&lt;tr&gt;</code>, and data cells using <code>&lt;td&gt;</code> for standard cells and <code>&lt;th&gt;</code> for header cells.</p>
+        <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data 1&lt;/td&gt;
+    &lt;td&gt;Data 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </pre>
+    </section>
+
+    <!-- HTML Forms Section -->
+    <section class="mb-5">
+        <h2>HTML Forms</h2>
+        <p>Forms in HTML are used to collect user input. The <code>&lt;form&gt;</code> element contains form controls like <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;button&gt;</code>.</p>
+
+        <h4>Form Example:</h4>
+        <pre>
+&lt;form action="/submit_form" method="POST"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+        </pre>
+        <p>In this example, the form data is sent to the <code>/submit_form</code> URL with a POST request when the user clicks Submit.</p>
+    </section>
+</main>
+
+    </div>
+
+
+
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

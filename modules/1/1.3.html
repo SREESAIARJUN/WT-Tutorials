@@ -1,0 +1,247 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+<style>
+        /* Added CSS for sidebar */
+        .sidebar {
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+   
+    <a href="1.1.html">Fundamentals of HTML</a>
+    <a href="1.2.html">Working with Text</a>
+    <a href="1.3.html">Organizing Text in HTML</a>
+    <a href="1.4.html">Working with Links and URLs</a>
+    <a href="1.5.html">Creating Tables</a>
+    <a href="1.6.html">Working with Images</a>
+    <a href="1.7.html">Canvas</a>
+    <a href="1.8.html">Forms</a>
+    <a href="1.9.html">Frames and Multimedia</a>
+    <a href="1.10.html">HTML5 Document Structure</a>
+    <a href="1.11.html">Creating Editable Content</a>
+    <a href="1.12.html">Checking Spelling Mistakes</a>
+    <a href="1.13.html">Exploring Custom Data Attributes</a>
+    <a href="1.14.html">Client-Side Storage</a>
+    <a href="1.15.html">Drag and Drop Feature</a>
+    <a href="1.16.html">Offline Web Applications</a>
+    <a href="1.17.html">Web Communications</a>
+    <a href="1.18.html">Cross-Document Messaging and Desktop Notifications</a>
+
+</div>
+
+    <!-- Main Content -->
+<div class="main-content">
+
+    <!-- Main Content Section -->
+    <main class="container mt-5">
+        <h1 class="text-center mb-5">Organizing Text in HTML</h1>
+
+        <!-- Organizing Text Section -->
+        <section class="mb-5">
+            <h2>1.3 Organizing Text in HTML</h2>
+            <p>HTML provides several methods for organizing text content in a meaningful and structured way. These include using paragraphs, line breaks, and horizontal rules, among others.</p>
+
+            <h3>HTML Paragraphs</h3>
+            <p>The <b>&lt;p&gt;</b> tag is used to define a paragraph. It is one of the most commonly used tags for structuring text. A paragraph always starts on a new line, and browsers automatically add some space before and after a paragraph.</p>
+            <pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+            </pre>
+
+            <h3>HTML Line Breaks</h3>
+            <p>The <b>&lt;br&gt;</b> tag is used to create a line break in the text, without starting a new paragraph. This tag is an empty element, meaning it does not have a closing tag.</p>
+            <pre>
+&lt;p&gt;This is a paragraph with a line break&lt;br&gt;This is on a new line.&lt;/p&gt;
+            </pre>
+            <p>Output:</p>
+            <p>This is a paragraph with a line break<br>This is on a new line.</p>
+
+            <h3>Preformatted Text</h3>
+            <p>The <b>&lt;pre&gt;</b> tag is used to display preformatted text. It preserves both spaces and line breaks. This is useful when you want to display text exactly as it is typed.</p>
+            <pre>
+&lt;pre&gt;
+  This is preformatted text.
+  It preserves      spacing
+  and line breaks.
+&lt;/pre&gt;
+            </pre>
+            <p>Output:</p>
+            <pre>
+  This is preformatted text.
+  It preserves      spacing
+  and line breaks.
+            </pre>
+
+            <h3>HTML Horizontal Rules</h3>
+            <p>The <b>&lt;hr&gt;</b> tag is used to insert a horizontal rule or line to divide content on the page. This tag is also an empty element, meaning it does not have a closing tag.</p>
+            <pre>
+&lt;hr&gt;
+            </pre>
+            <p>Output:</p>
+            <hr>
+
+            <h3>HTML Block and Inline Elements</h3>
+            <p>In HTML, elements are either block-level or inline. Understanding the difference between these two types of elements is crucial for structuring your web page effectively.</p>
+
+            <h4>Block Elements</h4>
+            <p>Block-level elements take up the full width of their parent container and always start on a new line. Examples of block elements include:</p>
+            <ul>
+                <li><b>&lt;div&gt;</b> - a division or section in an HTML document</li>
+                <li><b>&lt;h1&gt;</b> to <b>&lt;h6&gt;</b> - header tags</li>
+                <li><b>&lt;p&gt;</b> - paragraph</li>
+                <li><b>&lt;form&gt;</b> - form element</li>
+                <li><b>&lt;table&gt;</b> - table</li>
+                <li><b>&lt;ul&gt;</b>, <b>&lt;ol&gt;</b>, <b>&lt;li&gt;</b> - lists</li>
+            </ul>
+
+            <h4>Inline Elements</h4>
+            <p>Inline elements take up only as much width as necessary and do not force a new line in the document. Examples of inline elements include:</p>
+            <ul>
+                <li><b>&lt;a&gt;</b> - anchor/link</li>
+                <li><b>&lt;span&gt;</b> - a section of text or content</li>
+                <li><b>&lt;img&gt;</b> - image</li>
+                <li><b>&lt;strong&gt;</b> - bold text</li>
+                <li><b>&lt;em&gt;</b> - emphasized text</li>
+            </ul>
+        </section>
+
+        <!-- HTML Document Structure -->
+        <section class="mb-5">
+            <h2>1.4 Document Structure</h2>
+            <p>HTML documents follow a specific structure to ensure that the content is displayed correctly by browsers. The document consists of elements such as the DOCTYPE declaration, the HTML element, the head, and the body.</p>
+
+            <h3>DOCTYPE Declaration</h3>
+            <p>The DOCTYPE declaration is used to specify the version of HTML that the document is using. In HTML5, the DOCTYPE declaration is simple:</p>
+            <pre>
+&lt;!DOCTYPE html&gt;
+            </pre>
+
+            <h3>HTML Element</h3>
+            <p>The <b>&lt;html&gt;</b> element is the root element of the HTML page. All other elements are nested inside this element.</p>
+            <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;!-- Head content goes here --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Body content goes here --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+
+            <h3>Head Element</h3>
+            <p>The <b>&lt;head&gt;</b> element contains meta-information about the document, such as its title, linked stylesheets, and metadata. The contents of the head element are not visible on the webpage.</p>
+
+            <h3>Body Element</h3>
+            <p>The <b>&lt;body&gt;</b> element contains all the content of the webpage that will be displayed in the browser, including text, images, links, and other elements.</p>
+            <pre>
+&lt;body&gt;
+    &lt;h1&gt;This is a Heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+            </pre>
+            <p>Output:</p>
+            <h1>This is a Heading</h1>
+            <p>This is a paragraph.</p>
+
+        </section>
+    </main>
+</div>
+
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>
