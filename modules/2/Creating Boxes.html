@@ -1,0 +1,240 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!--Editable section starts-->
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="./Intro to CSS.html">Intro to CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./CSS Selectors.html">CSS Selectors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Inserting CSS in an HTML document.html">Inserting CSS in an HTML document</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Backgrounds.html">Backgrounds</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Fonts and Text Styles.html">Fonts and Text Styles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Creating Boxes.html">Creating Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Displaying.html">Displaying</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Positioning and Floating Elements.html">Positioning and Floating Elements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Features of CSS3.html">Features of CSS3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Media Queries.html                                     ">Media Queries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Overview of JavaScript.html">Overview of JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Functions.html">JavaScript Functions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Image maps and Animations.html">Image Maps and Animations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Objects.html">JavaScript Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Working with Browser and Document Objects.html">Working with Browser and Document Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to JQuery.html">Intro to JQuery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JQuery Selectors and Events.html">JQuery Selectors and Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Methods to access HTML Elements and Attributes.html">Methods to access HTML elements and attributes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to AJAX.html">Intro to AJAX</a></li>
+                </ul>
+            </div>
+        </nav>
+       <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Creating Boxes</h1>
+            </div>
+
+            <section id="topic6" class="mb-5">
+                <h2>Comprehensive Explanation</h2>
+                <p>In CSS, the basic building block for creating layouts and structures is the box model. Every HTML element is represented as a rectangular box, and understanding the box model is crucial for controlling the size, spacing, and positioning of these boxes.</p>
+
+                <h3>The Box Model</h3>
+                <p>The box model consists of four main components:</p>
+                <ul>
+                    <li><strong>Content</strong>: The actual content of the element, such as text, images, or other HTML elements.</li>
+                    <li><strong>Padding</strong>: The space between the content and the element's border.</li>
+                    <li><strong>Border</strong>: The line that surrounds the padding and content of the element.</li>
+                    <li><strong>Margin</strong>: The space between the element's border and the surrounding elements.</li>
+                </ul>
+                <p>These components work together to define the size and spacing of an element on the web page.</p>
+            </section>
+
+            <section class="mb-5">
+                <h3>Controlling Box Dimensions</h3>
+                <p>You can use the following CSS properties to control the dimensions of a box:</p>
+                <ul>
+                    <li><code>width</code> and <code>height</code>: Set the width and height of the content area.</li>
+                    <li><code>padding</code>: Set the padding around the content area.</li>
+                    <li><code>border</code>: Set the border around the padding and content area.</li>
+                    <li><code>margin</code>: Set the margin around the border and other elements.</li>
+                </ul>
+                <p>You can use various units, such as pixels (px), percentages (%), or relative units (em, rem) to specify the values for these properties.</p>
+            </section>
+
+            <section class="mb-5">
+                <h3>Box Sizing</h3>
+                <p>The <code>box-sizing</code> property determines how the browser calculates the total width and height of an element. There are two main values for this property:</p>
+                <ul>
+                    <li><code>content-box</code> (default): The total width and height include only the content, not the padding or border.</li>
+                    <li><code>border-box</code>: The total width and height include the content, padding, and border.</li>
+                </ul>
+                <p>Using <code>border-box</code> can make it easier to control the size of elements, as the padding and border are included in the total dimensions.</p>
+            </section>
+
+            <section class="mb-5">
+                <h3>Box Alignment</h3>
+                <p>You can use various CSS properties to align boxes within their parent container:</p>
+                <ul>
+                    <li><code>text-align</code>: Aligns inline-level content (such as text) within a block-level element.</li>
+                    <li><code>margin: auto;</code>: Centers a block-level element horizontally within its parent container.</li>
+                    <li><code>justify-content</code> and <code>align-items</code>: Used in flexbox layouts to align and distribute flex items.</li>
+                    <li><code>position</code>: Used in conjunction with <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> to position an element relative to its normal position or another element.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Box Styling Examples</h2>
+                <pre><code class="language-css">
+/* Basic box */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+/* Box with padding and margin */
+.box-with-padding {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Centered box */
+.centered-box {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+
+/* Box with rounded corners */
+.rounded-box {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+                </code></pre>
+            </section>
+
+            <section class="mb-5">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Use the <code>box-sizing: border-box;</code> property to make it easier to control the size of elements.</li>
+                    <li>Utilize margin and padding to create spacing and hierarchy between elements.</li>
+                    <li>Consider using flexbox or grid layouts for more complex box-based designs.</li>
+                    <li>Experiment with border styles, colors, and rounded corners to create visually appealing boxes.</li>
+                    <li>Use consistent naming conventions for your box classes to improve code maintainability.</li>
+                    <li>Avoid excessive nesting of boxes, as it can lead to complex and difficult-to-manage CSS.</li>
+                    <li>Test your box layouts across different screen sizes to ensure they remain responsive and visually coherent.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2>Conclusion</h2>
+                <p>Understanding the box model and how to create and style boxes is fundamental to web design and layout. By mastering these concepts, you can create visually appealing and well-structured web pages that adapt to different screen sizes and user needs. Remember to experiment, test, and refine your box-based designs to achieve the best results.</p>
+            </section>
+        </main>
+    </div>
+</div>
+
+<!--Editable section ends-->
+<button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+    <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+</button>
+
+<div id="chatbot" class="chatbot-container" style="display: none;">
+    <div class="chatbot-header">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+        <h3>Web Tech Assistant</h3>
+        <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+    <div class="chatbot-input">
+        <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+        <button id="sendMessage" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="dark-mode.js"></script>
+<script src="chatbot.js"></script>
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

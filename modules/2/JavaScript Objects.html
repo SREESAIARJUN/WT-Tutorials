@@ -1,0 +1,264 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!--Editable section starts-->
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="./Intro to CSS.html">Intro to CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./CSS Selectors.html">CSS Selectors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Inserting CSS in an HTML document.html">Inserting CSS in an HTML document</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Backgrounds.html">Backgrounds</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Fonts and Text Styles.html">Fonts and Text Styles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Creating Boxes.html">Creating Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Displaying.html">Displaying</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Positioning and Floating Elements.html">Positioning and Floating Elements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Features of CSS3.html">Features of CSS3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Media Queries.html                                     ">Media Queries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Overview of JavaScript.html">Overview of JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Functions.html">JavaScript Functions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Image maps and Animations.html">Image Maps and Animations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Objects.html">JavaScript Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Working with Browser and Document Objects.html">Working with Browser and Document Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to JQuery.html">Intro to JQuery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JQuery Selectors and Events.html">JQuery Selectors and Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Methods to access HTML Elements and Attributes.html">Methods to access HTML elements and attributes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to AJAX.html">Intro to AJAX</a></li>
+                </ul>
+            </div>
+        </nav>
+  <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">JavaScript Objects</h1>
+            </div>
+
+            <section id="topic15" class="mb-5">
+                <h2>Comprehensive Explanation</h2>
+                <p>In JavaScript, objects are the fundamental data structure for organizing and storing data. They allow you to group related data and functionality together, making your code more modular, maintainable, and reusable.</p>
+                <p>Objects in JavaScript are collections of key-value pairs, where the keys are called "properties" and the values can be of any data type, including functions (which are called "methods" when they are part of an object).</p>
+            </section>
+
+            <section class="mb-5">
+                <h2>Creating Objects</h2>
+                <p>There are several ways to create objects in JavaScript:</p>
+                
+                <h3>Object Literal Notation</h3>
+                <pre><code class="language-javascript">
+const person = {
+    name: "John Doe",
+    age: 30,
+    occupation: "Software Engineer",
+    greet: function() {
+        console.log(`Hello, my name is ${this.name}.`);
+    }
+};
+                </code></pre>
+                <p>In this example, we create an object called <code>person</code> using the object literal notation, which consists of a set of key-value pairs enclosed in curly braces <code>{}</code>.</p>
+                
+                <h3>Constructor Function</h3>
+                <pre><code class="language-javascript">
+function Person(name, age, occupation) {
+    this.name = name;
+    this.age = age;
+    this.occupation = occupation;
+    this.greet = function() {
+        console.log(`Hello, my name is ${this.name}.`);
+    };
+}
+
+const john = new Person("John Doe", 30, "Software Engineer");
+                </code></pre>
+                <p>In this example, we define a <code>Person</code> constructor function that takes in three parameters: <code>name</code>, <code>age</code>, and <code>occupation</code>. We then create a new <code>Person</code> object using the <code>new</code> keyword and assign it to the <code>john</code> variable.</p>
+                
+                <h3>Object.create()</h3>
+                <pre><code class="language-javascript">
+const personPrototype = {
+    greet: function() {
+        console.log(`Hello, my name is ${this.name}.`);
+    }
+};
+
+const john = Object.create(personPrototype);
+john.name = "John Doe";
+john.age = 30;
+john.occupation = "Software Engineer";
+                </code></pre>
+                <p>In this example, we first create an object called <code>personPrototype</code> that contains a <code>greet</code> method. We then use the <code>Object.create()</code> method to create a new object <code>john</code> that inherits the properties and methods of <code>personPrototype</code>. We then add the specific properties for the <code>john</code> object.</p>
+            </section>
+
+            <section class="mb-5">
+                <h2>Accessing Object Properties</h2>
+                <p>You can access object properties using either dot notation or bracket notation:</p>
+                <pre><code class="language-javascript">
+console.log(person.name); // Output: "John Doe"
+console.log(person["age"]); // Output: 30
+                </code></pre>
+                <p>Dot notation is generally preferred for accessing properties, but bracket notation is useful when the property name is stored in a variable or needs to be computed at runtime.</p>
+            </section>
+
+            <section class="mb-5">
+                <h2>Modifying Object Properties</h2>
+                <p>You can modify object properties by assigning new values to them:</p>
+                <pre><code class="language-javascript">
+person.age = 31;
+person["occupation"] = "Senior Software Engineer";
+                </code></pre>
+                <p>You can also add new properties or remove existing ones:</p>
+                <pre><code class="language-javascript">
+person.hobbies = ["reading", "hiking"];
+delete person.age;
+                </code></pre>
+            </section>
+
+            <section class="mb-5">
+                <h2>Object Methods</h2>
+                <p>As mentioned earlier, functions stored as properties of an object are called "methods". Methods can access and manipulate the object's properties using the <code>this</code> keyword, which refers to the current object instance.</p>
+                <pre><code class="language-javascript">
+const person = {
+    name: "John Doe",
+    age: 30,
+    occupation: "Software Engineer",
+    greet: function() {
+        console.log(`Hello, my name is ${this.name}.`);
+    },
+    calculateRetirementAge: function() {
+        const retirementAge = 65;
+        const yearsToRetirement = retirementAge - this.age;
+        console.log(`You have ${yearsToRetirement} years until retirement.`);
+    }
+};
+
+person.greet(); // Output: "Hello, my name is John Doe."
+person.calculateRetirementAge(); // Output: "You have 35 years until retirement."
+                </code></pre>
+            </section>
+
+            <section class="mb-5">
+                <h2>Iterating over Object Properties</h2>
+                <p>You can use a <code>for...in</code> loop to iterate over an object's properties:</p>
+                <pre><code class="language-javascript">
+for (let prop in person) {
+    console.log(`${prop}: ${person[prop]}`);
+}
+                </code></pre>
+                <p>This will output:</p>
+                <pre>
+name: John Doe
+age: 30
+occupation: Software Engineer
+greet: function() {
+    console.log(`Hello, my name is ${this.name}.`);
+}
+calculateRetirementAge: function() {
+    const retirementAge = 65;
+    const yearsToRetirement = retirementAge - this.age;
+    console.log(`You have ${yearsToRetirement} years until retirement.`);
+}
+                </pre>
+            </section>
+
+            <section class="mb-5">
+                <h2>Conclusion</h2>
+                <p>JavaScript objects are a fundamental data structure that allow you to group related data and functionality together. By understanding how to create, access, modify, and iterate over objects, you can write more modular, maintainable, and reusable code. Mastering JavaScript objects is a key skill for any web developer.</p>
+            </section>
+        </main>
+    </div>
+</div>
+
+<!--Editable section ends-->
+
+<button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+    <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+</button>
+
+<div id="chatbot" class="chatbot-container" style="display: none;">
+    <div class="chatbot-header">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+        <h3>Web Tech Assistant</h3>
+        <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+    <div class="chatbot-input">
+        <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+        <button id="sendMessage" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="dark-mode.js"></script>
+<script src="chatbot.js"></script>
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

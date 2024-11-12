@@ -1,0 +1,222 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <!--Editable section starts-->
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="./Intro to CSS.html">Intro to CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./CSS Selectors.html">CSS Selectors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Inserting CSS in an HTML document.html">Inserting CSS in an HTML document</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Backgrounds.html">Backgrounds</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Fonts and Text Styles.html">Fonts and Text Styles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Creating Boxes.html">Creating Boxes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Displaying.html">Displaying</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Positioning and Floating Elements.html">Positioning and Floating Elements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Features of CSS3.html">Features of CSS3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Media Queries.html                                     ">Media Queries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Overview of JavaScript.html">Overview of JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Functions.html">JavaScript Functions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Image maps and Animations.html">Image Maps and Animations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JavaScript Objects.html">JavaScript Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Working with Browser and Document Objects.html">Working with Browser and Document Objects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to JQuery.html">Intro to JQuery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./JQuery Selectors and Events.html">JQuery Selectors and Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Methods to access HTML Elements and Attributes.html">Methods to access HTML elements and attributes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Intro to AJAX.html">Intro to AJAX</a></li>
+                </ul>
+            </div>
+        </nav>
+     <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Events</h1>
+            </div>
+
+            <section id="topic13" class="mb-5">
+                <h2>Comprehensive Explanation</h2>
+                <p>In web development, events are actions or occurrences that happen in the browser or on the web page, which the JavaScript code can detect and respond to. Events are a fundamental part of creating interactive and responsive user interfaces.</p>
+                <p>When an event occurs, the browser generates an event object that contains information about the event, such as the type of event, the element that triggered the event, and the event's coordinates. JavaScript can then use this event object to perform specific actions in response to the event.</p>
+            </section>
+
+            <section class="mb-5">
+                <h3>Common Event Types</h3>
+                <p>Some of the most common event types in JavaScript include:</p>
+                <ul>
+                    <li><strong>Mouse Events:</strong> <code>click</code>, <code>dblclick</code>, <code>mousedown</code>, <code>mouseup</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mousemove</code></li>
+                    <li><strong>Keyboard Events:</strong> <code>keydown</code>, <code>keyup</code>, <code>keypress</code></li>
+                    <li><strong>Form Events:</strong> <code>submit</code>, <code>change</code>, <code>focus</code>, <code>blur</code></li>
+                    <li><strong>Window Events:</strong> <code>load</code>, <code>resize</code>, <code>scroll</code>, <code>unload</code></li>
+                    <li><strong>Other Events:</strong> <code>input</code>, <code>transitionend</code>, <code>animationend</code>, <code>contextmenu</code></li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3>Adding Event Listeners</h3>
+                <p>To handle events in JavaScript, you need to add event listeners to the desired elements. Event listeners are functions that are called when the specified event occurs. Here's an example of adding a click event listener to a button:</p>
+                <pre><code class="language-javascript">
+// Get the button element
+const button = document.getElementById('myButton');
+
+// Add a click event listener to the button
+button.addEventListener('click', function() {
+    console.log('Button was clicked!');
+});
+                </code></pre>
+                <p>In this example, when the user clicks the button with the ID "myButton", the anonymous function passed as the second argument to <code>addEventListener</code> will be executed, logging the message "Button was clicked!" to the console.</p>
+            </section>
+
+            <section class="mb-5">
+                <h3>Event Handling</h3>
+                <p>When an event occurs, the browser generates an event object that contains information about the event. You can use this event object to perform additional actions or retrieve more details about the event. Here's an example of how to access the event object:</p>
+                <pre><code class="language-javascript">
+button.addEventListener('click', function(event) {
+    console.log('Button was clicked!');
+    console.log('Event object:', event);
+});
+                </code></pre>
+                <p>In this example, the event object is passed as an argument to the event listener function, and you can access its properties and methods to gather more information about the event, such as the target element, the coordinates of the click, and more.</p>
+            </section>
+
+            <section class="mb-5">
+                <h3>Event Propagation</h3>
+                <p>Event propagation is the way events "bubble up" or "capture down" the DOM tree. By default, events bubble up the DOM tree, meaning that if you have a button inside a div, and you click the button, the click event will first be handled by the button, then the div, then any parent elements, and so on. You can control this behavior using the <code>stopPropagation()</code> method of the event object.</p>
+                <pre><code class="language-javascript">
+// Get the button and the parent div
+const button = document.getElementById('myButton');
+const parent = document.getElementById('parent');
+
+// Add click event listeners
+button.addEventListener('click', function(event) {
+    console.log('Button was clicked!');
+    event.stopPropagation(); // Prevent the event from bubbling up
+});
+
+parent.addEventListener('click', function() {
+    console.log('Parent div was clicked!');
+});
+                </code></pre>
+                <p>In this example, when the button is clicked, the "Button was clicked!" message will be logged, but the "Parent div was clicked!" message will not be logged, because the event propagation was stopped.</p>
+            </section>
+
+            <section class="mb-5">
+                <h3>Event Delegation</h3>
+                <p>Event delegation is a technique where you attach a single event listener to a parent element, and that listener will fire whenever a matching event occurs on any of its child elements. This can be more efficient than attaching individual event listeners to each child element. Here's an example:</p>
+                <pre><code class="language-javascript">
+// Get the parent element
+const parent = document.getElementById('parent');
+
+// Add a click event listener to the parent
+parent.addEventListener('click', function(event) {
+    if (event.target.matches('button')) {
+        console.log('Button was clicked!');
+    }
+});
+                </code></pre>
+                <p>In this example, a single click event listener is added to the parent element. Whenever a button inside the parent is clicked, the event listener function will be executed, and the code inside will check if the clicked element matches a button. This can be more efficient than adding individual click event listeners to each button.</p>
+            </section>
+
+            <section class="mb-5">
+                <h2>Conclusion</h2>
+                <p>Events are a fundamental part of creating interactive and responsive web applications. By understanding how to add event listeners, handle event objects, control event propagation, and use event delegation, you can build web applications that respond to user actions and provide a smooth, engaging user experience.</p>
+            </section>
+        </main>
+    </div>
+</div>
+
+<!--Editable section ends-->
+
+<button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+    <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+</button>
+
+<div id="chatbot" class="chatbot-container" style="display: none;">
+    <div class="chatbot-header">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+        <h3>Web Tech Assistant</h3>
+        <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+    </div>
+    <div id="chatbotMessages" class="chatbot-messages"><div class="message bot"><p>Hello! I'm your Web Tech Assistant. How can I help you today?</p>
+</div></div>
+    <div class="chatbot-input">
+        <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+        <button id="sendMessage" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="dark-mode.js"></script>
+<script src="chatbot.js"></script>
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>
