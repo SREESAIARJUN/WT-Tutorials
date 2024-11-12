@@ -1,0 +1,325 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="introduction_php.html">Introduction</a>
+        <a href="php_datatypes.html">Data Types</a>
+        <a href="php_variables.html">Variables</a>
+        <a href="php_constants.html">Constants</a>
+        <a href="php_Expressions.html">Expressions</a>
+        <a href="php_String Interpolation.html">String Interpolation</a>
+        <a href="php_Control  Structures.html">Control Structures</a>
+        <a href="php_ Functions.html">Functions</a>
+        <a href="php_Arrays.html">Arrays</a>
+        <a href="php_Embedding PHP Code in Web Pages.html">Embedding PHP Code in Web Pages</a>
+        <a href="php_Object Oriented PHP.html">Object Oriented PHP</a>
+    </div>
+    <!-- Main Content -->
+   <!-- Main Content -->
+<div class="main-content">
+    <main class="container mt-5">
+        <h1 class="text-center mb-5">PHP: Control Structures</h1>
+
+        <!-- Introduction Section -->
+        <section class="mb-5">
+            <h2>Introduction to PHP Control Structures</h2>
+            <p>Control structures are the backbone of programming logic in PHP. They allow you to control the flow of your program's execution based on different conditions. PHP supports several types of control structures, including conditional statements and loops.</p>
+        </section>
+
+        <!-- If Statement Section -->
+        <section class="mb-5">
+            <h2>If Statement</h2>
+            <p>The if statement allows you to execute code blocks based on conditions.</p>
+            <pre><code class="language-php">
+&lt;?php
+$age = 18;
+if ($age >= 18) {
+    echo "You are an adult.";
+}
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- If-Else Statement Section -->
+        <section class="mb-5">
+            <h2>If-Else Statement</h2>
+            <p>The if-else statement allows you to execute one block of code if a condition is true and another if it's false.</p>
+            <pre><code class="language-php">
+&lt;?php
+$age = 15;
+if ($age >= 18) {
+    echo "You are an adult.";
+} else {
+    echo "You are a minor.";
+}
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- If-Elseif-Else Statement Section -->
+        <section class="mb-5">
+            <h2>If-Elseif-Else Statement</h2>
+            <p>The if-elseif-else statement allows you to test multiple conditions.</p>
+            <pre><code class="language-php">
+&lt;?php
+$score = 75;
+if ($score >= 90) {
+    echo "A";
+} elseif ($score >= 80) {
+    echo "B";
+} elseif ($score >= 70) {
+    echo "C";
+} else {
+    echo "F";
+}
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Switch Statement Section -->
+        <section class="mb-5">
+            <h2>Switch Statement</h2>
+            <p>The switch statement is used to perform different actions based on different conditions.</p>
+            <pre><code class="language-php">
+&lt;?php
+$day = "Monday";
+switch ($day) {
+    case "Monday":
+        echo "It's the start of the work week.";
+        break;
+    case "Friday":
+        echo "TGIF!";
+        break;
+    default:
+        echo "It's a regular day.";
+}
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- While Loop Section -->
+        <section class="mb-5">
+            <h2>While Loop</h2>
+            <p>The while loop executes a block of code as long as the specified condition is true.</p>
+            <pre><code class="language-php">
+&lt;?php
+$i = 1;
+while ($i <= 5) {
+    echo $i . " ";
+    $i++;
+}
+// Outputs: 1 2 3 4 5
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Do-While Loop Section -->
+        <section class="mb-5">
+            <h2>Do-While Loop</h2>
+            <p>The do-while loop will always execute the block of code once, then check the condition.</p>
+            <pre><code class="language-php">
+&lt;?php
+$i = 1;
+do {
+    echo $i . " ";
+    $i++;
+} while ($i <= 5);
+// Outputs: 1 2 3 4 5
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- For Loop Section -->
+        <section class="mb-5">
+            <h2>For Loop</h2>
+            <p>The for loop is used when you know in advance how many times you want to execute a statement or a block of statements.</p>
+            <pre><code class="language-php">
+&lt;?php
+for ($i = 1; $i <= 5; $i++) {
+    echo $i . " ";
+}
+// Outputs: 1 2 3 4 5
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Foreach Loop Section -->
+        <section class="mb-5">
+            <h2>Foreach Loop</h2>
+            <p>The foreach loop works only on arrays and objects, and is used to loop through each key/value pair in an array.</p>
+            <pre><code class="language-php">
+&lt;?php
+$colors = ["red", "green", "blue"];
+foreach ($colors as $color) {
+    echo $color . " ";
+}
+// Outputs: red green blue
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Break Statement Section -->
+        <section class="mb-5">
+            <h2>Break Statement</h2>
+            <p>The break statement is used to exit a loop prematurely.</p>
+            <pre><code class="language-php">
+&lt;?php
+for ($i = 1; $i <= 10; $i++) {
+    if ($i == 5) {
+        break;
+    }
+    echo $i . " ";
+}
+// Outputs: 1 2 3 4
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Continue Statement Section -->
+        <section class="mb-5">
+            <h2>Continue Statement</h2>
+            <p>The continue statement is used to skip the rest of the current loop iteration and continue with the next iteration.</p>
+            <pre><code class="language-php">
+&lt;?php
+for ($i = 1; $i <= 5; $i++) {
+    if ($i == 3) {
+        continue;
+    }
+    echo $i . " ";
+}
+// Outputs: 1 2 4 5
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Match Expression (PHP 8.0+) Section -->
+        <section class="mb-5">
+            <h2>Match Expression (PHP 8.0+)</h2>
+            <p>The match expression is similar to switch and provides a more concise syntax for conditional branching.</p>
+            <pre><code class="language-php">
+&lt;?php
+$status = 200;
+$message = match($status) {
+    200, 300 => 'Success',
+    400 => 'Bad request',
+    500 => 'Server error',
+    default => 'Unknown status',
+};
+echo $message;  // Outputs: Success
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section class="mb-5">
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Use clear and descriptive condition statements.</li>
+                <li>Avoid deep nesting of control structures to maintain readability.</li>
+                <li>Consider using switch or match instead of multiple if-elseif statements when comparing a single variable against multiple values.</li>
+                <li>Use foreach loops when working with arrays, as they're generally more readable and less prone to errors.</li>
+                <li>Be cautious with infinite loops - always ensure there's a way to exit the loop.</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="mb-5">
+            <h2>Conclusion</h2>
+            <p>Control structures are fundamental to creating dynamic and responsive PHP applications. They allow you to create complex logic flows, iterate through data, and make decisions based on various conditions. Understanding and effectively using these control structures is crucial for writing efficient and powerful PHP code.</p>
+        </section>
+    </main>
+</div>
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

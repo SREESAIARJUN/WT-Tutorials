@@ -1,0 +1,277 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="introduction_php.html">Introduction</a>
+        <a href="php_datatypes.html">Data Types</a>
+        <a href="php_variables.html">Variables</a>
+        <a href="php_constants.html">Constants</a>
+        <a href="php_Expressions.html">Expressions</a>
+        <a href="php_String Interpolation.html">String Interpolation</a>
+        <a href="php_Control  Structures.html">Control Structures</a>
+        <a href="php_ Functions.html">Functions</a>
+        <a href="php_Arrays.html">Arrays</a>
+        <a href="php_Embedding PHP Code in Web Pages.html">Embedding PHP Code in Web Pages</a>
+        <a href="php_Object Oriented PHP.html">Object Oriented PHP</a>
+    </div>
+    <!-- Main Content -->
+<div class="main-content">
+    <main class="container mt-5">
+        <h1 class="text-center mb-5">PHP: Data Types</h1>
+
+        <!-- Introduction Section -->
+        <section class="mb-5">
+            <h2>Introduction to PHP Data Types</h2>
+            <p>PHP supports several data types that allow you to store different kinds of values in variables. Understanding these data types is crucial for effective PHP programming.</p>
+        </section>
+
+        <!-- Main Data Types Section -->
+        <section class="mb-5">
+            <h2>Main PHP Data Types</h2>
+            <p>PHP has eight primitive data types:</p>
+            <ol>
+                <li>Integer</li>
+                <li>Float (floating point numbers - also called double)</li>
+                <li>String</li>
+                <li>Boolean</li>
+                <li>Array</li>
+                <li>Object</li>
+                <li>NULL</li>
+                <li>Resource</li>
+            </ol>
+        </section>
+
+        <!-- Integer Section -->
+        <section class="mb-5">
+            <h2>1. Integer</h2>
+            <p>An integer is a whole number (without decimals) that can be positive, negative, or zero.</p>
+            <h3>Example:</h3>
+            <pre><code class="language-php">
+&lt;?php
+$x = 5985;
+var_dump($x);
+// Output: int(5985)
+?&gt;
+            </code></pre>
+            <p>The <code>var_dump()</code> function returns the data type and value.</p>
+        </section>
+
+        <!-- Float Section -->
+        <section class="mb-5">
+            <h2>2. Float</h2>
+            <p>A float is a number with a decimal point or a number in exponential form.</p>
+            <h3>Example:</h3>
+            <pre><code class="language-php">
+&lt;?php
+$x = 10.365;
+var_dump($x);
+// Output: float(10.365)
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- String Section -->
+        <section class="mb-5">
+            <h2>3. String</h2>
+            <p>A string is a sequence of characters. It can be enclosed in single quotes ('') or double quotes ("").</p>
+            <h3>Example:</h3>
+            <pre><code class="language-php">
+&lt;?php
+$x = "Hello world!";
+var_dump($x);
+// Output: string(12) "Hello world!"
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Boolean Section -->
+        <section class="mb-5">
+            <h2>4. Boolean</h2>
+            <p>A Boolean represents two possible states: TRUE or FALSE.</p>
+            <h3>Example:</h3>
+            <pre><code class="language-php">
+&lt;?php
+$x = true;
+var_dump($x);
+// Output: bool(true)
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Array Section -->
+        <section class="mb-5">
+            <h2>5. Array</h2>
+            <p>An array stores multiple values in one single variable.</p>
+            <h3>Example:</h3>
+            <pre><code class="language-php">
+&lt;?php
+$cars = array("Volvo", "BMW", "Toyota");
+var_dump($cars);
+// Output: array(3) { [0]=> string(5) "Volvo" [1]=> string(3) "BMW" [2]=> string(6) "Toyota" }
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Object Section -->
+        <section class="mb-5">
+            <h2>6. Object</h2>
+            <p>An object is an instance of a class. It can store both data and information on how to process that data.</p>
+            <h3>Example:</h3>
+            <pre><code class="language-php">
+&lt;?php
+class Car {
+    public $color;
+    public $model;
+    public function __construct($color, $model) {
+        $this->color = $color;
+        $this->model = $model;
+    }
+}
+
+$myCar = new Car("red", "Volvo");
+var_dump($myCar);
+// Output: object(Car)#1 (2) { ["color"]=> string(3) "red" ["model"]=> string(5) "Volvo" }
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- NULL Section -->
+        <section class="mb-5">
+            <h2>7. NULL</h2>
+            <p>NULL is a special data type that can have only one value: NULL. A variable of data type NULL is a variable that has no value assigned to it.</p>
+            <h3>Example:</h3>
+            <pre><code class="language-php">
+&lt;?php
+$x = null;
+var_dump($x);
+// Output: NULL
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Resource Section -->
+        <section class="mb-5">
+            <h2>8. Resource</h2>
+            <p>A resource is a special variable, holding a reference to an external resource. Resources are created and used by special functions.</p>
+            <p>Because resource variables hold special handles to opened files, database connections, image canvas areas and the like, converting to a resource makes no sense.</p>
+        </section>
+
+        <!-- Type Juggling Section -->
+        <section class="mb-5">
+            <h2>Type Juggling</h2>
+            <p>PHP is a loosely typed language, which means that you don't have to explicitly declare the type of a variable. PHP automatically changes the variable type depending on its value or context.</p>
+            <h3>Example:</h3>
+            <pre><code class="language-php">
+&lt;?php
+$x = "5";       // $x is a string
+$y = $x + 2;    // $y is an integer (7)
+var_dump($y);
+// Output: int(7)
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="mb-5">
+            <h2>Conclusion</h2>
+            <p>Understanding PHP data types is fundamental to writing effective PHP code. As you progress in your PHP journey, you'll learn how to manipulate these data types and use them in more complex operations.</p>
+        </section>
+    </main>
+</div>
+
+
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

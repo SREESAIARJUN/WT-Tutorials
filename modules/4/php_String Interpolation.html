@@ -1,0 +1,253 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="introduction_php.html">Introduction</a>
+        <a href="php_datatypes.html">Data Types</a>
+        <a href="php_variables.html">Variables</a>
+        <a href="php_constants.html">Constants</a>
+        <a href="php_Expressions.html">Expressions</a>
+        <a href="php_String Interpolation.html">String Interpolation</a>
+        <a href="php_Control  Structures.html">Control Structures</a>
+        <a href="php_ Functions.html">Functions</a>
+        <a href="php_Arrays.html">Arrays</a>
+        <a href="php_Embedding PHP Code in Web Pages.html">Embedding PHP Code in Web Pages</a>
+        <a href="php_Object Oriented PHP.html">Object Oriented PHP</a>
+    </div>
+    <!-- Main Content -->
+
+    <div class="main-content">
+        <main class="container mt-5">
+            <h1 class="text-center mb-5">PHP: String Interpolation</h1>
+    
+            <!-- Introduction Section -->
+            <section class="mb-5">
+                <h2>Introduction to PHP String Interpolation</h2>
+                <p>String interpolation in PHP refers to the process of evaluating a string literal containing one or more placeholders. These placeholders are replaced with their corresponding values when the string is evaluated. PHP provides several ways to perform string interpolation.</p>
+            </section>
+    
+            <!-- Double-Quoted Strings Section -->
+            <section class="mb-5">
+                <h2>Double-Quoted Strings</h2>
+                <p>The simplest form of string interpolation in PHP is using double-quoted strings. PHP will automatically replace variable names with their values inside double-quoted strings.</p>
+                <pre><code class="language-php">
+    &lt;?php
+    $name = "John";
+    $age = 30;
+    echo "My name is $name and I am $age years old.";
+    // Outputs: My name is John and I am 30 years old.
+    ?&gt;
+                </code></pre>
+                <p>Note: Single-quoted strings do not interpolate variables.</p>
+            </section>
+    
+            <!-- Curly Braces Section -->
+            <section class="mb-5">
+                <h2>Using Curly Braces</h2>
+                <p>For more complex expressions or to clearly delimit the variable name, you can use curly braces {}.</p>
+                <pre><code class="language-php">
+    &lt;?php
+    $fruit = "apple";
+    echo "I ate ${fruit}s";  // Outputs: I ate apples
+    
+    $animals = ["dog", "cat", "bird"];
+    echo "I have a {$animals[1]}";  // Outputs: I have a cat
+    ?&gt;
+                </code></pre>
+            </section>
+    
+            <!-- Complex Expressions Section -->
+            <section class="mb-5">
+                <h2>Complex Expressions</h2>
+                <p>You can include more complex expressions within curly braces:</p>
+                <pre><code class="language-php">
+    &lt;?php
+    $quantity = 3;
+    $price = 5.99;
+    echo "Total: ${quantity * $price}";  // Outputs: Total: 17.97
+    
+    $person = ["name" => "Alice", "age" => 25];
+    echo "Name: {$person['name']}";  // Outputs: Name: Alice
+    ?&gt;
+                </code></pre>
+            </section>
+    
+            <!-- Heredoc Syntax Section -->
+            <section class="mb-5">
+                <h2>Heredoc Syntax</h2>
+                <p>Heredoc syntax provides another way to interpolate variables in multi-line strings:</p>
+                <pre><code class="language-php">
+    &lt;?php
+    $name = "Bob";
+    $text = &lt;&lt;&lt;EOT
+    Hello, $name!
+    This is a multi-line
+    string using heredoc syntax.
+    EOT;
+    echo $text;
+    ?&gt;
+                </code></pre>
+                <p>Heredoc strings behave like double-quoted strings but allow for easier formatting of multi-line text.</p>
+            </section>
+    
+            <!-- Nowdoc Syntax Section -->
+            <section class="mb-5">
+                <h2>Nowdoc Syntax</h2>
+                <p>Nowdoc syntax is similar to heredoc, but it behaves like single-quoted strings (no interpolation):</p>
+                <pre><code class="language-php">
+    &lt;?php
+    $name = "Charlie";
+    $text = &lt;&lt;&lt;'EOT'
+    Hello, $name!
+    This string will not interpolate $name.
+    EOT;
+    echo $text;
+    // Outputs: Hello, $name! This string will not interpolate $name.
+    ?&gt;
+                </code></pre>
+            </section>
+    
+            <!-- String Interpolation vs Concatenation Section -->
+            <section class="mb-5">
+                <h2>String Interpolation vs Concatenation</h2>
+                <p>While string interpolation often leads to more readable code, string concatenation using the . operator is an alternative:</p>
+                <pre><code class="language-php">
+    &lt;?php
+    $name = "David";
+    $age = 35;
+    
+    // String interpolation
+    echo "My name is $name and I am $age years old.";
+    
+    // String concatenation
+    echo 'My name is ' . $name . ' and I am ' . $age . ' years old.';
+    
+    // Both output: My name is David and I am 35 years old.
+    ?&gt;
+                </code></pre>
+            </section>
+    
+            <!-- Performance Considerations Section -->
+            <section class="mb-5">
+                <h2>Performance Considerations</h2>
+                <p>While string interpolation is convenient, it can have a slight performance overhead compared to concatenation, especially for large strings or in tight loops. In most cases, the difference is negligible, but it's worth considering for performance-critical applications.</p>
+            </section>
+    
+            <!-- Best Practices Section -->
+            <section class="mb-5">
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>Use double-quoted strings or heredoc syntax for strings containing variables to be interpolated.</li>
+                    <li>Use curly braces to clearly delimit variable names or for complex expressions.</li>
+                    <li>Consider using single-quoted strings or nowdoc syntax for strings without variables to avoid unnecessary parsing.</li>
+                    <li>Be mindful of potential security issues when interpolating user-supplied data into strings, especially in SQL queries or HTML output.</li>
+                </ul>
+            </section>
+    
+            <!-- Conclusion Section -->
+            <section class="mb-5">
+                <h2>Conclusion</h2>
+                <p>String interpolation in PHP provides a convenient and readable way to embed variables and expressions within strings. By understanding the different methods of string interpolation and their use cases, you can write more efficient and maintainable PHP code.</p>
+            </section>
+        </main>
+    </div>
+    ```
+    
+    
+
+
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

@@ -1,0 +1,279 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="introduction_php.html">Introduction</a>
+        <a href="php_datatypes.html">Data Types</a>
+        <a href="php_variables.html">Variables</a>
+        <a href="php_constants.html">Constants</a>
+        <a href="php_Expressions.html">Expressions</a>
+        <a href="php_String Interpolation.html">String Interpolation</a>
+        <a href="php_Control  Structures.html">Control Structures</a>
+        <a href="php_ Functions.html">Functions</a>
+        <a href="php_Arrays.html">Arrays</a>
+        <a href="php_Embedding PHP Code in Web Pages.html">Embedding PHP Code in Web Pages</a>
+        <a href="php_Object Oriented PHP.html">Object Oriented PHP</a>
+    </div>
+
+    <!-- Main Content -->
+
+<div class="main-content">
+    <main class="container mt-5">
+        <h1 class="text-center mb-5">PHP: Expressions</h1>
+
+        <!-- Introduction Section -->
+        <section class="mb-5">
+            <h2>Introduction to PHP Expressions</h2>
+            <p>In PHP, an expression is anything that has a value. Expressions are the most important building blocks of PHP. Almost everything you write in PHP is an expression. The simplest yet most accurate way to define an expression is "anything that has a value".</p>
+        </section>
+
+        <!-- Types of Expressions Section -->
+        <section class="mb-5">
+            <h2>Types of Expressions</h2>
+            <p>PHP supports several types of expressions:</p>
+            <ul>
+                <li>Arithmetic Expressions</li>
+                <li>String Expressions</li>
+                <li>Logical Expressions</li>
+                <li>Assignment Expressions</li>
+                <li>Comparison Expressions</li>
+                <li>Conditional Expressions</li>
+            </ul>
+        </section>
+
+        <!-- Arithmetic Expressions Section -->
+        <section class="mb-5">
+            <h2>Arithmetic Expressions</h2>
+            <p>Arithmetic expressions use arithmetic operators to perform mathematical operations.</p>
+            <pre><code class="language-php">
+&lt;?php
+$x = 10;
+$y = 5;
+echo $x + $y;  // Outputs: 15
+echo $x - $y;  // Outputs: 5
+echo $x * $y;  // Outputs: 50
+echo $x / $y;  // Outputs: 2
+echo $x % $y;  // Outputs: 0 (modulus)
+echo $x ** $y; // Outputs: 100000 (exponentiation)
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- String Expressions Section -->
+        <section class="mb-5">
+            <h2>String Expressions</h2>
+            <p>String expressions involve manipulation or combination of strings.</p>
+            <pre><code class="language-php">
+&lt;?php
+$greeting = "Hello";
+$name = "World";
+echo $greeting . " " . $name; // Outputs: Hello World
+echo "$greeting $name";       // Outputs: Hello World
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Logical Expressions Section -->
+        <section class="mb-5">
+            <h2>Logical Expressions</h2>
+            <p>Logical expressions evaluate to either true or false.</p>
+            <pre><code class="language-php">
+&lt;?php
+$x = true;
+$y = false;
+var_dump($x && $y); // Outputs: bool(false)
+var_dump($x || $y); // Outputs: bool(true)
+var_dump(!$x);      // Outputs: bool(false)
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Assignment Expressions Section -->
+        <section class="mb-5">
+            <h2>Assignment Expressions</h2>
+            <p>Assignment expressions assign values to variables.</p>
+            <pre><code class="language-php">
+&lt;?php
+$x = 10;
+$y = 5;
+$x += $y;  // Equivalent to $x = $x + $y
+echo $x;   // Outputs: 15
+
+$z = ($x = 3) + 5;
+echo $z;   // Outputs: 8
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Comparison Expressions Section -->
+        <section class="mb-5">
+            <h2>Comparison Expressions</h2>
+            <p>Comparison expressions compare two values and return a boolean result.</p>
+            <pre><code class="language-php">
+&lt;?php
+$x = 10;
+$y = 5;
+var_dump($x == $y);  // Outputs: bool(false)
+var_dump($x != $y);  // Outputs: bool(true)
+var_dump($x &lt; $y);   // Outputs: bool(false)
+var_dump($x &gt;= $y);  // Outputs: bool(true)
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Conditional Expressions Section -->
+        <section class="mb-5">
+            <h2>Conditional Expressions</h2>
+            <p>Conditional expressions use the ternary operator to make decisions.</p>
+            <pre><code class="language-php">
+&lt;?php
+$age = 20;
+$status = ($age &gt;= 18) ? "adult" : "minor";
+echo $status;  // Outputs: adult
+
+// Null coalescing operator (PHP 7+)
+$name = $_GET['name'] ?? 'Anonymous';
+echo $name;  // Outputs: 'Anonymous' if $_GET['name'] is not set
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Complex Expressions Section -->
+        <section class="mb-5">
+            <h2>Complex Expressions</h2>
+            <p>Expressions can be combined to form more complex expressions.</p>
+            <pre><code class="language-php">
+&lt;?php
+$x = 10;
+$y = 5;
+$z = 2;
+
+$result = ($x + $y) * $z;
+echo $result;  // Outputs: 30
+
+$isAdult = ($age &gt;= 18) && ($country == "USA");
+var_dump($isAdult);  // Outputs: bool(true) or bool(false)
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Expression Precedence Section -->
+        <section class="mb-5">
+            <h2>Expression Precedence</h2>
+            <p>When multiple operators are used in an expression, the order of precedence determines how the expression is evaluated.</p>
+            <pre><code class="language-php">
+&lt;?php
+$result = 5 + 3 * 2;
+echo $result;  // Outputs: 11 (not 16)
+
+$result = (5 + 3) * 2;
+echo $result;  // Outputs: 16
+?&gt;
+            </code></pre>
+            <p>It's often a good practice to use parentheses to make the order of operations clear, even when not strictly necessary.</p>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="mb-5">
+            <h2>Conclusion</h2>
+            <p>Understanding expressions is fundamental to PHP programming. They form the building blocks of statements and control structures, allowing you to perform calculations, make decisions, and manipulate data in your scripts. As you become more familiar with PHP, you'll find yourself combining these different types of expressions to create more complex and powerful programs.</p>
+        </section>
+    </main>
+</div>
+
+
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

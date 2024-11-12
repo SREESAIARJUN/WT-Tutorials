@@ -1,0 +1,282 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="introduction_php.html">Introduction</a>
+        <a href="php_datatypes.html">Data Types</a>
+        <a href="php_variables.html">Variables</a>
+        <a href="php_constants.html">Constants</a>
+        <a href="php_Expressions.html">Expressions</a>
+        <a href="php_String Interpolation.html">String Interpolation</a>
+        <a href="php_Control  Structures.html">Control Structures</a>
+        <a href="php_ Functions.html">Functions</a>
+        <a href="php_Arrays.html">Arrays</a>
+        <a href="php_Embedding PHP Code in Web Pages.html">Embedding PHP Code in Web Pages</a>
+        <a href="php_Object Oriented PHP.html">Object Oriented PHP</a>
+    </div>
+<!-- Main Content -->
+<div class="main-content">
+    <main class="container mt-5">
+        <h1 class="text-center mb-5">PHP: Embedding PHP Code in Web Pages</h1>
+
+        <!-- Introduction Section -->
+        <section class="mb-5">
+            <h2>Introduction to Embedding PHP in HTML</h2>
+            <p>One of PHP's strengths is its ability to be embedded directly into HTML. This allows you to create dynamic web pages by mixing static HTML with dynamic PHP code. Understanding how to properly embed PHP in your web pages is crucial for web development with PHP.</p>
+        </section>
+
+        <!-- Basic PHP Tags Section -->
+        <section class="mb-5">
+            <h2>Basic PHP Tags</h2>
+            <p>PHP code is enclosed within special start and end processing instructions (tags) that allow you to jump into and out of "PHP mode":</p>
+            <pre><code class="language-php">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1&gt;My First PHP Page&lt;/h1&gt;
+    &lt;?php
+    echo "Hello, World!";
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <p>In this example, only the text within the &lt;?php ?&gt; tags is processed as PHP. The rest is treated as HTML.</p>
+        </section>
+
+        <!-- Echo and Print Statements Section -->
+        <section class="mb-5">
+            <h2>Echo and Print Statements</h2>
+            <p>To output content from PHP, you can use the echo or print statements:</p>
+            <pre><code class="language-php">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h1&gt;&lt;?php echo "Welcome to My Website"; ?&gt;&lt;/h1&gt;
+    &lt;p&gt;&lt;?php print "This is a paragraph."; ?&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+
+        <!-- PHP Variables in HTML Section -->
+        <section class="mb-5">
+            <h2>PHP Variables in HTML</h2>
+            <p>You can use PHP variables directly within your HTML:</p>
+            <pre><code class="language-php">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;?php
+    $color = "red";
+    $fruit = "apple";
+    ?&gt;
+    &lt;p&gt;The &lt;?php echo $fruit; ?&gt; is &lt;?php echo $color; ?&gt;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+
+        <!-- PHP in HTML Attributes Section -->
+        <section class="mb-5">
+            <h2>PHP in HTML Attributes</h2>
+            <p>PHP can be used within HTML attributes to create dynamic attributes:</p>
+            <pre><code class="language-php">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;?php $imageURL = "https://example.com/image.jpg"; ?&gt;
+    &lt;img src="&lt;?php echo $imageURL; ?&gt;" alt="Example Image"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+
+        <!-- PHP Control Structures in HTML Section -->
+        <section class="mb-5">
+            <h2>PHP Control Structures in HTML</h2>
+            <p>You can use PHP control structures to dynamically generate HTML:</p>
+            <pre><code class="language-php">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+    &lt;?php
+    $fruits = ["Apple", "Banana", "Orange"];
+    foreach ($fruits as $fruit) {
+        echo "&lt;li&gt;$fruit&lt;/li&gt;";
+    }
+    ?&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+
+        <!-- Alternative Syntax for Control Structures Section -->
+        <section class="mb-5">
+            <h2>Alternative Syntax for Control Structures</h2>
+            <p>PHP provides an alternative syntax for some control structures, which can be more readable when mixing with HTML:</p>
+            <pre><code class="language-php">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;?php if ($user_logged_in): ?&gt;
+        &lt;h1&gt;Welcome, User!&lt;/h1&gt;
+    &lt;?php else: ?&gt;
+        &lt;h1&gt;Please Log In&lt;/h1&gt;
+    &lt;?php endif; ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+
+        <!-- Short Echo Tags Section -->
+        <section class="mb-5">
+            <h2>Short Echo Tags</h2>
+            <p>PHP provides a shorthand syntax for echoing variables, which can be useful for quick output:</p>
+            <pre><code class="language-php">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;p&gt;The current year is &lt;?= date('Y') ?&gt;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <p>Note: Short echo tags (&lt;?=) are always available in PHP 5.4.0 and later.</p>
+        </section>
+
+        <!-- PHP Comments Section -->
+        <section class="mb-5">
+            <h2>PHP Comments</h2>
+            <p>You can use PHP comments within your HTML to document your code:</p>
+            <pre><code class="language-php">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;?php
+    // This is a single-line comment
+    /* This is a
+       multi-line comment */
+    ?&gt;
+    &lt;h1&gt;&lt;?php echo "Hello, World!"; // This echoes a greeting ?&gt;&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section class="mb-5">
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Always use proper PHP tags (&lt;?php ?&gt;) for maximum compatibility.</li>
+                <li>Separate PHP logic from presentation as much as possible.</li>
+                <li>Use alternative syntax for control structures when mixing heavily with HTML.</li>
+                <li>Be cautious about echo'ing unescaped user input to prevent XSS attacks.</li>
+                <li>Use PHP's built-in functions like htmlspecialchars() when outputting user data.</li>
+                <li>Consider using a template engine for more complex projects to better separate logic from presentation.</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="mb-5">
+            <h2>Conclusion</h2>
+            <p>Embedding PHP in HTML allows you to create dynamic web pages easily. By understanding the various ways to integrate PHP with HTML, you can create more interactive and data-driven websites. As you progress in your PHP development, you'll find more advanced techniques for structuring your code and separating concerns in larger applications.</p>
+        </section>
+    </main>
+</div>
+
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

@@ -1,0 +1,304 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="introduction_php.html">Introduction</a>
+        <a href="php_datatypes.html">Data Types</a>
+        <a href="php_variables.html">Variables</a>
+        <a href="php_constants.html">Constants</a>
+        <a href="php_Expressions.html">Expressions</a>
+        <a href="php_String Interpolation.html">String Interpolation</a>
+        <a href="php_Control  Structures.html">Control Structures</a>
+        <a href="php_ Functions.html">Functions</a>
+        <a href="php_Arrays.html">Arrays</a>
+        <a href="php_Embedding PHP Code in Web Pages.html">Embedding PHP Code in Web Pages</a>
+        <a href="php_Object Oriented PHP.html">Object Oriented PHP</a>
+    </div>
+
+  <!-- Main Content -->
+<div class="main-content">
+    <main class="container mt-5">
+        <h1 class="text-center mb-5">PHP: Arrays</h1>
+
+        <!-- Introduction Section -->
+        <section class="mb-5">
+            <h2>Introduction to PHP Arrays</h2>
+            <p>Arrays in PHP are versatile data structures that can store multiple values in a single variable. They are essential for organizing and manipulating data in PHP applications. PHP offers several types of arrays and numerous built-in functions for array manipulation.</p>
+        </section>
+
+        <!-- Creating Arrays Section -->
+        <section class="mb-5">
+            <h2>Creating Arrays</h2>
+            <p>There are multiple ways to create arrays in PHP:</p>
+            <pre><code class="language-php">
+&lt;?php
+// Using array() function
+$fruits = array("Apple", "Banana", "Orange");
+
+// Using square bracket syntax (PHP 5.4+)
+$colors = ["Red", "Green", "Blue"];
+
+// Creating an empty array
+$emptyArray = [];
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Indexed Arrays Section -->
+        <section class="mb-5">
+            <h2>Indexed Arrays</h2>
+            <p>Indexed arrays use numeric keys, starting from 0 by default.</p>
+            <pre><code class="language-php">
+&lt;?php
+$cars = ["Volvo", "BMW", "Toyota"];
+echo $cars[0]; // Outputs: Volvo
+
+// Adding a new element
+$cars[] = "Honda";
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Associative Arrays Section -->
+        <section class="mb-5">
+            <h2>Associative Arrays</h2>
+            <p>Associative arrays use named keys that you assign to them.</p>
+            <pre><code class="language-php">
+&lt;?php
+$age = ["Peter" => 35, "Ben" => 37, "Joe" => 43];
+echo $age["Ben"]; // Outputs: 37
+
+// Adding a new element
+$age["Mary"] = 29;
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Multidimensional Arrays Section -->
+        <section class="mb-5">
+            <h2>Multidimensional Arrays</h2>
+            <p>Multidimensional arrays contain one or more arrays as their elements.</p>
+            <pre><code class="language-php">
+&lt;?php
+$employees = [
+    ["John", "Doe", "john@example.com"],
+    ["Mary", "Smith", "mary@example.com"]
+];
+echo $employees[1][0]; // Outputs: Mary
+
+$users = [
+    "John" => ["age" => 30, "city" => "New York"],
+    "Mary" => ["age" => 25, "city" => "London"]
+];
+echo $users["Mary"]["city"]; // Outputs: London
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Array Functions Section -->
+        <section class="mb-5">
+            <h2>Array Functions</h2>
+            <p>PHP provides numerous built-in functions for working with arrays:</p>
+            <pre><code class="language-php">
+&lt;?php
+$numbers = [3, 1, 4, 1, 5, 9];
+
+// Count elements
+echo count($numbers); // Outputs: 6
+
+// Sort array
+sort($numbers);
+print_r($numbers); // Outputs: Array ( [0] => 1 [1] => 1 [2] => 3 [3] => 4 [4] => 5 [5] => 9 )
+
+// Reverse array
+$reversed = array_reverse($numbers);
+print_r($reversed); // Outputs: Array ( [0] => 9 [1] => 5 [2] => 4 [3] => 3 [4] => 1 [5] => 1 )
+
+// Check if element exists
+if (in_array(5, $numbers)) {
+    echo "Found 5";
+}
+
+// Get array keys
+$fruits = ["a" => "apple", "b" => "banana"];
+print_r(array_keys($fruits)); // Outputs: Array ( [0] => a [1] => b )
+
+// Merge arrays
+$array1 = [1, 2, 3];
+$array2 = [4, 5, 6];
+$merged = array_merge($array1, $array2);
+print_r($merged); // Outputs: Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 [5] => 6 )
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Array Iteration Section -->
+        <section class="mb-5">
+            <h2>Array Iteration</h2>
+            <p>PHP offers several ways to iterate through arrays:</p>
+            <pre><code class="language-php">
+&lt;?php
+$colors = ["red", "green", "blue"];
+
+// Using for loop
+for ($i = 0; $i < count($colors); $i++) {
+    echo $colors[$i] . " ";
+}
+
+// Using foreach loop
+foreach ($colors as $color) {
+    echo $color . " ";
+}
+
+// Using foreach with key => value
+$age = ["Peter" => 35, "Ben" => 37, "Joe" => 43];
+foreach ($age as $name => $value) {
+    echo "$name is $value years old. ";
+}
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Array Unpacking Section -->
+        <section class="mb-5">
+            <h2>Array Unpacking (PHP 7.4+)</h2>
+            <p>PHP 7.4 introduced the spread operator for arrays, allowing easy unpacking of arrays.</p>
+            <pre><code class="language-php">
+&lt;?php
+$fruit = ["apple", "orange"];
+$vegetables = ["carrot", "pea"];
+$food = [...$fruit, ...$vegetables];
+print_r($food); // Outputs: Array ( [0] => apple [1] => orange [2] => carrot [3] => pea )
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Array Destructuring Section -->
+        <section class="mb-5">
+            <h2>Array Destructuring</h2>
+            <p>PHP allows you to unpack arrays into distinct variables.</p>
+            <pre><code class="language-php">
+&lt;?php
+$info = ["John Doe", "john@example.com", 35];
+[$name, $email, $age] = $info;
+echo "Name: $name, Email: $email, Age: $age";
+// Outputs: Name: John Doe, Email: john@example.com, Age: 35
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section class="mb-5">
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Use meaningful names for array keys in associative arrays.</li>
+                <li>Prefer foreach loops for iterating over arrays when the key is not needed.</li>
+                <li>Use array functions like array_map(), array_filter(), and array_reduce() for functional programming style operations.</li>
+                <li>Be cautious with large arrays to avoid memory issues.</li>
+                <li>Use type hinting (array) for function parameters and return types when working with arrays.</li>
+                <li>Consider using array unpacking for merging arrays instead of array_merge() for better performance with a large number of arrays.</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="mb-5">
+            <h2>Conclusion</h2>
+            <p>Arrays are fundamental data structures in PHP, offering powerful ways to store and manipulate collections of data. Understanding how to create, modify, and iterate through arrays is crucial for effective PHP programming. As you continue to work with PHP, you'll find arrays to be indispensable in handling complex data structures and implementing various algorithms.</p>
+        </section>
+    </main>
+</div>
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

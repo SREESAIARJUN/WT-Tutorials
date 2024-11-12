@@ -1,0 +1,243 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="introduction_php.html">Introduction</a>
+        <a href="php_datatypes.html">Data Types</a>
+        <a href="php_variables.html">Variables</a>
+        <a href="php_constants.html">Constants</a>
+        <a href="php_Expressions.html">Expressions</a>
+        <a href="php_String Interpolation.html">String Interpolation</a>
+        <a href="php_Control  Structures.html">Control Structures</a>
+        <a href="php_ Functions.html">Functions</a>
+        <a href="php_Arrays.html">Arrays</a>
+        <a href="php_Embedding PHP Code in Web Pages.html">Embedding PHP Code in Web Pages</a>
+        <a href="php_Object Oriented PHP.html">Object Oriented PHP</a>
+    </div>
+    <!-- Main Content -->
+<!-- Main Content -->
+<div class="main-content">
+    <main class="container mt-5">
+        <h1 class="text-center mb-5">PHP: Constants</h1>
+
+        <!-- Introduction Section -->
+        <section class="mb-5">
+            <h2>Introduction to PHP Constants</h2>
+            <p>Constants in PHP are identifiers for simple values that cannot be changed during the execution of a script. Unlike variables, constants are automatically global across the entire script.</p>
+        </section>
+
+        <!-- Defining Constants Section -->
+        <section class="mb-5">
+            <h2>Defining Constants</h2>
+            <p>Constants are defined using the <code>define()</code> function or the <code>const</code> keyword.</p>
+            
+            <h3>Using define() function:</h3>
+            <pre><code class="language-php">
+&lt;?php
+define("GREETING", "Welcome to PHP!");
+echo GREETING;
+?&gt;
+            </code></pre>
+            
+            <h3>Using const keyword (PHP 5.3.0 and later):</h3>
+            <pre><code class="language-php">
+&lt;?php
+const GREETING = "Welcome to PHP!";
+echo GREETING;
+?&gt;
+            </code></pre>
+            
+            <p>Note: The <code>const</code> keyword can be used to define constants at the top level of a script or inside a class definition, but not inside functions or loops.</p>
+        </section>
+
+        <!-- Constant Rules Section -->
+        <section class="mb-5">
+            <h2>Rules for PHP Constants</h2>
+            <ul>
+                <li>Constant names are case-sensitive by default. However, it's common practice to name constants in all uppercase letters.</li>
+                <li>Constants should start with a letter or underscore, followed by any number of letters, numbers, or underscores.</li>
+                <li>Once a constant is defined, it can't be changed or undefined.</li>
+                <li>Constants can only hold scalar values (boolean, integer, float and string) or arrays (PHP 7+).</li>
+            </ul>
+        </section>
+
+        <!-- Constant vs Variable Section -->
+        <section class="mb-5">
+            <h2>Constants vs Variables</h2>
+            <p>Here are the key differences between constants and variables:</p>
+            <ul>
+                <li>Constants do not use the $ symbol before the identifier.</li>
+                <li>Constants can be defined and accessed anywhere in the script without regard to variable scoping rules.</li>
+                <li>Constants cannot be redefined or undefined once they have been set.</li>
+                <li>Constant values can only be strings and numbers (and arrays in PHP 7+).</li>
+            </ul>
+        </section>
+
+        <!-- Checking if Constant is Defined Section -->
+        <section class="mb-5">
+            <h2>Checking if a Constant is Defined</h2>
+            <p>You can use the <code>defined()</code> function to check if a constant has been defined:</p>
+            <pre><code class="language-php">
+&lt;?php
+if (defined("GREETING")) {
+    echo GREETING;
+} else {
+    echo "GREETING is not defined.";
+}
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Magic Constants Section -->
+        <section class="mb-5">
+            <h2>Magic Constants</h2>
+            <p>PHP provides several predefined constants that change depending on where they are used. These are called magic constants:</p>
+            <ul>
+                <li><code>__LINE__</code> - The current line number of the file.</li>
+                <li><code>__FILE__</code> - The full path and filename of the file.</li>
+                <li><code>__DIR__</code> - The directory of the file.</li>
+                <li><code>__FUNCTION__</code> - The function name (PHP 4.3.0 and higher).</li>
+                <li><code>__CLASS__</code> - The class name (PHP 4.3.0 and higher).</li>
+                <li><code>__METHOD__</code> - The class method name (PHP 5.0.0 and higher).</li>
+                <li><code>__NAMESPACE__</code> - The name of the current namespace (PHP 5.3.0 and higher).</li>
+            </ul>
+            <p>Example:</p>
+            <pre><code class="language-php">
+&lt;?php
+echo "Line number " . __LINE__ . " in file " . __FILE__;
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Constant Arrays Section -->
+        <section class="mb-5">
+            <h2>Constant Arrays (PHP 7+)</h2>
+            <p>From PHP 7.0, you can create an array constant using the <code>define()</code> function:</p>
+            <pre><code class="language-php">
+&lt;?php
+define("ANIMALS", [
+    "dog",
+    "cat",
+    "bird"
+]);
+echo ANIMALS[1]; // outputs "cat"
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section class="mb-5">
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Use constants for values that don't change throughout your script, like configuration settings.</li>
+                <li>Name constants in all uppercase to distinguish them from variables.</li>
+                <li>Group related constants together, possibly in a separate configuration file.</li>
+                <li>Use constants instead of "magic numbers" or string literals in your code to improve readability and maintainability.</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="mb-5">
+            <h2>Conclusion</h2>
+            <p>Constants are an essential part of PHP programming, providing a way to store values that remain unchanged throughout script execution. They enhance code readability, maintainability, and can help prevent accidental changes to important values in your applications.</p>
+        </section>
+    </main>
+</div>
+
+
+
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>

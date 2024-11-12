@@ -1,0 +1,321 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Tutorial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body class="">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="mainlogo.png" height="50" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../syllabus.html">Syllabus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../download_material.html">Download Material</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../playground.html">Playground</a></li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Ediatable section starts-->
+
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="introduction_php.html">Introduction</a>
+        <a href="php_datatypes.html">Data Types</a>
+        <a href="php_variables.html">Variables</a>
+        <a href="php_constants.html">Constants</a>
+        <a href="php_Expressions.html">Expressions</a>
+        <a href="php_String Interpolation.html">String Interpolation</a>
+        <a href="php_Control  Structures.html">Control Structures</a>
+        <a href="php_ Functions.html">Functions</a>
+        <a href="php_Arrays.html">Arrays</a>
+        <a href="php_Embedding PHP Code in Web Pages.html">Embedding PHP Code in Web Pages</a>
+        <a href="php_Object Oriented PHP.html">Object Oriented PHP</a>
+    </div>
+
+    
+    <!-- Main Content -->
+<div class="main-content">
+    <main class="container mt-5">
+        <h1 class="text-center mb-5">PHP: Functions</h1>
+
+        <!-- Introduction Section -->
+        <section class="mb-5">
+            <h2>Introduction to PHP Functions</h2>
+            <p>Functions are blocks of reusable code that perform specific tasks. They help in organizing code, improving readability, and reducing repetition. PHP comes with a large number of built-in functions and also allows you to create your own custom functions.</p>
+        </section>
+
+        <!-- Defining Functions Section -->
+        <section class="mb-5">
+            <h2>Defining Functions</h2>
+            <p>In PHP, you can define a function using the <code>function</code> keyword, followed by the function name and a pair of parentheses.</p>
+            <pre><code class="language-php">
+&lt;?php
+function greet() {
+    echo "Hello, World!";
+}
+
+// Calling the function
+greet(); // Outputs: Hello, World!
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Functions with Parameters Section -->
+        <section class="mb-5">
+            <h2>Functions with Parameters</h2>
+            <p>Functions can accept parameters, which are variables passed to the function.</p>
+            <pre><code class="language-php">
+&lt;?php
+function greetPerson($name) {
+    echo "Hello, $name!";
+}
+
+greetPerson("Alice"); // Outputs: Hello, Alice!
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Default Parameter Values Section -->
+        <section class="mb-5">
+            <h2>Default Parameter Values</h2>
+            <p>You can assign default values to function parameters.</p>
+            <pre><code class="language-php">
+&lt;?php
+function greetWithTitle($name, $title = "Mr./Ms.") {
+    echo "Hello, $title $name!";
+}
+
+greetWithTitle("Bob"); // Outputs: Hello, Mr./Ms. Bob!
+greetWithTitle("Alice", "Dr."); // Outputs: Hello, Dr. Alice!
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Returning Values Section -->
+        <section class="mb-5">
+            <h2>Returning Values</h2>
+            <p>Functions can return values using the <code>return</code> statement.</p>
+            <pre><code class="language-php">
+&lt;?php
+function add($a, $b) {
+    return $a + $b;
+}
+
+$result = add(5, 3);
+echo $result; // Outputs: 8
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Variable Scope Section -->
+        <section class="mb-5">
+            <h2>Variable Scope</h2>
+            <p>Variables defined inside a function have a local scope and can't be accessed outside the function.</p>
+            <pre><code class="language-php">
+&lt;?php
+function test() {
+    $local_var = "I'm local";
+    echo $local_var;
+}
+
+test(); // Outputs: I'm local
+// echo $local_var; // This would cause an error
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Global Keyword Section -->
+        <section class="mb-5">
+            <h2>Global Keyword</h2>
+            <p>The <code>global</code> keyword allows you to access global variables from within a function.</p>
+            <pre><code class="language-php">
+&lt;?php
+$x = 5;
+
+function useGlobal() {
+    global $x;
+    echo $x;
+}
+
+useGlobal(); // Outputs: 5
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Anonymous Functions Section -->
+        <section class="mb-5">
+            <h2>Anonymous Functions</h2>
+            <p>PHP supports anonymous functions, also known as closures.</p>
+            <pre><code class="language-php">
+&lt;?php
+$greet = function($name) {
+    echo "Hello, $name!";
+};
+
+$greet("Charlie"); // Outputs: Hello, Charlie!
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Arrow Functions (PHP 7.4+) Section -->
+        <section class="mb-5">
+            <h2>Arrow Functions (PHP 7.4+)</h2>
+            <p>Arrow functions provide a more concise syntax for simple functions.</p>
+            <pre><code class="language-php">
+&lt;?php
+$multiply = fn($a, $b) => $a * $b;
+
+echo $multiply(4, 5); // Outputs: 20
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Type Declarations Section -->
+        <section class="mb-5">
+            <h2>Type Declarations</h2>
+            <p>PHP 7+ allows you to specify the expected data types for function parameters and return values.</p>
+            <pre><code class="language-php">
+&lt;?php
+function addIntegers(int $a, int $b): int {
+    return $a + $b;
+}
+
+echo addIntegers(5, 10); // Outputs: 15
+// addIntegers("5", "10"); // This would trigger a TypeError
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Variadic Functions Section -->
+        <section class="mb-5">
+            <h2>Variadic Functions</h2>
+            <p>Variadic functions can accept a variable number of arguments.</p>
+            <pre><code class="language-php">
+&lt;?php
+function sum(...$numbers) {
+    return array_sum($numbers);
+}
+
+echo sum(1, 2, 3, 4); // Outputs: 10
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Recursive Functions Section -->
+        <section class="mb-5">
+            <h2>Recursive Functions</h2>
+            <p>A recursive function is a function that calls itself.</p>
+            <pre><code class="language-php">
+&lt;?php
+function factorial($n) {
+    if ($n <= 1) {
+        return 1;
+    }
+    return $n * factorial($n - 1);
+}
+
+echo factorial(5); // Outputs: 120
+?&gt;
+            </code></pre>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section class="mb-5">
+            <h2>Best Practices</h2>
+            <ul>
+                <li>Use descriptive function names that indicate what the function does.</li>
+                <li>Keep functions small and focused on a single task.</li>
+                <li>Use type declarations to improve code reliability.</li>
+                <li>Document your functions with PHPDoc comments.</li>
+                <li>Avoid using global variables inside functions when possible.</li>
+                <li>Return values instead of printing them directly, to improve function reusability.</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="mb-5">
+            <h2>Conclusion</h2>
+            <p>Functions are a fundamental building block of PHP programming. They allow you to create modular, reusable, and organized code. By mastering functions, you can write more efficient, maintainable, and scalable PHP applications. As you progress in your PHP journey, you'll find functions to be an indispensable tool in your programming toolkit.</p>
+        </section>
+    </main>
+</div>
+
+
+
+
+    <!--Editable section ends-->
+    <button id="openChatbot" class="chatbot-toggle" style="display: flex;">
+        <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+    </button>
+
+    <div id="chatbot" class="chatbot-container" style="display: none;">
+        <div class="chatbot-header">
+            <img src="chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
+            <h3>Web Tech Assistant</h3>
+            <button id="closeChatbot" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages"><div class="message bot">
+</div></div>
+        <div class="chatbot-input">
+            <textarea id="userInput" placeholder="Ask your doubt..." rows="3"></textarea>
+            <button id="sendMessage" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script> <!-- Your existing JS file -->
+    <script src="dark-mode.js"></script> <!-- Dark mode toggle JS -->
+    <script src="chatbot.js"></script> <!-- Chatbot JS -->
+    <script>
+        // Theme switcher event listener
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // Set dark mode from local storage if it was previously enabled
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        function runCode() {
+            const htmlCode = document.getElementById('htmlCode').value;
+            const iframe = document.getElementById('livePreview');
+            iframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(htmlCode);
+        }
+
+        function runPlayground() {
+            const playgroundHtml = document.getElementById('playgroundHtmlCode').value;
+            const playgroundIframe = document.getElementById('playgroundPreview');
+            playgroundIframe.src = 'data:text/html;charset=utf-8,' + encodeURIComponent(playgroundHtml);
+        }
+
+    </script>
+
+</body></html>
