@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyCFO_wL-z8wip-PgVE9NXblbxMzKP9ggBk';
+const API_KEY = 'AIzaSyBbZ9Af2EDeCOTJnCeeiJAVXrTIaB0_wTY';
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-002:generateContent?key=${API_KEY}`;
 
 const openChatbotBtn = document.getElementById('openChatbot');
